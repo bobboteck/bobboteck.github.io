@@ -46,10 +46,11 @@
 	      width: 400px;
 	    }
 	  }
-    .raccoltacolori{
-      color: #82b965;
-      background-color: rgba(255,255,255,0.8);
+    /*overload*/
+    :host(.tall) {
+      height: 90px;
     }
+    #ink { color: #82b965; }
 	  </style>
 	</head>
   <body unresolved>
@@ -58,7 +59,7 @@
       <core-toolbar class="tall">
         <paper-icon-button id="navicon" icon="menu"></paper-icon-button>
 
-        <span flex>Title</span>
+        <span flex>Bobboteck</span>
 
         <paper-icon-button id="morebutton" icon="more-vert"></paper-icon-button>
   
