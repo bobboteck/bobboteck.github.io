@@ -23,7 +23,7 @@
 	  }
 	  core-toolbar {
 	    background: #3b8dbd;
-	    color: rgba(255,255,255,0.8);
+	    color: #fff;
 	  }
 	  #tabs {
 	    width: 100%;
@@ -47,7 +47,7 @@
 	    }
 	  }
     /*overload*/
-    :host(.tall) {
+    paper-toolbar.toolbar {
       height: 90px;
     }
     #ink { color: #82b965; }
@@ -56,7 +56,7 @@
   <body unresolved>
     <core-header-panel>
 
-      <core-toolbar class="tall">
+      <paper-toolbar class="toolbar">
         <paper-icon-button id="navicon" icon="menu"></paper-icon-button>
 
         <span flex>Bobboteck</span>
@@ -68,7 +68,7 @@
           <paper-tab name="favorites">WHOAMI</paper-tab>
         </paper-tabs>
   
-      </core-toolbar>
+      </paper-toolbar>
   
       <div class="container" layout vertical center>
         <!-- post-list show="all"></post-list -->
