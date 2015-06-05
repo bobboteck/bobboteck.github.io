@@ -22,8 +22,8 @@
 	    -webkit-overflow-scrolling: touch; 
 	  }
 	  core-toolbar {
-	    background: #03a9f4;
-	    color: white;
+	    background: #3b8dbd;
+	    color: rgba(255,255,255,0.8);
 	  }
 	  #tabs {
 	    width: 100%;
@@ -46,12 +46,21 @@
 	      width: 400px;
 	    }
 	  }
+    .raccoltacolori{
+      color: #82b965;
+      background-color: rgba(255,255,255,0.8);
+    }
 	  </style>
 	</head>
   <body unresolved>
     <core-header-panel>
 
       <core-toolbar>
+        <paper-icon-button id="navicon" icon="menu"></paper-icon-button>
+
+        <span flex>Title</span>
+
+        <paper-icon-button id="morebutton" icon="more-vert"></paper-icon-button>
   
         <paper-tabs id="tabs" selected="all" self-end>
           <paper-tab name="all">Home</paper-tab>
