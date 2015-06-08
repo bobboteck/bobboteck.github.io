@@ -89,23 +89,23 @@
         <paper-tabs id="tabs" selected="all" class="bottom fit" self-end>
           <paper-tab name="home">Home</paper-tab>
           <paper-tab name="whoami">WHOAMI</paper-tab>
-          <paper-tab name="contact">Contact</paper-tab>
+          <!-- paper-tab name="contact">Contact</paper-tab -->
         </paper-tabs>
   
       </core-toolbar>
   
       <core-pages selected="{{$.paper-tab.selected}} " selectedindex="0" notap  id="core-pages">
-        <about-me id="home" active>
+        <div id="home">
           <h2 horizontal center-justified>Roberto</h2>
           <p>Roberto is web developer, but enthusiast of Robotics.</p>
-        </about-me>
+        </div>
     
-        <portfolio-list id="whoami">
+        <div id="whoami">
         <!--Insert slider?-->
-        </portfolio-list>
+        </div>
     
-        <contact-me id="contact">
-        </contact-me>
+        <!-- contact-me id="contact">
+        </contact-me -->
       </core-pages>    
   
     </core-header-panel>
