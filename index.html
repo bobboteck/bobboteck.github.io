@@ -87,19 +87,20 @@
         <paper-icon-button id="morebutton" icon="more-vert"></paper-icon-button>
   
         <paper-tabs id="tabs" selected="all" class="bottom fit" self-end>
-          <paper-tab name="all">Home</paper-tab>
-          <paper-tab name="favorites">WHOAMI</paper-tab>
+          <paper-tab name="home">Home</paper-tab>
+          <paper-tab name="whoami">WHOAMI</paper-tab>
+          <paper-tab name="contact">Contact</paper-tab>
         </paper-tabs>
   
       </core-toolbar>
   
       <core-pages selected="{{$.paper-tab.selected}} " selectedindex="0" notap  id="core-pages">
-        <about-me id="paper-tab" active>
+        <about-me id="home" active>
           <h2 horizontal center-justified>Roberto</h2>
           <p>Roberto is web developer, but enthusiast of Robotics.</p>
         </about-me>
     
-        <portfolio-list id="portfolio">
+        <portfolio-list id="whoami">
         <!--Insert slider?-->
         </portfolio-list>
     
