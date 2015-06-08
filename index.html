@@ -86,7 +86,7 @@
 
         <paper-icon-button id="morebutton" icon="more-vert"></paper-icon-button>
   
-        <paper-tabs id="tabs" selected="all" class="bottom fit" self-end>
+        <paper-tabs id="tabs" selected="{{selected}}" class="bottom fit" self-end>
           <paper-tab name="home">Home</paper-tab>
           <paper-tab name="whoami">WHOAMI</paper-tab>
           <!-- paper-tab name="contact">Contact</paper-tab -->
@@ -94,14 +94,14 @@
   
       </core-toolbar>
   
-      <core-pages selected="{{$.paper-tab.selected}} " selectedindex="0" notap  id="core-pages">
+      <core-pages selected="{{selected}}" id="core-pages">
         <div id="home">
           <h2 horizontal center-justified>Roberto</h2>
           <p>Roberto is web developer, but enthusiast of Robotics.</p>
         </div>
     
         <div id="whoami">
-        <!--Insert slider?-->
+          I'm!!!
         </div>
     
         <!-- contact-me id="contact">
