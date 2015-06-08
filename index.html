@@ -47,8 +47,28 @@
 	    }
 	  }
     /*overload*/
-    paper-tabs.pink::shadow #selectionBar {
+    paper-tabs.pink paper-tab::shadow #ink {
+      color: #82b965;
+      -moz-column-rule-color: #82b965;
+      -webkit-column-rule-color: #82b965;
+    }
+
+    paper-tabs.pink {
+      color: #82b965;
+      -moz-column-rule-color: #82b965;
+      -webkit-column-rule-color: #82b965;
+     }
+    
+    paper-tabs::shadow paper-ripple#ink paper-tab::shadow #ink {
       background-color: #82b965;
+      -moz-column-rule-color: #82b965;
+      -webkit-column-rule-color: #82b965;
+    }
+    
+    paper-tabs::shadow #selectionBar {
+      background-color: #82b965;
+      -moz-column-rule-color: #82b965;
+      -webkit-column-rule-color: #82b965;
     }
     core-toolbar.toolbar {
       height: 90px;
