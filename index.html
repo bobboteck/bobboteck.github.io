@@ -93,20 +93,32 @@
   
       </core-toolbar>
   
-      <div class="container" layout vertical center>
-        <!-- post-list show="all"></post-list -->
-        Container
-      </div>
+      <core-pages selected="{{$.paper-tab.selected}} " selectedindex="0" notap  id="core-pages">
+        <about-me id="paper-tab" active>
+          <h2 horizontal center-justified>Worldwide Jamie</h2>
+          <p>Jamie is a Chicago-based freelance front end web developer.</p>
+          <p>Clearly this website is <b>Under Development</b></p>
+          <p>Come back soon to see how great your site could be</p>
+        </about-me>
+    
+        <portfolio-list id="portfolio">
+        <!--Insert slider?-->
+        </portfolio-list>
+    
+        <contact-me id="contact">
+        </contact-me>
+      </core-pages>    
   
     </core-header-panel>
   
     <script>
-  /*  var tabs = document.querySelector('paper-tabs');
-    var list = document.querySelector('post-list');
-  
-    tabs.addEventListener('core-select', function() {
-      list.show = tabs.selected;
-    });*/
+      var tabs = document.querySelector('paper-tabs');
+      var pages = document.querySelector('core-pages');
+      
+      tabs.addEventListener('core-select',function(){
+        console.log(tabs.selected);
+        pages.selected = tabs.selected;
+      });
     </script>
   </body>
 </html>
