@@ -94,7 +94,7 @@
   
       </core-toolbar>
   
-      <core-pages selected="{{selected}}" id="core-pages">
+      <core-pages selected="{{selected}}" selected="0" id="core-pages">
         <div id="home">
           <h2 horizontal center-justified>Roberto</h2>
           <p>Roberto is web developer, but enthusiast of Robotics.</p>
@@ -111,13 +111,13 @@
     </core-header-panel>
   
     <script>
-      var tabs = document.querySelector('paper-tabs');
+      /*var tabs = document.querySelector('paper-tabs');
       var pages = document.querySelector('core-pages');
       
       tabs.addEventListener('core-select',function(){
         console.log(tabs.selected);
         pages.selected = tabs.selected;
-      });
+      });*/
     </script>
   </body>
 </html>
