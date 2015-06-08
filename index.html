@@ -86,7 +86,7 @@
 
         <paper-icon-button id="morebutton" icon="more-vert"></paper-icon-button>
   
-        <paper-tabs id="tabs" selected="{{selected}}" class="bottom fit" self-end>
+        <paper-tabs id="tabs" selected="0" class="bottom fit" self-end>
           <paper-tab name="home">Home</paper-tab>
           <paper-tab name="whoami">WHOAMI</paper-tab>
           <!-- paper-tab name="contact">Contact</paper-tab -->
@@ -94,7 +94,7 @@
   
       </core-toolbar>
   
-      <core-pages selected="{{selected}}" selected="0" id="core-pages">
+      <core-pages selected="{{&.paper-tab.selected}}" id="core-pages">
         <div id="home">
           <h2 horizontal center-justified>Roberto</h2>
           <p>Roberto is web developer, but enthusiast of Robotics.</p>
