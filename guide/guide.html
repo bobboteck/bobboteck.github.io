@@ -54,7 +54,7 @@ function httpGet(theUrl)
 
     $(document).ready(function() {
         //console.log("document loaded");
-        var text = httpGet('https://github.com/bobboteck/bobboteck.github.io/guide/pine64.md');
+        var text = httpGet('https://raw.githubusercontent.com/bobboteck/bobboteck.github.io/master/guide/pine64.md');
         converter = new showdown.Converter();
         html = converter.makeHtml(text);
 
