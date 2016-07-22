@@ -69,6 +69,11 @@ Al riavvio questa volta non vedrete il propt di login in formato testo, ma la fi
 
 ##Software aggiuntivi
 
+###Nano
+```
+sudo apt-get install nano
+```
+
 ###Python
 ```
 ubuntu@pine64:~$ apt-cache search python | egrep "^python2.[0-9] " --color
