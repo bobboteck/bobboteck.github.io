@@ -1,3 +1,6 @@
+Installazioni da fare dopo la creazione di una VM Linux su Azure per potersi connettere in RDP (xrdp) con desktop Mate.
+
+```
 sudo apt-get update
 sudo apt-add-repository ppa:ubuntu-mate-dev/ppa
 sudo apt-add-repository ppa:ubuntu-mate-dev/xenial-mate
@@ -13,3 +16,4 @@ sudo xrdp-genkeymap km-0409.ini
 }
 
 Connettersi
+```
