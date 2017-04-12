@@ -1,4 +1,8 @@
+Abilitare la regola per la porta 3389
+
 Installazioni da fare dopo la creazione di una VM Linux su Azure per potersi connettere in RDP (xrdp) con desktop Mate.
+
+
 
 ```
 sudo apt-get update
@@ -16,4 +20,13 @@ sudo xrdp-genkeymap km-0409.ini
 }
 
 Connettersi
+```
+
+
+Per installare il DE classico di Ubuntu
+```
+sudo apt-get update
+sudo apt-get install ubuntu-desktop
+sudo apt-get install xrdp
+
 ```
