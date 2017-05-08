@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Roberto D'Amico - Bobboteck - IW0GTF">
+        <link rel="canonical" href="http://bobboteck.github.io/pine64/pine64/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Installazione - Bobboteck's Guide</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+	
+	<script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-', 'bobboteck.github.io');
+            ga('send', 'pageview');
+        </script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">Bobboteck's Guide</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pine 64 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="./">Cos'è?</a>
+</li>
+                            
+<li class="active">
+    <a href="./">Installazione</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="./">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="prev" >
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/bobboteck/bobboteck.github.io">
+                                <i class="fa fa-github"></i>GitHub
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#appunti-installazione-e-configurazione-pine64">Appunti Installazione e configurazione PINE64</a></li>
+            <li><a href="#cose-la-pine64">Cos'è la PINE64</a></li>
+            <li><a href="#prima-di-cominciare">Prima di cominciare</a></li>
+            <li><a href="#la-iso">La ISO</a></li>
+            <li><a href="#il-primo-boot">Il primo boot</a></li>
+            <li><a href="#installare-e-configurare-il-desktop-environment">Installare e configurare il Desktop Environment</a></li>
+            <li><a href="#software-aggiuntivi">Software aggiuntivi</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="appunti-installazione-e-configurazione-pine64">Appunti Installazione e configurazione PINE64</h1>
+<h2 id="cose-la-pine64">Cos'è la PINE64</h2>
+<p>...</p>
+<h2 id="prima-di-cominciare">Prima di cominciare</h2>
+<p>Il case ...
+L'alimentatore ...
+La microSD ...
+Per completare cavo di rete, tastiera e mouse</p>
+<h2 id="la-iso">La ISO</h2>
+<p>Per cominciare serve scaricare la ISO da montare sulla microSD, faccio una piccola premessa, ad ora nel momento in cui scrivo non c'è una distribzione ufficiale per la PINE64, quelle che sono disponibili sono realizzate da utenti che tulizzano la scheda, in particolare la distribuzione di ubuntu è realizzata da "longsleep". Detto questo aggiungo che io non ho utilizzato la ISO riportata sul wiki ufficiale, ma direttamente una di quelle messe a disposizione da longsleep sul sito [https://www.stdin.xyz/downloads/people/longsleep/pine64-images/ubuntu/]. Al momento in cui scrivo è disponbile una versione del 16 luglio 2016, ma io ho utilizzato la versione del 7 maggio 2016, probabilmente prenderò una seconda SD per testare questa nuova versione in futuro.
+Passiamo alla parte più importante, portare la ISO sulla microSD, io l'ho fatto dal mio PC con ubuntu ed è stato semplicissimo basta collegare la microSD al PC, poi fare doppio click sul file scaricato (xenial-pine64-bspkernel-20160507-1.img.xz) ed in automatico si aprirà una finestra che ci chiede dove voglio ripristinare l'immagine, basta selezionare la SD (bisogna fare attenzione solo qui a cosa selezioniamo) e attendere che l'operazione sia completata. Altermine smontare la SD ed il gioco è fatto. Se non avete un PC con linux sappiate che un mio amico ha fatto la setessa operazione usando la Live di Ubuntu.</p>
+<h2 id="il-primo-boot">Il primo boot</h2>
+<p>Prima di collegare l'alimentazione alla scheda, inserite la microSD nell'apposito connettore, collegate il cavo di rete (io non ho il modulo WiFi), il cavo HDMI e la tastiera, il mouse al momento non serve perché la ISO non contiene tutta la parte relativa al server grafico, che potremo installare successivamente, ora collegate l'alimentatore prima alla presa di rete e poi alla PINE64.
+Ricordatevi di selezionare sul televisore la giusta porta HDMI, ho detto televisore non a caso, perché su alcuni monitor non funziona corretamente in quanto usano internamente un adattore HDMI che al momento crea problemi, io non ho indagato ulteriormente su questo tema se scopro qualcosa di più aggiornerò l'articolo. Ora se tutte le componenti sono giuste e se tutti i collegamenti sono fatti bene, dovreste già vedere sullo schermo del testo che scorre. Potreste anche notare che il testo è in parte tagliato sui bordi dello schermo (questo potete notarlo se non siete al primo boot di un linux), bene nessun problema, provate ad armeggiare con il telecomando del televisore, esistono delle funzionalità di zoom o adattamento dell'immagine ed alcuni televisori scelgono in autonomia cosa è meglio per noi, anche se non sempre lo è. Per cercare di spiegare meglio questo fenomeno, ricordo che avevo un televisore che permetteva di selezione diversi formati di visualizzazione 4:3, 16:9, wide, senza barre (quelle nere tipiche dei film), quest'ultima in particolare è vero che non faceva vedere le barre nere sopra e sotto l'immagine, ma è anche vero che per adattarla tagliava un po' di immagine ai lati. E' la stessa cosa che accade con la PINE64, io ad esempio sul TV che ho usato ho impostato la modalità THX è si vede correttamente. Tornando al boot, ad un certo punto potrebbe sembrare che sia tutto fermo e potreste interprete in modo non corretto i massaggi a video (al mio primo tentativo non vedevo tutto il il testo e l'ultima cosa che leggevo era un errore, quindi ho spento pensando che non andava), aspettate con molta calma il primo boot è "mostruosamente lento". Quando sarà completato lo capirete perché vi chiederà di inserire la Login e successivamente la Password, dopo di che sarete collegati al prompt di Ubuntu installato sulla PINE, e potete cominciare a dare i primi comandi da tastiera.</p>
+<h2 id="installare-e-configurare-il-desktop-environment">Installare e configurare il Desktop Environment</h2>
+<p>A qualcuno potrebbe bastare il prompt per lavorare con Linux, senza appesantire il sistema con l'interfaccia grafica, visto l'utilizzo che ne voglio fare anche per me poteva andar bene, ma volevo provare la scheda in tutto le sue funzionalità quindi vediamo come installare il Desktop Environment.
+Io ho seguito questa guida [https://www.pine64.pro/desktop-environment-on-ubuntu/] che è fatta molto bene, ne riporto per semplicità i comandi eseguiti:</p>
+<pre><code>sudo -i
+apt-get upgrade
+apt-get upgrade
+apt-get install dialog tasksel
+</code></pre>
+
+<p>Eseguendo il primo comando viene riechiesta la password dell'utente root, in modo che tutti i comandi a seguire siano eseguiti con le sue credenziali. Per chi non fosse addentrato ai comandi da terminale di Linu, con le altre righe si aggiorna il sistema e poi si installa la utility tasksel, che verrà usata per installare il desktop environment. Avviamo quindi questa utility con il comando</p>
+<pre><code>tasksel
+</code></pre>
+
+<p>Si aprirà un'iterfaccia "grafica" nel terminale in cui si può sceglire cosa installare, al momento i DE supportati sono solo MATE e XFCE, a voi la scelta se avete preferenze, io ho optato per MATE, quindi ho selezionato nell'interfaccia "Ubuntu MATE minimal installation" e dato OK. Tutto il processo dura un'ora o più, i tempi dipendono dalla bontà della microSD e della rete che state utilizzando, quindi avviate il processo e dedicatevi ad altro. Consiglio, se possibile, di eseguire queste operazioni direttamente dalla scheda e non collegati in SSH, visti i tempi di esecuzione potrebbero verificarsi problemi di qualsiasi tipo e perdere la connessione senza sapere a che punto sia arrivata l'installazione o se si sono verificati problemi.</p>
+<p>Terminata questa installazione, possiamo eseguire i comandi riportati nello step 3 della pagina indicata in precedenza, per l'installazione di alcune librerie e la creazione del file xorg.conf. Personalmente non ho controllato se questo file esisteva già prima di eseguire i comandi, cercherò di ricordarmene quando farò una nuova SD, comunque garantisco che così funziona se scrivete correttamente tutti i comandi. La prima riga serve ad installare le librerie aggiuntive:</p>
+<pre><code>apt-get install libump libvdpau-sunxi1 libcedrus1 sunxi-disp-tool xserver-xorg-video-fbturbo
+</code></pre>
+
+<p>Le altre a creare il file</p>
+<pre><code>echo 'Section &quot;Device&quot;' &gt; /etc/X11/xorg.conf
+echo 'Identifier &quot;Allwinner A10/A13 FBDEV&quot;' &gt;&gt; /etc/X11/xorg.conf
+echo 'Driver &quot;fbturbo&quot;' &gt;&gt; /etc/X11/xorg.conf
+echo 'Option &quot;fbdev&quot; &quot;/dev/fb0&quot;' &gt;&gt; /etc/X11/xorg.conf
+echo 'Option &quot;SwapbuffersWait&quot; &quot;true&quot;' &gt;&gt; /etc/X11/xorg.conf
+echo 'EndSection' &gt;&gt; /etc/X11/xorg.conf
+</code></pre>
+
+<p>Al termine di questi comandi potete eseguire anche:</p>
+<pre><code>cat /etc/X11/xorg.conf
+</code></pre>
+
+<p>per verificare che il file sia stato scritto correttamente, se tutto è ok si può effettuare un riavvio, come? Semplice basta digitare:</p>
+<pre><code>reboot
+</code></pre>
+
+<p>Al riavvio questa volta non vedrete il propt di login in formato testo, ma la finestra per inserire le credenziali del Desktop Environment.</p>
+<h2 id="software-aggiuntivi">Software aggiuntivi</h2>
+<h3 id="nano">Nano</h3>
+<pre><code>sudo apt-get install nano
+</code></pre>
+
+<h3 id="python">Python</h3>
+<pre><code>ubuntu@pine64:~$ apt-cache search python | egrep &quot;^python2.[0-9] &quot; --color
+python2.7 - Interactive high-level object-oriented language (version 2.7)
+ubuntu@pine64:~$ sudo apt-get install python2.7
+</code></pre>
+
+<h3 id="nodejs">NodeJS</h3>
+<pre><code>curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+sudo apt-get install -y nodejs
+</code></pre>
+
+<h3 id="git">Git</h3>
+<pre><code>sudo apt-get install git-all
+</code></pre>
+
+<h3 id="midori">Midori</h3>
+<pre><code>apt-get install midori
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
