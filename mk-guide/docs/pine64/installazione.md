@@ -1,14 +1,5 @@
 #Appunti Installazione e configurazione PINE64
 
-##Cos'è la PINE64
-...
-
-##Prima di cominciare
-Il case ...
-L'alimentatore ...
-La microSD ...
-Per completare cavo di rete, tastiera e mouse
-
 ##La ISO
 Per cominciare serve scaricare la ISO da montare sulla microSD, faccio una piccola premessa, ad ora nel momento in cui scrivo non c'è una distribzione ufficiale per la PINE64, quelle che sono disponibili sono realizzate da utenti che tulizzano la scheda, in particolare la distribuzione di ubuntu è realizzata da "longsleep". Detto questo aggiungo che io non ho utilizzato la ISO riportata sul wiki ufficiale, ma direttamente una di quelle messe a disposizione da longsleep sul sito [https://www.stdin.xyz/downloads/people/longsleep/pine64-images/ubuntu/]. Al momento in cui scrivo è disponbile una versione del 16 luglio 2016, ma io ho utilizzato la versione del 7 maggio 2016, probabilmente prenderò una seconda SD per testare questa nuova versione in futuro.
 Passiamo alla parte più importante, portare la ISO sulla microSD, io l'ho fatto dal mio PC con ubuntu ed è stato semplicissimo basta collegare la microSD al PC, poi fare doppio click sul file scaricato (xenial-pine64-bspkernel-20160507-1.img.xz) ed in automatico si aprirà una finestra che ci chiede dove voglio ripristinare l'immagine, basta selezionare la SD (bisogna fare attenzione solo qui a cosa selezioniamo) e attendere che l'operazione sia completata. Altermine smontare la SD ed il gioco è fatto. Se non avete un PC con linux sappiate che un mio amico ha fatto la setessa operazione usando la Live di Ubuntu.

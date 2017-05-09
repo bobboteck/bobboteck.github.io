@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Roberto D'Amico - Bobboteck - IW0GTF">
-        <link rel="canonical" href="http://bobboteck.github.io/pine64/pine64/">
+        <link rel="canonical" href="http://bobboteck.github.io/pine64/installazione/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
         <title>Installazione - Bobboteck's Guide</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
@@ -28,7 +28,7 @@
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-            ga('create', 'UA-', 'bobboteck.github.io');
+            ga('create', 'UA-98811481-1', 'bobboteck.github.io');
             ga('send', 'pageview');
         </script> 
     </head>
@@ -62,7 +62,7 @@
                         <ul class="dropdown-menu">
                             
 <li >
-    <a href="./">Cos'è?</a>
+    <a href="../cosae/">Cos'è?</a>
 </li>
                             
 <li class="active">
@@ -79,18 +79,13 @@
                     </a>
                 </li>
                     <li >
-                        <a rel="next" href="./">
+                        <a rel="next" href="../cosae/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li class="disabled">
                         <a rel="prev" >
                             Next <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/bobboteck/bobboteck.github.io">
-                                <i class="fa fa-github"></i>GitHub
                         </a>
                     </li>
             </ul>
@@ -102,8 +97,6 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#appunti-installazione-e-configurazione-pine64">Appunti Installazione e configurazione PINE64</a></li>
-            <li><a href="#cose-la-pine64">Cos'è la PINE64</a></li>
-            <li><a href="#prima-di-cominciare">Prima di cominciare</a></li>
             <li><a href="#la-iso">La ISO</a></li>
             <li><a href="#il-primo-boot">Il primo boot</a></li>
             <li><a href="#installare-e-configurare-il-desktop-environment">Installare e configurare il Desktop Environment</a></li>
@@ -113,13 +106,6 @@
                 <div class="col-md-9" role="main">
 
 <h1 id="appunti-installazione-e-configurazione-pine64">Appunti Installazione e configurazione PINE64</h1>
-<h2 id="cose-la-pine64">Cos'è la PINE64</h2>
-<p>...</p>
-<h2 id="prima-di-cominciare">Prima di cominciare</h2>
-<p>Il case ...
-L'alimentatore ...
-La microSD ...
-Per completare cavo di rete, tastiera e mouse</p>
 <h2 id="la-iso">La ISO</h2>
 <p>Per cominciare serve scaricare la ISO da montare sulla microSD, faccio una piccola premessa, ad ora nel momento in cui scrivo non c'è una distribzione ufficiale per la PINE64, quelle che sono disponibili sono realizzate da utenti che tulizzano la scheda, in particolare la distribuzione di ubuntu è realizzata da "longsleep". Detto questo aggiungo che io non ho utilizzato la ISO riportata sul wiki ufficiale, ma direttamente una di quelle messe a disposizione da longsleep sul sito [https://www.stdin.xyz/downloads/people/longsleep/pine64-images/ubuntu/]. Al momento in cui scrivo è disponbile una versione del 16 luglio 2016, ma io ho utilizzato la versione del 7 maggio 2016, probabilmente prenderò una seconda SD per testare questa nuova versione in futuro.
 Passiamo alla parte più importante, portare la ISO sulla microSD, io l'ho fatto dal mio PC con ubuntu ed è stato semplicissimo basta collegare la microSD al PC, poi fare doppio click sul file scaricato (xenial-pine64-bspkernel-20160507-1.img.xz) ed in automatico si aprirà una finestra che ci chiede dove voglio ripristinare l'immagine, basta selezionare la SD (bisogna fare attenzione solo qui a cosa selezioniamo) e attendere che l'operazione sia completata. Altermine smontare la SD ed il gioco è fatto. Se non avete un PC con linux sappiate che un mio amico ha fatto la setessa operazione usando la Live di Ubuntu.</p>

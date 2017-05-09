@@ -1,12 +1,11 @@
 site_name: Bobboteck's Guide
 site_url: http://bobboteck.github.io/
-repo_url: https://github.com/bobboteck/bobboteck.github.io
 site_description: In questa sezione del mio sito potete trovare una raccolta di Guide, scritte principalmente a mio uso e consumo, ma spero di fare cosa gradita anche ad altri condividendo le mie esperienze.
 site_author: Roberto D'Amico - Bobboteck - IW0GTF
-google_analytics: ['UA-', 'bobboteck.github.io']
+google_analytics: ['UA-98811481-1', 'bobboteck.github.io']
 site_dir: ../guide/
 pages:
     - Home: index.md
     - Pine 64:
-        - Cos'è? : pine64/pine64.md
-        - Installazione: pine64/pine64.md
+        - Cos'è? : pine64/cosae.md
+        - Installazione: pine64/installazione.md
