@@ -9,3 +9,5 @@ pages:
     - Pine 64:
         - Cos'è? : pine64/cosae.md
         - Installazione: pine64/installazione.md
+    - Linux:
+        - Xrdp : linux/configure-xrdp-azure.md

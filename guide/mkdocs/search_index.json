@@ -94,6 +94,11 @@
             "location": "/pine64/installazione/#midori", 
             "text": "apt-get install midori", 
             "title": "Midori"
+        }, 
+        {
+            "location": "/linux/configure-xrdp-azure/", 
+            "text": "Abilitare la regola per la porta 3389\n\n\nInstallazioni da fare dopo la creazione di una VM Linux su Azure per potersi connettere in RDP (xrdp) con desktop Mate.\n\n\nsudo apt-get update\nsudo apt-add-repository ppa:ubuntu-mate-dev/ppa\nsudo apt-add-repository ppa:ubuntu-mate-dev/xenial-mate\nsudo apt-get update\nsudo apt-get install --no-install-recommends ubuntu-mate-core ubuntu-mate-desktop\nsudo apt-get install xrdp\n[[http://c-nergy.be/blog/?p=8952]]\n{\nsudo sed -i.bak '/fi/a #xrdp multiple users configuration \\n mate-session \\n' /etc/xrdp/startwm.sh\nsetxkbmap -layout it\nsudo cp km-0409.ini km-0409.bak\nsudo xrdp-genkeymap km-0409.ini\n}\n\n\n\n\nConnettersi\n\n\nPer installare il DE classico di Ubuntu\n\n\nsudo apt-get update\nsudo apt-get install ubuntu-desktop\nsudo apt-get install xrdp", 
+            "title": "Xrdp"
         }
     ]
 }

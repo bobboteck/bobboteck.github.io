@@ -4,7 +4,7 @@ Installazioni da fare dopo la creazione di una VM Linux su Azure per potersi con
 
 
 
-```
+```bash
 sudo apt-get update
 sudo apt-add-repository ppa:ubuntu-mate-dev/ppa
 sudo apt-add-repository ppa:ubuntu-mate-dev/xenial-mate
@@ -18,15 +18,14 @@ setxkbmap -layout it
 sudo cp km-0409.ini km-0409.bak
 sudo xrdp-genkeymap km-0409.ini
 }
-
-Connettersi
 ```
+Connettersi
+
 
 
 Per installare il DE classico di Ubuntu
-```
+```bash
 sudo apt-get update
 sudo apt-get install ubuntu-desktop
 sudo apt-get install xrdp
-
 ```
