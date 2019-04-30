@@ -54,11 +54,6 @@ function easy_numpad_close()
 function easynum() {
     event.preventDefault();
 
-    navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
-    if (navigator.vibrate) {
-        navigator.vibrate(60);
-    }
-
     var easy_num_button = $(event.target);
     var easy_num_value = easy_num_button.text();
     $('#easy-numpad-output').append(easy_num_value);
