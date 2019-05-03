@@ -31,8 +31,9 @@ function show_easy_numpad(thisElement)
                     <td><a href="Cancel" class="cancel" id="cancel" onclick="easy_numpad_cancel()">Cancel</a></td>
                 </tr>
                 <tr>
-                    <td colspan="2" onclick="easynum(this)"><a href="0">0</a></td>
-                    <td onclick="easynum(this)"><a href=".">.</a></td>
+                    <td><a href="±" onclick="easynum(this)">±</a></td>
+					<td ><a href="0"onclick="easynum(this)">0</a></td>
+                    <td><a href="." onclick="easynum(this)">.</a></td>
                     <td><a href="Done" class="done" id="done" onclick="easy_numpad_done()">Done</a></td>
                 </tr>
             </table>
@@ -54,7 +55,26 @@ function easy_numpad_close()
 function easynum(thisElement)
 {
     event.preventDefault();
-    document.getElementById("easy-numpad-output").innerText += thisElement.innerText;
+    let buttonValue = "";
+
+    switch(thisElement.innerText)
+    {
+        case "±":
+            let currentValue = document.getElementById("easy-numpad-output").innerText;
+            if(currentValue.startsWith("-"))
+            {
+                document.getElementById("easy-numpad-output").innerText = currentValue.substring(1,currentValue.length);
+            }
+            else
+            {
+                document.getElementById("easy-numpad-output").innerText = "-" + currentValue;
+            }
+        break;
+
+        default:
+            document.getElementById("easy-numpad-output").innerText += thisElement.innerText;
+        break;
+    }
 }
 
 function easy_numpad_del()
