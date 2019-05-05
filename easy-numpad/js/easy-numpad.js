@@ -31,8 +31,9 @@ function show_easy_numpad(thisElement)
                     <td><a href="Cancel" class="cancel" id="cancel" onclick="easy_numpad_cancel()">Cancel</a></td>
                 </tr>
                 <tr>
-                    <td colspan="2" onclick="easynum(this)"><a href="0">0</a></td>
-                    <td onclick="easynum(this)"><a href=".">.</a></td>
+                    <td><a href="±" onclick="easynum(this)">±</a></td>
+					<td ><a href="0"onclick="easynum(this)">0</a></td>
+                    <td><a href="." onclick="easynum(this)">.</a></td>
                     <td><a href="Done" class="done" id="done" onclick="easy_numpad_done()">Done</a></td>
                 </tr>
             </table>
@@ -54,7 +55,48 @@ function easy_numpad_close()
 function easynum(thisElement)
 {
     event.preventDefault();
-    document.getElementById("easy-numpad-output").innerText += thisElement.innerText;
+
+    let currentValue = document.getElementById("easy-numpad-output").innerText;
+
+    switch(thisElement.innerText)
+    {
+        case "±":
+            if(currentValue.startsWith("-"))
+            {
+                document.getElementById("easy-numpad-output").innerText = currentValue.substring(1,currentValue.length);
+            }
+            else
+            {
+                document.getElementById("easy-numpad-output").innerText = "-" + currentValue;
+            }
+        break;
+        case ".":
+            if(currentValue.length === 0)
+            {
+                document.getElementById("easy-numpad-output").innerText = "0.";
+            }
+            else
+            {
+                if(currentValue.indexOf(".") < 0)
+                {
+                    document.getElementById("easy-numpad-output").innerText += ".";
+                }
+            }
+        break;
+        case "0":
+            if(currentValue.length === 0)
+            {
+                document.getElementById("easy-numpad-output").innerText = "0.";
+            }
+            else
+            {
+                document.getElementById("easy-numpad-output").innerText += thisElement.innerText;
+            }
+        break;
+        default:
+            document.getElementById("easy-numpad-output").innerText += thisElement.innerText;
+        break;
+    }
 }
 
 function easy_numpad_del()
@@ -81,6 +123,12 @@ function easy_numpad_done()
 {
     event.preventDefault();
     let easy_numpad_output_val = document.getElementById("easy-numpad-output").innerText;
-    document.getElementById(_outputID).value=easy_numpad_output_val;
+
+    if(easy_numpad_output_val.indexOf(".") === (easy_numpad_output_val.length - 1))
+    {
+        easy_numpad_output_val = easy_numpad_output_val.substring(0,easy_numpad_output_val.length - 1);
+    }
+
+    document.getElementById(_outputID).value = easy_numpad_output_val;
     easy_numpad_close();
 }
