@@ -48,7 +48,12 @@ function show_easy_numpad(thisElement)
     _outputID = thisElement.id;
     _minValue = document.getElementById(thisElement.id).getAttribute("min");
     _maxValue = document.getElementById(thisElement.id).getAttribute("max");
-    document.getElementById("easy-numpad-output").innerText = thisElement.value;
+    
+    let useDefault = document.getElementById(thisElement.id).getAttribute("data-easynumpad-use_default");
+    if(useDefault != "false")
+    {
+        document.getElementById("easy-numpad-output").innerText = thisElement.value;
+    }
 }
 
 function easy_numpad_close()
