@@ -83,8 +83,8 @@ var JoyStick = (function(container, parameters) {
 	var movedY=centerY;
 		
 	// Check if the device support the touch or not
-	var touchable = 'createTouch' in document;
-	if(touchable)
+	//var touchable = 'createTouch' in document;
+	if("ontouchstart" in document.documentElement)
 	{
 		canvas.addEventListener('touchstart', onTouchStart, false);
 		canvas.addEventListener('touchmove', onTouchMove, false);
