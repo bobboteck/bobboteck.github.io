@@ -153,7 +153,7 @@ var JoyStick = (function(container, parameters) {
 	{
 		// Prevent the browser from doing its default thing (scroll, zoom)
 		event.preventDefault();
-		if(pressed==1)
+		if(pressed==1 && event.targetTouches[0].target == canvas)
 		{
 			movedX=event.touches[0].pageX;
 			movedY=event.touches[0].pageY;
