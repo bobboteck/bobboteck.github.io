@@ -155,8 +155,8 @@ var JoyStick = (function(container, parameters) {
 		event.preventDefault();
 		if(pressed==1 && event.targetTouches[0].target == canvas)
 		{
-			movedX=event.touches[0].pageX;
-			movedY=event.touches[0].pageY;
+			movedX=event.targetTouches[0].pageX;
+			movedY=event.targetTouches[0].pageY;
 			// Manage offset
 			movedX-=canvas.offsetLeft;
 			movedY-=canvas.offsetTop;
