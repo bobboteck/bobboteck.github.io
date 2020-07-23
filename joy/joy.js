@@ -157,7 +157,7 @@ var JoyStick = (function(container, parameters)
 		pressed = 1;
 	}
 
-	function onTouchMove(event)
+	/*function onTouchMove(event)
 	{
 		// Prevent the browser from doing its default thing (scroll, zoom)
 		event.preventDefault();
@@ -182,7 +182,23 @@ var JoyStick = (function(container, parameters)
 			drawExternal();
 			drawInternal();
 		}
-	} 
+	}*/
+
+	function onTouchMove(event)
+	{
+	  // Prevent the browser from doing its default thing (scroll, zoom)
+	  event.preventDefault();
+	  if(pressed === 1 && event.targetTouches[0].target === canvas)
+	  {
+		movedX = event.targetTouches[0].offsetX;
+		movedY = event.targetTouches[0].offsetY;
+		// Delete canvas
+		context.clearRect(0, 0, canvas.width, canvas.height);
+		// Redraw object
+		drawExternal();
+		drawInternal();
+	  }
+	}
 
 	function onTouchEnd(event) 
 	{
@@ -209,6 +225,7 @@ var JoyStick = (function(container, parameters)
 		pressed = 1;
 	}
 
+/*
 	function onMouseMove(event) 
 	{
 		if(pressed === 1)
@@ -233,6 +250,21 @@ var JoyStick = (function(container, parameters)
 			drawInternal();
 		}
 	}
+*/
+
+function onMouseMove(event) 
+{
+  if(pressed === 1)
+  {
+	movedX = event.offsetX;
+	movedY = event.offsetY;
+	// Delete canvas
+	context.clearRect(0, 0, canvas.width, canvas.height);
+	// Redraw object
+	drawExternal();
+	drawInternal();
+  }
+}
 
 	function onMouseUp(event) 
 	{
