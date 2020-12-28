@@ -12,8 +12,8 @@ repository: "rnanosaur/rnanosaur.github.io"
 email: roberto.damico@officinerobotiche.it
 description: >- # this means to ignore newlines until "baseurl:"
   Presentation Web Site of Roberto D'Amico - Bobboteck - IW0GTF
-twitter_username: @bobboteck
-github_username: @bobboteck
+twitter_username: bobboteck
+github_username: bobboteck
 minimal_mistakes_skin: default
 search: true
 
