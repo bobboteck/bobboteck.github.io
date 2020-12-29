@@ -1,7 +1,8 @@
 ---
 title: "Smoke"
 excerpt: "Is the first Robot I build."
-header: /assets/images/robots/smoke.jpg
+header: 
+    teaser: /assets/images/robots/smoke.jpg
 permalink: /robots/smoke
 toc: true
 toc_label: "Table of Contents"
