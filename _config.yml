@@ -7,11 +7,11 @@ title: Bobboteck
 
 subtitle: "My personal web site"
 name: "Roberto D'Amico"
-repository: "rnanosaur/rnanosaur.github.io"
+repository: "bobboteck/bobboteck.github.io"
 
 email: roberto.damico@officinerobotiche.it
 description: >- # this means to ignore newlines until "baseurl:"
-  Presentation Web Site of Roberto D'Amico - Bobboteck - IW0GTF
+  Presentation Web Site of Roberto D'Amico - Bobboteck - (IW0GTF)
 twitter_username: bobboteck
 github_username: bobboteck
 minimal_mistakes_skin: default
@@ -54,7 +54,7 @@ plugins:
 
 author:
   name   : "Roberto D'Amico"
-  avatar : "/assets/images/roberto-damico-bobboteck.jpg"
+  avatar : "/assets/images/bio-photo.jpg"
   bio    : "Analyst and software developer, Robotics enthusiastic, Co-Fouder of Officine Robotiche association."
   links:
     - label: "GitHub"
@@ -63,8 +63,11 @@ author:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/bobboteck"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube-play"
+      url: "https://www.youtube.com/c/RobertoDAmico"
     - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedIn-square"
+      icon: "fab fa-fw fa-linkedin-square"
       url: "https://www.linkedin.com/in/r-damico"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
@@ -82,8 +85,11 @@ footer:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/bobboteck"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube-play"
+      url: "https://www.youtube.com/c/RobertoDAmico"
     - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedIn-square"
+      icon: "fab fa-fw fa-linkedin-square"
       url: "https://www.linkedin.com/in/r-damico"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
