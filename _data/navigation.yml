@@ -1,6 +1,6 @@
 main:
   - title: "Robots"
-    url: /robot/
+    url: /robots/
   - title: "Projects"
     url: /project/
   - title: "Tutorials"

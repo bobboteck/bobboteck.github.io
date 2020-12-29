@@ -133,12 +133,14 @@ defaults:
   # _robots
   - scope:
       path: "_robots"
-      type: robot
+      type: robots
     values:
       layout: single
       author_profile: true
       share: true
       read_time: true
+      sidebar:
+        nav: "robots"
   # _projects
   - scope:
       path: "_projects"
