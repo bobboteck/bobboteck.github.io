@@ -101,7 +101,7 @@ footer:
 teaser: /assets/images/intro.jpg
 
 collections:
-  robot:
+  robots:
     output: true
     permalink: /:collection/:path/
   project:

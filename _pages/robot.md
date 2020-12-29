@@ -6,4 +6,4 @@ entries_layout: grid
 classes: wide
 ---
 
-See all my Robots, not only my own project, but all Robots I have build
+See all my Robots, not only my own projects, but all Robots I have build and worked on.
