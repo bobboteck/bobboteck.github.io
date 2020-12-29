@@ -1,26 +1,19 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: MM
-email:
+title: Bobboteck
+
+subtitle: "My personal web site"
+name: "Roberto D'Amico"
+repository: "rnanosaur/rnanosaur.github.io"
+
+email: roberto.damico@officinerobotiche.it
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: username
-github_username: username
+  Presentation Web Site of Roberto D'Amico - Bobboteck - IW0GTF
+twitter_username: bobboteck
+github_username: bobboteck
 minimal_mistakes_skin: default
 search: true
 
@@ -39,7 +32,9 @@ include:
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
+exclude:
+  - README.md
+  - LICENSE
 #   - Gemfile
 #   - Gemfile.lock
 #   - node_modules
@@ -58,34 +53,57 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  name   : "Roberto D'Amico"
+  avatar : "/assets/images/roberto-damico-bobboteck.jpg"
+  bio    : "Analyst and software developer, Robotics enthusiastic, Co-Fouder of Officine Robotiche association."
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/bobboteck"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/bobboteck"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedIn-square"
+      url: "https://www.linkedin.com/in/r-damico"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://instagram.com/bobboteck"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:roberto.damico@officinerobotiche.it"
 
+# Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/bobboteck"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/bobboteck"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedIn-square"
+      url: "https://www.linkedin.com/in/r-damico"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://instagram.com/bobboteck"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:roberto.damico@officinerobotiche.it"
+
+teaser: /assets/images/intro.jpg
+
+collections:
+  robot:
+    output: true
+    permalink: /:collection/:path/
+  project:
+    output: true
+    permalink: /:collection/:path/
+  tutorial:
+    output: true
+    permalink: /:collection/:path/
 
 defaults:
   # _posts
@@ -106,6 +124,26 @@ defaults:
     values:
       layout: single
       author_profile: true
+  # _robots
+  - scope:
+      path: "_robots"
+      type: robot
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      read_time: true
+  # _tutorial
+  - scope:
+      path: "_tutorial"
+      type: tutorial
+    values:
+      layout: single
+      author_profile: false
+      share: true
+      read_time: true
+      sidebar:
+        nav: "tutorial"
 
 category_archive:
   type: liquid
@@ -113,3 +151,9 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+analytics:
+  provider: "google"
+  google:
+    tracking_id: "UA-98811481-1"
+    anonymize_ip: false # default
