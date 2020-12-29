@@ -139,6 +139,15 @@ defaults:
       author_profile: true
       share: true
       read_time: true
+  # _projects
+  - scope:
+      path: "_projects"
+      type: project
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      read_time: true
   # _tutorial
   - scope:
       path: "_tutorial"
