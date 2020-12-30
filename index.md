@@ -9,27 +9,27 @@ header:
   - label: "About me"
     url: "/about/"
 intro: 
-  - excerpt: 'Robotics and more ...'
+  - excerpt: 'Relevant projects and other information'
 feature_row:
-  - image_path: /assets/images/x.jpg
+  - image_path: /assets/projects/playbox/playbox.png
     alt: "plaYbox"
     title: "plaYbox"
-    excerpt: "plaYbox ..."
-    #url: "https://"
+    excerpt: "plaYbox is a wooden box game for children"
+    url: "https://github.com/bobboteck/plaYbox"
     btn_label: "Read More"
     btn_class: "btn--primary"
-  - image_path: /assets/images/x.jpg
+  - image_path: /assets/projects/joystick/joystick.jpg
     alt: "JoyStick"
     title: "JoyStick"
     excerpt: "HTML5 Canvas and Vanilla JavaScript JoyStick"
-    #url: "https://"
+    url: "https://github.com/bobboteck/JoyStick"
     btn_label: "Read More"
     btn_class: "btn--primary"
-  - image_path: /assets/images/x.gif
-    alt: "bo"
-    title: "bo"
-    excerpt: "bo bo bo "
-    #url: "...."
+  - image_path: /assets/images/ORlogoTrasparente-sito-bigger.png
+    alt: "Officine Robotiche"
+    title: "Officine Robotiche"
+    excerpt: "OR is our association, read more about us"
+    url: "https://www.officinerobotiche.it"
     btn_label: "Read More"
     btn_class: "btn--primary"
 ---

@@ -1,6 +1,6 @@
 ---
-title: "Penguin Bot Biped Robot Kit"
-excerpt: "A commercial Robot for my daughter"
+title: "Penguin Bot"
+excerpt: "A commercial biped Robot Kit for my daughter"
 header: 
     teaser: /assets/robots/penguin/penguin.jpg
 permalink: /robots/penguin

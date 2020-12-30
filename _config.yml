@@ -5,13 +5,13 @@
 # in the templates via {{ site.myvariable }}.
 title: Bobboteck
 
-subtitle: "My personal web site"
+subtitle: "Roberto D'Amico personal web site"
 name: "Roberto D'Amico"
 repository: "bobboteck/bobboteck.github.io"
 
 email: roberto.damico@officinerobotiche.it
 description: >- # this means to ignore newlines until "baseurl:"
-  Presentation Web Site of Roberto D'Amico - Bobboteck - (IW0GTF)
+  Personal Web Site of Roberto D'Amico - Bobboteck - (IW0GTF)
 twitter_username: bobboteck
 github_username: bobboteck
 minimal_mistakes_skin: default
@@ -24,7 +24,7 @@ remote_theme: mmistakes/minimal-mistakes
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Europe/Rome
 
 include:
   - _pages
