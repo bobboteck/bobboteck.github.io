@@ -24,7 +24,7 @@ The purpose of the competition is that the Robot, in a completely autonomous way
 For this reason, at first we thought of building three robots, the regulation does not place limits on the number of robots, the important thing is that all of them fit together in a check box measuring 20x20x30cm, but then for reasons of time the choice is relapse on the single piece, this led to some structural and mechanical problems, especially pitch.
 But let's get to the name, one of the members of the TEAM proposed to call them with the names of 3 characters from a famous street fighting game on the computer, then since we switched to only one robot we changed the name giving it that of a character from the same game that he had all the powers of the other 3, so **[Smoke](https://en.wikipedia.org/wiki/Smoke_(Mortal_Kombat))** was chosen.
 
-![Smoke](/assets/robots/smoke/smoke.jpg)
+![Smoke](/assets/robots/smoke/smoke.jpg){: .align-center}
 
 ## The first race
 
@@ -35,5 +35,7 @@ Back at school after a brief investigation on the Robot we found that the power 
 
 The maturity arrived and made us make a good impression, we continued to participate in competitions and events where we took the Robot, but the group of 5 people began to decrease, until it was just me and my friend Andrea.
 The first races weren't the most exciting, but as the years went by the Robot improved, and on his tenth birthday in the school that gave him birth he won the first cup as first classified, from then on others followed, in the he year 2007 in the 4 races in which he participated he collected two second places and two first places, not bad for a toy that is beginning to be of a certain age, will it be the experience he has gained on the racing fields in so many years?
+
+### Video
 
 {% include video id="z78HE9BUd9s" provider="youtube" %}
