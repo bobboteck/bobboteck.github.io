@@ -24,7 +24,7 @@ The purpose of the competition is that the Robot, in a completely autonomous way
 For this reason, at first we thought of building three robots, the regulation does not place limits on the number of robots, the important thing is that all of them fit together in a check box measuring 20x20x30cm, but then for reasons of time the choice is relapse on the single piece, this led to some structural and mechanical problems, especially pitch.
 But let's get to the name, one of the members of the TEAM proposed to call them with the names of 3 characters from a famous street fighting game on the computer, then since we switched to only one robot we changed the name giving it that of a character from the same game that he had all the powers of the other 3, so **[Smoke](https://en.wikipedia.org/wiki/Smoke_(Mortal_Kombat))** was chosen.
 
-{% include figure image_path="/assets/robots/smoke/smoke.jpg" alt="Smoke the Robot Explorer" caption="Smoke the Robot Explorer" .align-center %}
+![Smoke](/assets/robots/smoke/smoke.jpg)
 
 ## The first race
 
