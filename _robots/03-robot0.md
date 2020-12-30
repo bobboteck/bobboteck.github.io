@@ -2,7 +2,7 @@
 title: "Robot Zero"
 excerpt: "..."
 header: 
-    teaser: /assets/robots/robot0/robot0.jpg
+    teaser: /assets/images/no-picture-teaser.png #/assets/robots/robot0/robot0.jpg
 permalink: /robots/robot0
 toc: true
 toc_label: "Table of Contents"

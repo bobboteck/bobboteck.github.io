@@ -2,7 +2,7 @@
 title: "FIRE"
 excerpt: "After the Smoke comes the FIRE"
 header: 
-    teaser: /assets/robots/fire/fire.jpg
+    teaser: /assets/images/no-picture-teaser.png #/assets/robots/fire/fire.jpg
 permalink: /robots/fire
 toc: true
 toc_label: "Table of Contents"

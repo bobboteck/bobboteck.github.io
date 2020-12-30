@@ -2,7 +2,7 @@
 title: "Arduline"
 excerpt: "A very simple Line Follower based on Arduino"
 header: 
-    teaser: /assets/robots/arduline/arduline.jpg
+    teaser: /assets/images/no-picture-teaser.png #/assets/robots/arduline/arduline.jpg
 permalink: /robots/arduline
 toc: true
 toc_label: "Table of Contents"

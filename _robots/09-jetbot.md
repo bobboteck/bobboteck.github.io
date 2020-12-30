@@ -2,7 +2,7 @@
 title: "JetBot"
 excerpt: "Based on NVIDIA Jetson Nano, I build it for the Maker Faire Rome"
 header: 
-    teaser: /assets/robots/jetbot/jetbot.jpg
+    teaser: /assets/images/no-picture-teaser.png #/assets/robots/jetbot/jetbot.jpg
 permalink: /robots/jetbot
 toc: true
 toc_label: "Table of Contents"

@@ -2,7 +2,7 @@
 title: "AR.L.O.K."
 excerpt: "..."
 header: 
-    teaser: /assets/robots/arlok/arlok.jpg
+    teaser: /assets/images/no-picture-teaser.png #/assets/robots/arlok/arlok.jpg
 permalink: /robots/arlok
 toc: true
 toc_label: "Table of Contents"

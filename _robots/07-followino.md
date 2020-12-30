@@ -2,7 +2,7 @@
 title: "Followino"
 excerpt: "A new try to create a very simple Line Follower"
 header: 
-    teaser: /assets/robots/followino/followino.jpg
+    teaser: /assets/images/no-picture-teaser.png #/assets/robots/followino/followino.jpg
 permalink: /robots/followino
 toc: true
 toc_label: "Table of Contents"
