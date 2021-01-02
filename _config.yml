@@ -17,6 +17,9 @@ github_username: bobboteck
 minimal_mistakes_skin: default
 search: true
 
+after_footer_scripts :
+  - /assets/js/cookie-consent.js
+
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
