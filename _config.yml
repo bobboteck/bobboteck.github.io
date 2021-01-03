@@ -152,6 +152,8 @@ defaults:
       author_profile: true
       share: true
       read_time: true
+      sidebar:
+        nav: "robots"
   # _tutorial
   - scope:
       path: "_tutorial"
