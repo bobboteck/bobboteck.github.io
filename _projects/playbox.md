@@ -1,0 +1,72 @@
+---
+title: "plaYbox"
+excerpt: "Is a wooden box, with buttons and LEDs, game for children"
+header: 
+    teaser: /assets/projects/playbox/playbox-teaser.png
+permalink: /projects/playbox/
+toc: true
+toc_label: "Table of Contents"
+toc_icon: "cog"
+toc_sticky: true
+
+gallery:
+  - url: /assets/projects/playbox/box-gallery-01.jpg
+    image_path: /assets/projects/playbox/box-gallery-01-th.jpg
+    alt: "Holes in buttons side of the box"
+    title: "Holes in buttons side of the box"
+  - url: /assets/projects/playbox/box-gallery-02.jpg
+    image_path: /assets/projects/playbox/box-gallery-02-th.jpg
+    alt: "Hole in the handle sideo of the box for power switch"
+    title: "Hole in the handle sideo of the box for power switch"
+  - url: /assets/projects/playbox/box-gallery-03.jpg
+    image_path: /assets/projects/playbox/box-gallery-03-th.jpg
+    alt: "Holes for the internal boards, on which to mount Arduino, the power bank and the holes for the passage of cables"
+    title: "Holes for the internal boards, on which to mount Arduino, the power bank and the holes for the passage of cables"
+  - url: /assets/projects/playbox/box-gallery-04.jpg
+    image_path: /assets/projects/playbox/box-gallery-04-th.jpg
+    alt: "Arduino uno and the power bank positioned"
+    title: "Arduino uno and the power bank positioned"
+  - url: /assets/projects/playbox/box-gallery-05.jpg
+    image_path: /assets/projects/playbox/box-gallery-05-th.jpg
+    alt: "The wooden board placed into the box"
+    title: "The wooden board placed into the box"
+  - url: /assets/projects/playbox/box-gallery-06.jpg
+    image_path: /assets/projects/playbox/box-gallery-06-th.jpg
+    alt: "The cables connected on Arduino Uno Shield"
+    title: "The cables connected on Arduino Uno Shield"
+  - url: /assets/projects/playbox/box-gallery-07.jpg
+    image_path: /assets/projects/playbox/box-gallery-07-th.jpg
+    alt: "Internal view of assembled box"
+    title: "Internal view of assembled box"
+---
+
+The plaYbox is a recycled wooden box, with five **Buttons** equipped with **Leds**, used as a game for children.
+I had this idea, when casually surfing the internet I came across these big buttons, and having already seen my daughter's (less than 2 years old) interest in playing with the bright (but dangerous) switches present in the house, I thought to use them to build a game.
+
+![plaYbox](assets/projects/playbox/plaYbox.png)
+
+The project was based on **Arduino Uno**, I use a prototipe shield to connect all buttons and leds. The complete code is available on [GitHib repositry](https://github.com/bobboteck/plaYbox), if you like it remember to put a **Star**.
+
+## The wooden box
+
+I find in the home an old wooden box, it was a gift I had received, originally it contained two bottles of beer and a glass, the dimensions were perfect and even the internal tablets immediately seemed to help me to support the necessary electronics. The dimension are 25x25x12 cm.
+
+First I drew the diagonals by joining the vertices of the square on the smooth surface, in this way I found the center of the box to be able to make the first hole.
+The other four holes I made about 12 cm from the center, all the holes are 25mm.
+Then I drilled an extra hole for a push switch to use to turn the game on and off.
+
+{% include gallery caption="Gallery of wooden box building" %}
+
+## The circuit
+
+...
+
+## The code
+
+...
+
+## Some video
+
+In this video you can see the first test of buttons and leds.
+
+{% include video id="BOs1SQlVit8" provider="youtube" %}
