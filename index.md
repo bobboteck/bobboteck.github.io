@@ -15,7 +15,7 @@ feature_row:
     alt: "plaYbox"
     title: "plaYbox"
     excerpt: "plaYbox is a wooden box game for children"
-    url: "/projects/playbox/"
+    url: "/projects/playbox"
     btn_label: "Read More"
     btn_class: "btn--primary"
   - image_path: /assets/projects/joystick/joystick-teaser.png
