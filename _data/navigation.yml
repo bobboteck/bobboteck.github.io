@@ -4,7 +4,7 @@ main:
   - title: "Robots"
     url: /robots/
   - title: "Projects"
-    url: /project/
+    url: /projects/
   - title: "Tutorials"
     url: /tutorial/
   - title: "Categories"

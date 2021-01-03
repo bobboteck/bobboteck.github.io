@@ -3,7 +3,7 @@ title: "plaYbox"
 excerpt: "Is a wooden box, with buttons and LEDs, game for children"
 header: 
     teaser: /assets/projects/playbox/playbox-teaser.png
-permalink: /projects/playbox/
+permalink: /projects/playbox
 toc: true
 toc_label: "Table of Contents"
 toc_icon: "cog"
