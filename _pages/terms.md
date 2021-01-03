@@ -1,4 +1,7 @@
-# Terms and Privacy Policy
+---
+permalink: /terms/
+title: "Terms and Privacy Policy"
+---
 
 ## Privacy Policy
 
