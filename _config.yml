@@ -153,7 +153,7 @@ defaults:
       share: true
       read_time: true
       sidebar:
-        nav: "robots"
+        nav: "projects"
   # _tutorial
   - scope:
       path: "_tutorial"
