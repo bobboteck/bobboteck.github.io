@@ -106,7 +106,7 @@ collections:
   robots:
     output: true
     permalink: /:collection/:path/
-  project:
+  projects:
     output: true
     permalink: /:collection/:path/
   tutorial:
