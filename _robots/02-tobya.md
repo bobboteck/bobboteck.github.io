@@ -2,7 +2,7 @@
 title: "TOBYA"
 excerpt: "Not my Robot but I work on it, and use it as mascot"
 header: 
-    teaser: /assets/robots/tobya/tobya.jpg
+    teaser: /assets/robots/tobya/tobya-teaser.png
 permalink: /robots/tobya
 toc: true
 toc_label: "Table of Contents"
