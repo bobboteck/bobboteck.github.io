@@ -2,13 +2,24 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="description" content="Progressive Web Application for serial communication with your own Bluetooth Low Energy (Smart) devices">
+        <meta name="description" content="SERPICO Web Bluetooth Console">
         <title>SERPICO Web Bluetooth Console</title>
     </head>
     <body>
-        <button id="connect" type="button" aria-label="Connect">Connetti</button>
+        <input id="service" type="text" value="0xFFE0">
+        <input id="characteristic" type="text" value="0xFFE1">
 
+        <button id="connect" type="button" aria-label="Connect">Connetti</button>
         <button id="disconnect" type="button" aria-label="Disconnect">Disconnetti</button>
+
+        <div>
+            <div>
+                <label>Distanza ostacolo (cm): </label><label id="usValue"></label>
+            </div>
+            <div>
+                <label>Duty Cycles           : </label><label id="dcValue"></label>
+            </div>
+        </div>
 
         <script src="js/main.js"></script>
     </body>
