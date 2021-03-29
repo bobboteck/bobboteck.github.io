@@ -1,8 +1,71 @@
 const connectButton = document.getElementById('connect');
 const disconnectButton = document.getElementById('disconnect');
-const labelUS = document.getElementById('usValue');
-const labelDC = document.getElementById('dcValue');
 
+const labelUS = document.getElementById('usValue');
+const labelUSMin = document.getElementById('usValueMin');
+const labelUSMax = document.getElementById('usValueMax');
+
+const labelDC = document.getElementById('dcValue');
+const labelDCMin = document.getElementById('dcValueMin');
+const labelDCMax = document.getElementById('dcValueMax');
+
+let usData = { value:0, min:300, max:0 };
+let dcData = { value:0, min:2500, max:0 };
+
+let chartData = [0];    //[20, 10, 5, 2, 20, 30, 100];
+let chartLabels = ['0'];    //['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
+
+for(let i=1;i<51;i++)
+{
+    chartLabels.push(i.toString());
+}
+
+var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, 
+{
+    // The type of chart we want to create
+    type: 'line',
+    // The data for our dataset
+    data:
+    {
+        labels: chartLabels,
+        datasets: 
+        [
+            {
+                label: 'US Meter',
+                //backgroundColor: 'rgb(0, 99, 132)',
+                fill: false,
+                borderColor: 'rgb(75, 192, 192)',
+                lineTension: 0.1,
+                data: chartData //[0, 10, 5, 2, 20, 30, 100]
+            }
+        ]
+    },
+    // Configuration options go here
+    options: 
+    {
+        animation:
+        {
+            duration: 500
+        },
+        scales: 
+        {
+            yAxes: 
+            [
+                {
+                    ticks: 
+                    {
+                        //max: 200,
+                        //min: 0,
+                        suggestedMin: 0,
+                        suggestedMax: 200,
+                        stepSize: 1
+                    }
+                }
+            ]
+        }
+    }
+});
 
 connectButton.addEventListener('click', () => 
 {
@@ -74,19 +137,39 @@ function handleCharacteristicValueChanged(event)
 
     let data = value.split("\n",2);
 
-
-    data.forEach(dataInfo => {
+    data.forEach(dataInfo => 
+    {
         let info = dataInfo.split(":");
         if(info[0]==="US")
         {
-            labelUS.innerHTML = info[1];
+            usData.value = parseInt(info[1]);
+            usData.min = usData.min > usData.value ? usData.value : usData.min;
+            usData.max = usData.max < usData.value ? usData.value : usData.max;
         }
     
         if(info[0]==="DC")
         {
-            labelDC.innerHTML = info[1];
+            dcData.value = parseInt(info[1]);
+            dcData.min = dcData.min > dcData.value ? dcData.value : dcData.min;
+            dcData.max = dcData.max < dcData.value ? dcData.value : dcData.max;
         }
     });
 
+    labelUS.value = usData.value;
+    labelUSMin.value = usData.min;
+    labelUSMax.value = usData.max;
 
+    labelDC.value = dcData.value;
+    labelDCMin.value = dcData.min;
+    labelDCMax.value = dcData.max;
+
+
+    chart.data.datasets[0].data.push(usData.value);
+
+    if(chart.data.datasets[0].data.length>51)
+    {
+        chart.data.datasets[0].data.shift();
+    }
+
+    chart.update();
 }
