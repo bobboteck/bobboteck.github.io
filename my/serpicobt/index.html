@@ -7,23 +7,24 @@
         <title>SERPICO Web Bluetooth Console</title>
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <meta name="theme-color" content="#0082fc">
     </head>
     <body>
         <div class="container">
             <div class="row">
                 <div class="col">
                     <label for="service" class="form-label">Service</label>
-                    <input type="text" id="service" class="form-control" value="0xFFE0">
+                    <input type="text" id="service" class="form-control form-control-sm" value="0xFFE0">
                 </div>
                 <div class="col">
                     <label for="characteristic" class="form-label">Characteristic</label>
-                    <input type="text" id="characteristic" class="form-control" value="0xFFE1">
+                    <input type="text" id="characteristic" class="form-control form-control-sm" value="0xFFE1">
                 </div>
                 <div class="col">
-                    <button id="connect" type="button" class="btn btn-primary">Connetti</button>
-                <!-- /div>
-                <div class="col" -->
-                    <button id="disconnect" type="button" class="btn btn-primary">Disconnetti</button>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button id="connect" type="button" class="btn btn-primary btn-sm">Connetti</button>
+                        <button id="disconnect" type="button" class="btn btn-primary btn-sm" disabled>Disconnetti</button>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -31,19 +32,19 @@
                     Distanza ostacolo (cm):
                 </div>
                 <div class="col">
-                    <div class="form-floating mb-3">
+                    <div class="form-floating mb-2">
                         <input type="text" class="form-control" id="usValueMin" value="0">
                         <label for="usValueMin">Min</label>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="form-floating mb-3">
+                    <div class="form-floating mb-2">
                         <input type="text" class="form-control" id="usValue" value="0">
                         <label for="usValue">Value</label>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="form-floating mb-3">
+                    <div class="form-floating mb-2">
                         <input type="text" class="form-control" id="usValueMax" value="0">
                         <label for="usValueMax">Max</label>
                     </div>
@@ -54,19 +55,19 @@
                     Duty Cycles:
                 </div>
                 <div class="col">
-                    <div class="form-floating mb-3">
+                    <div class="form-floating mb-2">
                         <input type="text" class="form-control" id="dcValueMin" value="0">
                         <label for="dcValueMin">Min</label>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="form-floating mb-3">
+                    <div class="form-floating mb-2">
                         <input type="text" class="form-control" id="dcValue" value="0">
                         <label for="dcValue">Value</label>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="form-floating mb-3">
+                    <div class="form-floating mb-2">
                         <input type="text" class="form-control" id="dcValueMax" value="0">
                         <label for="dcValueMax">Max</label>
                     </div>
@@ -77,13 +78,19 @@
                     <canvas id="myChart"></canvas>
                 </div>
             </div>
+            <div class="row justify-content-md-center">
+                <div class="col-sm"></div>
+                <div class="col-sm">
+                    <div id="joyDiv" style="width:200px;height:200px" class="mx-auto"></div>
+                </div>
+                <div class="col-sm"></div>
+            </div>
         </div>
 
         <!-- Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+        <script src="https://github.com/bobboteck/JoyStick/releases/download/v1.1.6/joy.min.js"></script>
         <script src="js/main.js"></script>
-
-
     </body>
 </html>

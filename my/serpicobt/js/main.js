@@ -1,3 +1,6 @@
+const serviceUuid = document.querySelector('#service')
+const characteristicUuid = document.querySelector('#characteristic')
+
 const connectButton = document.getElementById('connect');
 const disconnectButton = document.getElementById('disconnect');
 
@@ -8,6 +11,8 @@ const labelUSMax = document.getElementById('usValueMax');
 const labelDC = document.getElementById('dcValue');
 const labelDCMin = document.getElementById('dcValueMin');
 const labelDCMax = document.getElementById('dcValueMax');
+
+let btDevice = null;
 
 let usData = { value:0, min:300, max:0 };
 let dcData = { value:0, min:2500, max:0 };
@@ -69,20 +74,21 @@ var chart = new Chart(ctx,
 
 connectButton.addEventListener('click', () => 
 {
-    let serviceUuid = document.querySelector('#service').value;
-    if (serviceUuid.startsWith('0x'))
+    let valueServiceUuid = serviceUuid.value;
+    if (valueServiceUuid.startsWith('0x'))
     {
-        serviceUuid = parseInt(serviceUuid);
+        valueServiceUuid = parseInt(valueServiceUuid);
     }
   
-    let characteristicUuid = document.querySelector('#characteristic').value;
-    if (characteristicUuid.startsWith('0x'))
+    let valueCharacteristicUuid = characteristicUuid.value;
+    if (valueCharacteristicUuid.startsWith('0x'))
     {
-        characteristicUuid = parseInt(characteristicUuid);
+        valueCharacteristicUuid = parseInt(valueCharacteristicUuid);
     }
   
     console.log('Requesting Bluetooth Device...');
-    navigator.bluetooth.requestDevice({filters: [{services: [serviceUuid]}]})
+
+    navigator.bluetooth.requestDevice({filters: [{services: [valueServiceUuid]}]})
     .then(device => 
     {
         console.log('Connecting to GATT Server...');
@@ -91,12 +97,12 @@ connectButton.addEventListener('click', () =>
     .then(server => 
     {
         console.log('Getting Service...');
-        return server.getPrimaryService(serviceUuid);
+        return server.getPrimaryService(valueServiceUuid);
     })
     .then(service =>
     {
         console.log('Getting Characteristic...');
-        return service.getCharacteristic(characteristicUuid);
+        return service.getCharacteristic(valueCharacteristicUuid);
     })
     .then(characteristic => 
     {
@@ -111,11 +117,18 @@ connectButton.addEventListener('click', () =>
         console.log('> Queued Write:         ' + characteristic.properties.reliableWrite);
         console.log('> Writable Auxiliaries: ' + characteristic.properties.writableAuxiliaries);
 
+        btDevice = characteristic.service.device;
+
         characteristic.startNotifications()
         .then(() => 
         {
             console.log('Notification started');
             characteristic.addEventListener('characteristicvaluechanged', handleCharacteristicValueChanged);
+
+            connectButton.disabled = true;
+            disconnectButton.disabled = false;
+            serviceUuid.disabled = true;
+            characteristicUuid.disabled = true;
         });
     })
     .catch(error =>
@@ -126,9 +139,29 @@ connectButton.addEventListener('click', () =>
   
 disconnectButton.addEventListener('click', () => 
 {
+    if(btDevice)
+    {
+        // Add code to remove this handle?
 
+        if(btDevice.gatt.connected)
+        {
+            btDevice.gatt.disconnect();
+            
+            connectButton.disabled = false;
+            disconnectButton.disabled = true;
+            serviceUuid.disabled = false;
+            characteristicUuid.disabled = false;
+
+            console.log("Disconnected");
+        }
+        else
+        {
+            console.log("Already disconnected");
+        }
+    }
 });
 
+var joy = new JoyStick('joyDiv');
 
 function handleCharacteristicValueChanged(event)
 {
