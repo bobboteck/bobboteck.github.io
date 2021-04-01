@@ -12,7 +12,10 @@ const labelDC = document.getElementById('dcValue');
 const labelDCMin = document.getElementById('dcValueMin');
 const labelDCMax = document.getElementById('dcValueMax');
 
+const onBoardLed = document.getElementById('onBoardLed');
+
 let btDevice = null;
+let btCharacteristic = null;
 
 let usData = { value:0, min:300, max:0 };
 let dcData = { value:0, min:2500, max:0 };
@@ -118,6 +121,7 @@ connectButton.addEventListener('click', () =>
         console.log('> Writable Auxiliaries: ' + characteristic.properties.writableAuxiliaries);
 
         btDevice = characteristic.service.device;
+        btCharacteristic = characteristic;
 
         characteristic.startNotifications()
         .then(() => 
@@ -159,6 +163,23 @@ disconnectButton.addEventListener('click', () =>
             console.log("Already disconnected");
         }
     }
+});
+
+onBoardLed.addEventListener('change', () =>
+{
+    if(onBoardLed.checked == true)
+    {
+        console.log("Led On");
+        
+        btCharacteristic.writeValue(new TextEncoder().encode("LED:1"));
+    }
+    else
+    {
+        console.log("Led Off");
+        btCharacteristic.writeValue(new TextEncoder().encode("LED:0"));
+    }
+
+    //btCharacteristic
 });
 
 var joy = new JoyStick('joyDiv');

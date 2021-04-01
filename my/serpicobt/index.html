@@ -29,23 +29,23 @@
             </div>
             <div class="row">
                 <div class="col">
-                    Distanza ostacolo (cm):
+                    Distanza (cm):
                 </div>
                 <div class="col">
                     <div class="form-floating mb-2">
-                        <input type="text" class="form-control" id="usValueMin" value="0">
+                        <input type="text" class="form-control" id="usValueMin" value="0" readonly>
                         <label for="usValueMin">Min</label>
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-floating mb-2">
-                        <input type="text" class="form-control" id="usValue" value="0">
+                        <input type="text" class="form-control" id="usValue" value="0" readonly>
                         <label for="usValue">Value</label>
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-floating mb-2">
-                        <input type="text" class="form-control" id="usValueMax" value="0">
+                        <input type="text" class="form-control" id="usValueMax" value="0" readonly>
                         <label for="usValueMax">Max</label>
                     </div>
                 </div>
@@ -56,19 +56,19 @@
                 </div>
                 <div class="col">
                     <div class="form-floating mb-2">
-                        <input type="text" class="form-control" id="dcValueMin" value="0">
+                        <input type="text" class="form-control" id="dcValueMin" value="0" readonly>
                         <label for="dcValueMin">Min</label>
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-floating mb-2">
-                        <input type="text" class="form-control" id="dcValue" value="0">
+                        <input type="text" class="form-control" id="dcValue" value="0" readonly>
                         <label for="dcValue">Value</label>
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-floating mb-2">
-                        <input type="text" class="form-control" id="dcValueMax" value="0">
+                        <input type="text" class="form-control" id="dcValueMax" value="0" readonly>
                         <label for="dcValueMax">Max</label>
                     </div>
                 </div>
@@ -79,11 +79,18 @@
                 </div>
             </div>
             <div class="row justify-content-md-center">
-                <div class="col-sm"></div>
+                <div class="col-sm align-middle mx-auto">
+                    <div class="form-check form-switch">
+                        <input type="checkbox" id="onBoardLed" class="form-check-input">
+                        <label for="onBoardLed" class="form-check-label">On board led</label>
+                    </div>
+                </div>
                 <div class="col-sm">
                     <div id="joyDiv" style="width:200px;height:200px" class="mx-auto"></div>
                 </div>
-                <div class="col-sm"></div>
+                <div class="col-sm">
+                    
+                </div>
             </div>
         </div>
 
