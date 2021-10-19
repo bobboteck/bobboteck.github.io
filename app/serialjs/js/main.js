@@ -69,7 +69,12 @@ async function serialConnect()
 
             // value is a Uint8Array.
             //console.log(value);
-            receivedData.value = receivedData.value + value + '\r\n';
+
+            value.forEach(element => {
+                receivedData.value = receivedData.value + String.fromCharCode(element);
+            });
+
+            //receivedData.value = receivedData.value + value + '\r\n';
 
             // Auto scroll down
             receivedData.scrollTop = receivedData.scrollHeight;
