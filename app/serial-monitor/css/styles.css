@@ -3,7 +3,7 @@ main > .container
     /*padding: 60px 15px 0;*/
     padding-top: 5px;
 }
-
+/*
 .bd-placeholder-img 
 {
     font-size: 1.125rem;
@@ -12,11 +12,49 @@ main > .container
     -moz-user-select: none;
     user-select: none;
 }
-
+*/
+/*
 @media (min-width: 768px) 
 {
     .bd-placeholder-img-lg 
     {
         font-size: 3.5rem;
     }
+}
+*/
+
+.textFormat
+{
+    font-family: monospace;
+    font-size: 10pt;
+}
+
+.githubColor
+{
+    color: #171516;
+}
+
+.twitterColor
+{
+    color: #55acee;
+}
+
+.youtubeColor
+{
+    color: #b00;
+}
+
+.linkedinColor
+{
+    color: #007bb6;
+}
+
+.instagramColor
+{
+    color: #517fa4;
+}
+
+.emailColor
+{
+    color: #3d4144;
 }
