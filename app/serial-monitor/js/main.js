@@ -1,9 +1,15 @@
-let connected = false;
-let baudRate = 0;
-const connectButton = document.getElementById("connect");
 const baudRateSelection = document.getElementById("baudRateSelection");
+const connectButton = document.getElementById("connect");
+const textToSend = document.getElementById("textToSend");
+const sendButton = document.getElementById("sendButton");
 const receivedData = document.getElementById("receivedData");
 const autoScrollCheck = document.getElementById("autoScrollCheck") ;
+
+let connected = false;
+let baudRate = 0;
+let port;
+let reader;
+
 
 // Calculate the height of text area
 let screenHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
@@ -11,14 +17,15 @@ receivedData.style.height = (screenHeight - 210).toString() + "px";
 //TODO: manage the screen resize
 
 // Disable controls
-connectButton.disabled = true;
 baudRateSelection.disabled = true;
+connectButton.disabled = true;
+textToSend.disabled = true;
+sendButton.disabled = true;
 
 // Check i f browser support the 'Web Serial API'
 if ("serial" in navigator) 
 {
     // Enable controls
-    //connectButton.disabled = false;
     baudRateSelection.disabled = false;
 }
 else
@@ -40,62 +47,212 @@ baudRateSelection.addEventListener("change", (event) =>
 });
 
 // Add event function on connectButton click
-connectButton.addEventListener('click', () => 
+connectButton.addEventListener('click', async () => 
 {
     console.log("Evento");
+
     if (navigator.serial)
     {
-        if(baudRate > 0)
+        if(baudRate > 0 && !connected)
         {
-            serialConnect();
+            serialConnect().then(() =>
+            {
+                connectButton.innerText = "Disconnect";
+                connectButton.classList.remove("btn-success");
+                connectButton.classList.add("btn-outline-success");
+                baudRateSelection.disabled = true;
+                textToSend.disabled = false;
+                sendButton.disabled = false;
+
+                readUntilNotClose();
+            });
+        }
+        else
+        {
+            console.log("Tentativo di chiusura");
+
+            connected = false;
+/*
+            console.log("Tentativo di chiusura - Prima di await readUntilNotClose");
+            await readUntilNotClose();
+            console.log("Tentativo di chiusura - Dopo di await readUntilNotClose");
+*/
+            console.log("Tentativo di chiusura - Prima di reader.cancel");
+            reader.cancel();
+            console.log("Tentativo di chiusura - Dopo di reader.cancel");
+            port.close();
+            console.log("Tentativo di chiusura - Dopo di await port.close");
+
+            connectButton.innerText = "Connect";
+            connectButton.classList.add("btn-success");
+            connectButton.classList.remove("btn-outline-success");
+            baudRateSelection.disabled = false;
+            textToSend.disabled = true;
+            sendButton.disabled = true;
         }
     }
+});
+
+sendButton.addEventListener("click", async () =>
+{
+    const writer = port.writable.getWriter();
+
+    const data = new Uint8Array([104, 101, 108, 108, 111, 104, 101, 108, 108, 111, 104, 101, 108, 108, 111, 104, 101, 108, 108, 111, 104, 101, 108, 108, 111, 104, 101, 108, 108, 111, 104, 101, 108, 108, 111, 104, 101, 108, 108, 111, 104, 101, 108, 108, 111, 104, 101, 108, 108, 111, 104, 101, 108, 108, 111, 104, 101, 108, 108, 111, 104, 101, 108, 108, 111, 104, 101, 108, 108, 111]); // hello
+    await writer.write(data);
+
+
+    // Allow the serial port to be closed later.
+    writer.releaseLock();
 });
 
 /**
  * Create a connenction and write the data in to the text area
  */
+/*
+async function serialConnectAndRead()
+{
+    try
+    {
+        console.log("serialConnectAndRead ...");
+
+        port = await navigator.serial.requestPort();
+        await port.open({ baudRate: baudRate });
+
+        connected = true;
+
+        while(port.readable && connected)
+        {
+            reader = port.readable.getReader();
+
+            // Listen to data coming from the serial device.
+            while (true) 
+            {
+                const { value, done } = await reader.read();
+                if (done) 
+                {
+                    // Allow the serial port to be closed later.
+                    reader.releaseLock();
+                    break;
+                }
+
+                // Show in text area each char received
+                value.forEach(element => 
+                {
+                    // The sequence of chars 13 and 10, insert a blank row in text area, this control is for skipping the 13 char and not have the blank row
+                    if(element !== 13)
+                    {
+                        //console.log(element);
+                        receivedData.value = receivedData.value + String.fromCharCode(element);
+                    }
+                });
+
+                // Check if Autoscroll is selected or not
+                if(autoScrollCheck.checked)
+                {
+                    // Auto scroll down
+                    receivedData.scrollTop = receivedData.scrollHeight;
+                }
+            }
+        }
+
+        await port.close();
+    }
+    catch(error)
+    {
+        console.log(error);
+    }
+
+    console.log("Disconnetti!");
+ }
+*/
+
+
+
+/**
+ * Create a connection with selected serial port
+ */
 async function serialConnect()
 {
     try
     {
-        const port = await navigator.serial.requestPort();
+        console.log("serialConnect ...");
+
+        port = await navigator.serial.requestPort();
         await port.open({ baudRate: baudRate });
 
-        const reader = port.readable.getReader();
+        connected = true;
 
-        // Listen to data coming from the serial device.
-        while (true) 
-        {
-            const { value, done } = await reader.read();
-            if (done) 
-            {
-                // Allow the serial port to be closed later.
-                reader.releaseLock();
-                break;
-            }
-
-            // Show in text area each char received
-            value.forEach(element => 
-            {
-                // The sequence of chars 13 and 10, insert a blank row in text area, this control is for skipping the 13 char and not have the blank row
-                if(element !== 13)
-                {
-                    //console.log(element);
-                    receivedData.value = receivedData.value + String.fromCharCode(element);
-                }
-            });
-
-            // Check if Autoscroll is selected or not
-            if(autoScrollCheck.checked)
-            {
-                // Auto scroll down
-                receivedData.scrollTop = receivedData.scrollHeight;
-            }
-        }
+        console.log("Port opened!");
     }
     catch(error)
     {
         console.log(error);
     }
 }
+
+
+/**
+ * Read the data and write it in to the text area
+ */
+async function readUntilNotClose()
+{
+    while(port.readable && connected)
+    {
+        try
+        {
+            console.log("readUntilNotClose ...");
+
+            reader = port.readable.getReader();
+
+            // Listen to data coming from the serial device.
+            while (true) 
+            {
+                const { value, done } = await reader.read();
+                if (done) 
+                {
+                    // Allow the serial port to be closed later.
+                    reader.releaseLock();
+                    //break;
+                }
+                else
+                {
+                    // Show in text area each char received
+                    value.forEach(element => 
+                    {
+                        // The sequence of chars 13 and 10, insert a blank row in text area, this control is for skipping the 13 char and not have the blank row
+                        if(element !== 13)
+                        {
+                            //console.log(element);
+                            receivedData.value = receivedData.value + String.fromCharCode(element);
+                        }
+                    });
+
+                    // Check if Autoscroll is selected or not
+                    if(autoScrollCheck.checked)
+                    {
+                        // Auto scroll down
+                        receivedData.scrollTop = receivedData.scrollHeight;
+                    }
+                }
+            }
+        }
+        catch(error)
+        {
+            console.log(error);
+        }
+    }
+
+    console.log("Disconnesso!");
+}
+
+
+
+navigator.serial.addEventListener("connect", (event) => 
+{
+    console.log("Event connected device");
+});
+  
+navigator.serial.addEventListener("disconnect", (event) => 
+{
+    console.log("Event disconnect device");
+});
