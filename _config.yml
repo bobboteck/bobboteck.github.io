@@ -10,7 +10,7 @@ repository: "bobboteck/bobboteck.github.io"
 
 email: roberto.damico@officinerobotiche.it
 description: >- # this means to ignore newlines until "baseurl:"
-  Personal Web Site of Roberto D'Amico - Bobboteck - (IW0GTF)
+  Personal Web Site of Roberto D'Amico - Bobboteck - IU0PHY (ex IW0GTF)
 twitter_username: bobboteck
 github_username: bobboteck
 minimal_mistakes_skin: default
@@ -110,6 +110,9 @@ collections:
     output: true
     permalink: /:collection/:path/
   tutorial:
+    output: true
+    permalink: /:collection/:path/
+  apps:
     output: true
     permalink: /:collection/:path/
 
