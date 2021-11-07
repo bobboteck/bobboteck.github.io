@@ -49,7 +49,7 @@ baudRateSelection.addEventListener("change", (event) =>
 // Add event function on connectButton click
 connectButton.addEventListener('click', async () => 
 {
-    console.log("Evento");
+    console.log("Evento - connectButton");
 
     if (navigator.serial)
     {
@@ -70,17 +70,14 @@ connectButton.addEventListener('click', async () =>
         else
         {
             console.log("Tentativo di chiusura");
-
             connected = false;
-/*
-            console.log("Tentativo di chiusura - Prima di await readUntilNotClose");
-            await readUntilNotClose();
-            console.log("Tentativo di chiusura - Dopo di await readUntilNotClose");
-*/
             console.log("Tentativo di chiusura - Prima di reader.cancel");
             reader.cancel();
             console.log("Tentativo di chiusura - Dopo di reader.cancel");
-            port.close();
+            // Allow the serial port to be closed
+            reader.releaseLock();
+            // Close serial port
+            await port.close();
             console.log("Tentativo di chiusura - Dopo di await port.close");
 
             connectButton.innerText = "Connect";
@@ -95,76 +92,19 @@ connectButton.addEventListener('click', async () =>
 
 sendButton.addEventListener("click", async () =>
 {
+    // Define writer
     const writer = port.writable.getWriter();
-
-    const data = new Uint8Array([104, 101, 108, 108, 111, 104, 101, 108, 108, 111, 104, 101, 108, 108, 111, 104, 101, 108, 108, 111, 104, 101, 108, 108, 111, 104, 101, 108, 108, 111, 104, 101, 108, 108, 111, 104, 101, 108, 108, 111, 104, 101, 108, 108, 111, 104, 101, 108, 108, 111, 104, 101, 108, 108, 111, 104, 101, 108, 108, 111, 104, 101, 108, 108, 111, 104, 101, 108, 108, 111]); // hello
+    // Init encoder object
+    let enc = new TextEncoder();
+    // convert text
+    const data = enc.encode(textToSend.value);
+    // send data
     await writer.write(data);
-
-
-    // Allow the serial port to be closed later.
+    // Allow the serial port to be closed
     writer.releaseLock();
+    // Clean the textbox
+    textToSend.value = "";
 });
-
-/**
- * Create a connenction and write the data in to the text area
- */
-/*
-async function serialConnectAndRead()
-{
-    try
-    {
-        console.log("serialConnectAndRead ...");
-
-        port = await navigator.serial.requestPort();
-        await port.open({ baudRate: baudRate });
-
-        connected = true;
-
-        while(port.readable && connected)
-        {
-            reader = port.readable.getReader();
-
-            // Listen to data coming from the serial device.
-            while (true) 
-            {
-                const { value, done } = await reader.read();
-                if (done) 
-                {
-                    // Allow the serial port to be closed later.
-                    reader.releaseLock();
-                    break;
-                }
-
-                // Show in text area each char received
-                value.forEach(element => 
-                {
-                    // The sequence of chars 13 and 10, insert a blank row in text area, this control is for skipping the 13 char and not have the blank row
-                    if(element !== 13)
-                    {
-                        //console.log(element);
-                        receivedData.value = receivedData.value + String.fromCharCode(element);
-                    }
-                });
-
-                // Check if Autoscroll is selected or not
-                if(autoScrollCheck.checked)
-                {
-                    // Auto scroll down
-                    receivedData.scrollTop = receivedData.scrollHeight;
-                }
-            }
-        }
-
-        await port.close();
-    }
-    catch(error)
-    {
-        console.log(error);
-    }
-
-    console.log("Disconnetti!");
- }
-*/
 
 
 
@@ -210,9 +150,10 @@ async function readUntilNotClose()
                 const { value, done } = await reader.read();
                 if (done) 
                 {
-                    // Allow the serial port to be closed later.
+                    console.log("DONE");
+                    // Allow the serial port to be closed
                     reader.releaseLock();
-                    //break;
+                    break;
                 }
                 else
                 {
@@ -234,11 +175,20 @@ async function readUntilNotClose()
                         receivedData.scrollTop = receivedData.scrollHeight;
                     }
                 }
+
+                console.log("Into while true");
             }
         }
         catch(error)
         {
+            console.log("CATCH");
             console.log(error);
+        }
+        finally
+        {
+            console.log("FINALLY");
+            // Allow the serial port to be closed
+            reader.releaseLock();
         }
     }
 

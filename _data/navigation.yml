@@ -7,6 +7,8 @@ main:
     url: /projects/
   - title: "Tutorials"
     url: /tutorial/
+  - title: "Apps"
+    url: /app/
   - title: "Categories"
     url: /categories/
   - title: "Tags"

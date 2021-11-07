@@ -165,6 +165,17 @@ defaults:
       read_time: true
       sidebar:
         nav: "tutorial"
+  # _apps
+  - scope:
+      path: "_apps"
+      type: apps
+    values:
+      layout: single
+      author_profile: false
+      share: true
+      read_time: true
+      sidebar:
+        nav: "apps"
 
 category_archive:
   type: liquid
