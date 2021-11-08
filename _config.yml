@@ -159,7 +159,7 @@ defaults:
         nav: "projects"
   # _tutorial
   - scope:
-      path: "_tutorial"
+      path: "_tutorials"
       type: tutorial
     values:
       layout: single
