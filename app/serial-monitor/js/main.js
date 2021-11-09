@@ -34,7 +34,7 @@ else
     connectButton.disabled = true;
     baudRateSelection.disabled = true;
     // Message for the user
-    alert("Sorry, but your browser not support 'Web Serial API', try with Chrome, Edge or other browse that support it");
+    //alert("Sorry, but your browser not support 'Web Serial API', try with Chrome, Edge or other browse that support it");
 }
 
 // Add event function on baudaRateSelecttion change

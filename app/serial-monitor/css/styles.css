@@ -38,3 +38,34 @@ main > .container
 {
     color: #3d4144;
 }
+
+.toastTop
+{
+    top: 110px !important;
+}
+
+.toastEnd
+{
+    right: 10px !important;
+}
+
+.footerSocial
+{
+    display: inline-block;
+}
+
+.footerSocial li
+{
+    display: inline-block;
+}
+
+.footerSocial a
+{
+    padding-right: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+    /*font-size: .75em;*/
+    text-transform: uppercase;
+    color: rgb(100, 103, 105);
+}

@@ -57,7 +57,7 @@ plugins:
 author:
   name   : "Roberto D'Amico"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Analyst and software developer, System integrator, Robotics enthusiastic, Radio amateur, Sunday photographer and Co-Fouder of Officine Robotiche association."
+  bio    : "Analyst and software developer, System integrator, Robotics enthusiastic, Radio amateur, sunday Photographer and Co-Fouder of Officine Robotiche association."
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"

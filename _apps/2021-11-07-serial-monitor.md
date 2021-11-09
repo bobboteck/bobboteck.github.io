@@ -10,8 +10,8 @@ toc_icon: "cog"
 toc_sticky: true
 ---
 
-If you don't have a serial warning installed on your PC, don't panic now you can use this web application, just use a browser that supports the Serial API (currently supported by Chrome or EDGE) connect the device to the PC and connect!
+If you don't have a **Serial Monitor** installed on your PC, don't panic now you can use this web application, just use a browser that supports the Serial API (currently supported by Chrome or EDGE) plug-in the device to the PC and connect!
 
 ![Smoke](/assets/apps/serial-monitor/serial-monitor-teaser.png){: .align-center}
 
-Click on **[Serial Monitor](https://bobboteck.github.io/app/serial-monitor/index.html)** to open the app.
+**[Click here to open the Serial Monitor app](https://bobboteck.github.io/app/serial-monitor/index.html)**{: .align-center}
