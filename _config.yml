@@ -4,7 +4,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Bobboteck ... a diary of my works
-subtitle: "All about my works"
+subtitle: "Robotic, electronic, software, radio and more"
 name: "Roberto D'Amico"
 repository: "bobboteck/bobboteck.github.io"
 
