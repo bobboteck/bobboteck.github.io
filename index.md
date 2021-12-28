@@ -1,6 +1,6 @@
 ---
 layout: splash
-excerpt: "Robotics and more ..."
+excerpt: "Robotics, electronic projects, software, activities and amateur radio projects, all my works are here"
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
