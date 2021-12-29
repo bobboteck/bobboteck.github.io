@@ -1,6 +1,6 @@
 ---
 layout: splash
-excerpt: "Robotics, electronic projects, software, activities and amateur radio projects, all my works are here"
+excerpt: "Robotics, electronic projects, software and amateur radio projects, all my works and activities are written here"
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
@@ -14,14 +14,14 @@ feature_row:
   - image_path: /assets/projects/playbox/playbox-teaser.png
     alt: "plaYbox"
     title: "plaYbox"
-    excerpt: "plaYbox is a wooden box game for children, based on Arduino Uno, child can play with light and buttons"
+    excerpt: "plaYbox is a wooden box game for children, based on Arduino Uno, child can play with lights, buttons and sounds. I'm collecting some ideas for a new version to make it more interesting for older kids too"
     url: "/projects/playbox"
     btn_label: "Read More"
     btn_class: "btn--primary"
   - image_path: /assets/projects/joystick/joystick-teaser.png
     alt: "JoyStick"
     title: "JoyStick"
-    excerpt: "HTML5 Canvas and Vanilla JavaScript JoyStick, the latest version is 2.0.0, now also available on npm"
+    excerpt: "Now in version 2, this library allows you to integrate a JoyStick into your HTML5 page, created in Javascript without the use of frameworks, it is also available as an npm package"
     url: "https://github.com/bobboteck/JoyStick"
     btn_label: "Read More"
     btn_class: "btn--primary"
