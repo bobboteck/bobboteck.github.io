@@ -33,7 +33,7 @@ feature_row:
     btn_label: "Read More"
     btn_class: "btn--primary"
 
-  - image_path: /assets/robots/serpico/serpico-teaser.png
+  - image_path: /assets/robots/serpico/serpico-teaser.jpg
     alt: "Studying Electronics and Robotics with PICO"
     title: "SERPICO"
     excerpt: "SERPICO is the acronym for Studying Electronics and Robotics with PICO, to study the new Raspberry PI Pico, the best and perhaps most obvious choice, it seemed to me to build a Robot"
