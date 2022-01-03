@@ -4,6 +4,7 @@ const textToSend = document.getElementById("textToSend");
 const sendButton = document.getElementById("sendButton");
 const receivedData = document.getElementById("receivedData");
 const autoScrollCheck = document.getElementById("autoScrollCheck") ;
+const saveMenuItem = document.getElementById("saveMenuItem");
 
 let connected = false;
 let baudRate = 0;
@@ -106,6 +107,22 @@ sendButton.addEventListener("click", async () =>
     textToSend.value = "";
 });
 
+saveMenuItem.addEventListener("click", () =>
+{
+    const d = new Date();
+    // define string date for file name
+    let month = (d.getMonth() + 1) >= 10 ? (d.getMonth() + 1).toString() : "0" + (d.getMonth() + 1).toString();
+    let day = d.getDate() >= 10 ? d.getDate().toString() : "0" + d.getDate().toString();
+    let dataForFileName = d.getFullYear().toString() + month + day;
+    // define string hour for file name
+    let hours = d.getHours() >= 10 ? d.getHours().toString() : "0" + d.getHours().toString();
+    let minutes = d.getMinutes() >= 10 ? d.getMinutes().toString() : "0" + d.getMinutes().toString();
+    let hourForFileName = hours + minutes;
+
+    let fileName = "SerialMonitor-" + dataForFileName + hourForFileName + ".txt";
+    
+    download(fileName, receivedData.value);
+}, false);
 
 
 /**
@@ -194,6 +211,27 @@ async function readUntilNotClose()
 
     console.log("Disconnesso!");
 }
+
+/**
+ * Function to save serial data received into a file to save localy
+ * 
+ * @param filename {string} Name of file to be saved
+ * @param data {string} Data to be saved
+ */
+function download(filename, data)
+{
+    const element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(data));
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+}
+
 
 
 
