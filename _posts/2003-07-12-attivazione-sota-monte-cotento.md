@@ -1,8 +1,8 @@
 ---
 title: "Attivazione SOTA monte Cotento"
 categories:
-  - SOTA
   - Blog
+  - SOTA
 tags:
   - sota
   - cotento
@@ -11,7 +11,7 @@ tags:
   - qrp
   - apulia
   - vhf
-  -contest
+  - contest
 toc: true
 toc_label: "Table of Contents"
 toc_icon: "cog"
