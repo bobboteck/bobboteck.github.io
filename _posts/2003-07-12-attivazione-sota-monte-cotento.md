@@ -1,5 +1,7 @@
 ---
 title: "Attivazione SOTA monte Cotento"
+header: 
+    teaser: /assets/blog/2003-07-12-sota-monte-cotento/2003-07-12-sota-monte-cotento-teaser.jpg
 categories:
   #- Blog
   - SOTA
