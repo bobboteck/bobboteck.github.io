@@ -1,7 +1,7 @@
 ---
 title: "Attivazione SOTA monte Cotento"
 categories:
-  - Blog
+  #- Blog
   - SOTA
 tags:
   - sota
