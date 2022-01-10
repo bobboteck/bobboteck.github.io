@@ -7,6 +7,8 @@ tags:
   - notice
 ---
 
+This post need to be removed!
+
 **Changes in Service:** O nooo I starting to work on new web site!!!
 {: .notice}
 
