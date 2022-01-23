@@ -25,8 +25,6 @@ toc_icon: "cog"
 toc_sticky: true
 ---
 
-## Non potevamo mancare l'appuntamento con il Contest Apulia VHF QRP
-
 Di nuovo su una cima **SOTA**, e ancora una cima **New-One** per noi. Questa volta partiamo con l'idea di salire sopra i **2000** e alla fine la scelta cade sul Monte Terminillo, saliremo su per la normale per arrivare in cima in tempo per l'inizio del contest. Come sempre capita però che io arrivo tardi a casa di Andrea, per strada ci si ferma a fare benzina e lungo la salita si incontrano macchine che vanno molto piano, così arriviamo al rifugio Sebastiani che il contest è cominciato. Parcheggiate le macchine e sistemati gli zaini si comincia a salire, il sentiero è segnato, inizialmente è molto facile, ma dopo poco comincia a salire con una certa ripidità, la cosa più fastidiosa è il fondo ghiaioso del sentiero. Terminato questo primo tratto c’è un breve pezzo pianeggiante e poi ricomincia la salita in alcuni tratti si passa tra delle rocce in un paesaggio fantastico, come si può vedere anche nelle foto.
 
 ![Lungo la salita IW0GTF](/assets/blog/2004-07-10-sota-monte-terminillo/2004-07-10-sota-monte-terminillo-01.jpg){: .align-center}
