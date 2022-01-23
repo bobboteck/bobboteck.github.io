@@ -2,6 +2,9 @@
 title: "Attivazione SOTA monte Gennaro"
 excerpt: "Una nuova cima SOTA per noi"
 header: 
+    overlay_color: "#000"
+    overlay_filter: "0.5"
+    overlay_image: /assets/blog/2004-05-22-sota-monte-gennaro/2004-05-22-sota-monte-gennaro-teaser.jpg
     teaser: /assets/blog/2004-05-22-sota-monte-gennaro/2004-05-22-sota-monte-gennaro-teaser.jpg
 categories:
   #- Blog

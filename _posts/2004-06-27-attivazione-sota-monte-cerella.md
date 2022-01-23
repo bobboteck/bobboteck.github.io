@@ -2,6 +2,9 @@
 title: "Attivazione SOTA monte Cerella"
 excerpt: "Ci riprovo in 50"
 header: 
+    overlay_color: "#000"
+    overlay_filter: "0.5"
+    overlay_image: /assets/blog/2004-06-27-sota-monte-cerella/2004-06-27-sota-monte-cerella-teaser.jpg
     teaser: /assets/blog/2004-06-27-sota-monte-cerella/2004-06-27-sota-monte-cerella-teaser.jpg
 categories:
   #- Blog

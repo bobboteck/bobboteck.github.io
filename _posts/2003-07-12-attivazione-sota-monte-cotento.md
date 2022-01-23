@@ -2,6 +2,9 @@
 title: "Attivazione SOTA monte Cotento"
 excerpt: "La nostra prima attivazione SOTA"
 header: 
+    overlay_color: "#000"
+    overlay_filter: "0.5"
+    overlay_image: /assets/blog/2003-07-12-sota-monte-cotento/2003-07-12-sota-monte-cotento-teaser.jpg
     teaser: /assets/blog/2003-07-12-sota-monte-cotento/2003-07-12-sota-monte-cotento-teaser.jpg
 categories:
   #- Blog

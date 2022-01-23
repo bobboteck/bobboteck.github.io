@@ -1,7 +1,13 @@
 ---
 title: "Bluetooth Web Console"
+excerpt: "Using web page and Bluetooth Low Energy to create a console application of SERPICO Robot"
+header: 
+    overlay_color: "#000"
+    overlay_filter: "0.5"
+    overlay_image: /assets/blog/2021-03-29-bluetooth-web-console/2021-03-29-bluetooth-web-console-teaser.png
+    teaser: /assets/blog/2021-03-29-bluetooth-web-console/2021-03-29-bluetooth-web-console-teaser.png
 categories:
-  - Blog
+  #- Blog
   - News
 tags:
   - bluetooth low energy
@@ -16,7 +22,7 @@ BLE is configured as a Serial comunication, and send data from the SERPICO Robot
 
 This picture show the last version of page.
 
-![Bluetooth Web Console](/assets/blog/ble-html5-javascript.png)
+![Bluetooth Web Console](/assets/blog/2021-03-29-bluetooth-web-console/2021-03-29-bluetooth-web-console-01.png)
 
 In this video the very first test.
 
