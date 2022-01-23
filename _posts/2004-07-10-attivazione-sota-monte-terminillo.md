@@ -2,6 +2,9 @@
 title: "Attivazione SOTA monte Terminillo"
 excerpt: "Non potevamo mancare l'appuntamento con il Contest Apulia VHF QRP"
 header: 
+    overlay_color: "#000"
+    overlay_filter: "0.5"
+    overlay_image: /assets/blog/2004-07-10-sota-monte-terminillo/2004-07-10-sota-monte-terminillo-teaser.jpg
     teaser: /assets/blog/2004-07-10-sota-monte-terminillo/2004-07-10-sota-monte-terminillo-teaser.jpg
 categories:
   #- Blog
@@ -14,6 +17,7 @@ tags:
   - qrp
   - apulia
   - vhf
+  - 144mhz
   - contest
 toc: true
 toc_label: "Table of Contents"
