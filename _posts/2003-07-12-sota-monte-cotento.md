@@ -24,7 +24,7 @@ toc_icon: "cog"
 toc_sticky: true
 ---
 
-## La nostra prima attivazione
+## L'attivazione
 
 Era da un po' di tempo che seguivamo le vicende del SOTA, e finalmente con l'occasione del contest APULIA VHF QRP decidiamo io ed Andrea che saremmo andati ad attivare una bella cima. Cerchiamo di organizzarci come melgio possiamo, compriamo per l'occasione una batteria di auto da 45Ah, visto che la radio che dobbiamo usare non è proprio stata progetta per il QRP in portatile, ma è quello che abbiamo. Comincio a scegliere tra le varie cime del Lazio, una che fosse abbastanza vincino a Roma e che mi permettesse di salire senza grandi problemi, vista la mia scarza preparazione fisica. Decidiamo per il monte Cotento a 2014m slm ad un'ora di camminata partendo da Campo Staffi. Bene tutto sembra pronto rimmediamo le ultime cose che ci possono servire e si va a dormire presto domani sveglia all'alba!
 

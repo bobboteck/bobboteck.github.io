@@ -25,6 +25,8 @@ toc_icon: "cog"
 toc_sticky: true
 ---
 
+## L'attivazione
+
 Di nuovo su una cima **SOTA**, e ancora una cima **New-One** per noi. Questa volta partiamo con l'idea di salire sopra i **2000** e alla fine la scelta cade sul Monte Terminillo, saliremo su per la normale per arrivare in cima in tempo per l'inizio del contest. Come sempre capita però che io arrivo tardi a casa di Andrea, per strada ci si ferma a fare benzina e lungo la salita si incontrano macchine che vanno molto piano, così arriviamo al rifugio Sebastiani che il contest è cominciato. Parcheggiate le macchine e sistemati gli zaini si comincia a salire, il sentiero è segnato, inizialmente è molto facile, ma dopo poco comincia a salire con una certa ripidità, la cosa più fastidiosa è il fondo ghiaioso del sentiero. Terminato questo primo tratto c’è un breve pezzo pianeggiante e poi ricomincia la salita in alcuni tratti si passa tra delle rocce in un paesaggio fantastico, come si può vedere anche nelle foto.
 
 ![Lungo la salita IW0GTF](/assets/blog/2004-07-10-sota-monte-terminillo/2004-07-10-sota-monte-terminillo-01.jpg){: .align-center}
@@ -83,6 +85,20 @@ QRB Totale: 5855 --- DX: I8YZO 496Km --- Punti: 7407
 ## La classifica del contest
 
 E' la seconda volta che partecipiamo a questo contest e siamo partiti con l'idea di puntare in alto in classifica, ma non pensavamo certo di arrivare così in alto. Quest'anno abbiamo partecipato ancora una volta alla categoria 3W. Per il prossimo anno, sperando in una propagazione e partecipazione migliore, lo scorso anno il numero di QSO del primo classificato era 67, probilmente proveremo la partecipazione con la categoria a potenza più bassa!
+
+|N°|Nominativo|N° QSO|DX|Molt. I-QRP|N° I-QRP Club|P. Dichiarati|P. Finale|
+|:---|:---|:---:|:---:|:---:|:---:|---:|---:|
+|**1**|**IW0GTF/I0**|**27**|**496**|**4**|**-**|**7407**|**7407**|
+|2|IW1BCO/I1|15|262|4|-|2656|2676|
+|3|IK1YNZ|10|459|3|-|2439|2439|
+|4|IW0BUA/I8|8|389|-|-|1795|1795|
+|5|IK4YAZ|12|325|3|-|1779|1779|
+|6|IK1ZYW|3|197|2|#476|622|622|
+|7|IW2JHT|3|147|1|-|435|435|
+|8|IW7DEC|5|95|-|#190|253|253|
+|9|IK7HIN/I7|2|193|-|#3|207|207|
+|10|IZ7EXL/I7|2|193|-|#448|207|207|
+|11|IZ7EXJ/I7|1|193|-|#449|193|193|
 
 ## La mappa dei collegamenti
 

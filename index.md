@@ -56,8 +56,13 @@ feature_row:
     url: "https://github.com/bobboteck/easy-numpad"
     btn_label: "Read More"
     btn_class: "btn--primary"
+
+footer: 
+  - excerpt: "I'm member of [Officine Robotiche](https://www.officinerobotiche.it/) an Social Promotion Association, whose declared purpose is to spread the STEAM knowledge with Robotics"
 ---
 
 {% include feature_row %}
 
-{% include feature_row id="feature_row2" type="left" %}
+{% include latest_post.html %}
+
+{% include feature_row id="footer" type="center" %}

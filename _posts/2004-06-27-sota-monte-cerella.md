@@ -23,7 +23,7 @@ toc_icon: "cog"
 toc_sticky: true
 ---
 
-## Ci riprovo in 50
+## L'attivazione
 
 Come avevo annunciato questa volta Andrea non è venuto con me, e purtroppo la sua attività da Monte Camicia è anche saltata per vari motivi, non ci siamo riusciti a sentire neanche tra di noi. Comunque la mia attivazione non è stata in solitaria, ero in buona compagnia, anzi in ottima, visto che stavo con la mia ragazza! :-)
 Proprio per l'occasione avevo scelto una meta molto facile, anche per non fare brutta figura. Monte Cerella si trova di fronte a Guadagnolo, e con una camminnata di mezzora ci si arriva.

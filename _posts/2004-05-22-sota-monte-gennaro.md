@@ -25,7 +25,7 @@ toc_icon: "cog"
 toc_sticky: true
 ---
 
-## Una nuova cima SOTA per noi
+## L'attivazione
 
 Finalmente dopo una lunga attesa e diversi rinvii a causa del mal tempo, siamo riusciti a partire per la nostra seconda attivazione **SOTA**. Questa volta attiviamo la cima sia in **50** che in **144 MHz**, grazie anche al mio ultimo acquisto, il piccolo **FT-817** molto comodo per questo tipo di attività vista la sua leggerezza. L'equipaggiamento è poi composto da dipolo auto costruito per i 6 metri e una 9 elementi per i 144MHz, l'alimentazione è affidata alla solita pesante batteria da auto per avere una buona autonomia. Questa volta abbiamo utilizzato un nuovo sistema di pali in alluminio che si innestano tra di loro, realizzato da Andrea (IW0GTG).
 

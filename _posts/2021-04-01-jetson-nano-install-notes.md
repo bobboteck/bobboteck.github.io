@@ -1,5 +1,11 @@
 ---
 title: "Jetson Nano personal installation notes"
+excerpt: "I had a Jetson Nano, which had a power problem, after some time while installing the OS it turns itself off. In this article I report the experience in question and some simple configuration steps"
+header: 
+    overlay_color: "#000"
+    overlay_filter: "0.5"
+    overlay_image: /assets/blog/2021-04-01-jetson-nano-install-notes/2021-04-01-jetson-nano-install-notes-teaser.png
+    teaser: /assets/blog/2021-04-01-jetson-nano-install-notes/2021-04-01-jetson-nano-install-notes-teaser.png
 categories:
   #- Blog
   - Notes
