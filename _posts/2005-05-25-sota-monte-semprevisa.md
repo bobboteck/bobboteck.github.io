@@ -4,8 +4,8 @@ excerpt: "Ci avevamo provato già una volta ad organizzare un'attivazione sul Se
 header: 
     overlay_color: "#000"
     overlay_filter: "0.5"
-    overlay_image: /assets/blog/2005-05-25-sota-monte-semprevisa/2005-05-25-sota-monte-semprevisa-teaser.jpg
-    teaser: /assets/blog/2005-05-25-sota-monte-semprevisa/2005-05-25-sota-monte-semprevisa-teaser.jpg
+    #overlay_image: /assets/blog/2005-05-25-sota-monte-semprevisa/2005-05-25-sota-monte-semprevisa-teaser.jpg
+    #teaser: /assets/blog/2005-05-25-sota-monte-semprevisa/2005-05-25-sota-monte-semprevisa-teaser.jpg
 categories:
   #- Blog
   - SOTA
