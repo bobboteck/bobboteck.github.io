@@ -26,28 +26,28 @@ toc_sticky: true
 gallery:
   - url: /assets/blog/2005-04-17-sota-monte-cerella/2005-04-17-sota-monte-cerella-01.jpg
     image_path: /assets/blog/2005-04-17-sota-monte-cerella/2005-04-17-sota-monte-cerella-01-th.jpg
-    alt: "Holes in buttons side of the box"
-    title: "Holes in buttons side of the box"
+    alt: "Pronti per partire verso la cima del Cerella"
+    title: "Pronti per partire verso la cima del Cerella"
   - url: /assets/blog/2005-04-17-sota-monte-cerella/2005-04-17-sota-monte-cerella-02.jpg
     image_path: /assets/blog/2005-04-17-sota-monte-cerella/2005-04-17-sota-monte-cerella-02-th.jpg
-    alt: "Hole in the handle sideo of the box for power switch"
-    title: "Hole in the handle sideo of the box for power switch"
+    alt: "Andrea è inclinato a causa del vento"
+    title: "Andrea è inclinato a causa del vento"
   - url: /assets/blog/2005-04-17-sota-monte-cerella/2005-04-17-sota-monte-cerella-03.jpg
     image_path: /assets/blog/2005-04-17-sota-monte-cerella/2005-04-17-sota-monte-cerella-03-th.jpg
-    alt: "Holes for the internal boards, on which to mount Arduino, the power bank and the holes for the passage of cables"
-    title: "Holes for the internal boards, on which to mount Arduino, the power bank and the holes for the passage of cables"
+    alt: "Prima neve ghiacciata che comincia a cedere"
+    title: "Prima neve ghiacciata che comincia a cedere"
   - url: /assets/blog/2005-04-17-sota-monte-cerella/2005-04-17-sota-monte-cerella-04.jpg
     image_path: /assets/blog/2005-04-17-sota-monte-cerella/2005-04-17-sota-monte-cerella-04-th.jpg
-    alt: "Arduino uno and the power bank positioned"
-    title: "Arduino uno and the power bank positioned"
+    alt: "Un rifugio di fortuna"
+    title: "Un rifugio di fortuna"
   - url: /assets/blog/2005-04-17-sota-monte-cerella/2005-04-17-sota-monte-cerella-05.jpg
     image_path: /assets/blog/2005-04-17-sota-monte-cerella/2005-04-17-sota-monte-cerella-05-th.jpg
-    alt: "The wooden board placed into the box"
-    title: "The wooden board placed into the box"
+    alt: "Si comincia ad impiangare tutto"
+    title: "Si comincia ad impiangare tutto"
   - url: /assets/blog/2005-04-17-sota-monte-cerella/2005-04-17-sota-monte-cerella-06.jpg
     image_path: /assets/blog/2005-04-17-sota-monte-cerella/2005-04-17-sota-monte-cerella-06-th.jpg
-    alt: "The cables connected on Arduino Uno Shield"
-    title: "The cables connected on Arduino Uno Shield"
+    alt: "Per la via del ritorno il paesaggio è completamente cambiato"
+    title: "Per la via del ritorno il paesaggio è completamente cambiato"
 ---
 
 ## L'attivazione
@@ -55,7 +55,7 @@ gallery:
 Già da qualche mese ci stavamo preparando per il week-end dei contest del Lazio, poi prima per motivi di lavoro e per le condizioni del tempo l'attività si è ridotta all'osso. Incerti su cosa fare fino a domenica mattina, quando alle 7:00 con Andrea ci sentiamo in radio, il cielo si sta schiarendo, ma ci sono ancora tante nuvole in giro. Alla fine decidiamo di tentare lo stesso, ma cambiamo meta, scegliamo il più semplice monte Cerella, che in caso di pioggia ci permetterebe di arrivare alla macchina più rapidamente.
 Quindi si parte e con calma si arriva al punto di partenza, caricati gli zaini cominciamo a camminare tante nuvole ma anche tanto vento, speriamo che si mantenga così per evitare la pioggia.
 
-Arrivati in cima ci prepariamo a montare l'attrezzatura, ma visto il forte vento e il tempo dubbio decidiamo di montare solo l'HB9 bi-banda, così per i 432MHz non dobbiamo neanche cambiare antenna. Finito di montare il tutto troviamo un posto più riparato e cominciamo le chiamate. Comincio a fare le prime chiamate, intanto Andrea con un telo attrezza un rifuggio di fortuna, visto che comnciano a cadere piccoli chicchi di giaccio.
+Arrivati in cima ci prepariamo a montare l'attrezzatura, ma visto il forte vento e il tempo dubbio decidiamo di montare solo l'HB9 bi-banda, così per i 432MHz non dobbiamo neanche cambiare antenna. Finito di montare il tutto troviamo un posto più riparato e cominciamo le chiamate. Comincio a fare le prime chiamate, intanto Andrea con un telo attrezza un rifugio di fortuna, visto che comnciano a cadere piccoli chicchi di giaccio.
 
 Il tempo cambia in continuazione, a tratti sembra si stia calmando, poi riprende, fino a quando non ci si mette e la neve comincia ad imbiacare tutto intorno, è poco più di un'ora che siamo li e visto che non sembra intenzionato a smettere decidiamo di andare via. Le operazioni di smontaggio sono rese difficili dal vento, dalla neve che cade e dalle mani che si stanno ghiacciando, non sono neanche riuscito a tirare fuori la macchinetta per le ultime foto. Solo lungo la strada del ritorno con le mani in tasca ho preso la macchinetta e fatta l'ultima foto per vedere come era cambiato il paesaggio.
 
@@ -64,7 +64,7 @@ Le condizioni di lavoro erano FT-817 con 2,5W di potenza alimentato con le batte
 
 ## Foto dell'attivazione
 
-{% include gallery caption="Gallery of wooden box building" %}
+{% include gallery caption="SOTA Monte Cerella 2005" %}
 
 ## Il log dell'attività
 
