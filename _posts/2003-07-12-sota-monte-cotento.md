@@ -90,3 +90,5 @@ QRB Totale: 2174 km --- DX: IK2UJS 501Km
 ## La mappa dei collegamenti
 
 ![La mappa dei collegamenti](/assets/blog/2003-07-12-sota-monte-cotento/2003-07-12-sota-monte-cotento-05.jpg){: .align-center}
+
+{% include qsos_map.html %}

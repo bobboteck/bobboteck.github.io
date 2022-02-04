@@ -3,22 +3,53 @@
 <head>
   <meta charset="utf-8">
   <title>MAP</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
-  <!-- Make sure you put this AFTER Leaflet's CSS -->
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 
 </head>
 <body>
   <div id="map" style="width:600px; height:500px"></div>
   
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
   <script>
-    fetch("./data.json")
+/*    fetch("./data.json")
     .then(response => 
     {
       return response.json();
     })
     .then(jsonData =>
     {
+*/
+        const jsonData = {
+    "MapConfig":
+    {
+        "Latitude": 41.912,
+        "Longitude": 13.330,
+        "Zoom": 5
+    },
+    "MyQTH": 
+    {
+        "Latitude": 41.912,
+        "Longitude": 13.330,
+        "Description": "<b>Monte Cotento</b> 2015 m<br>I/LZ-008<br>JN61pv"
+    },
+    "QSOs":
+    [
+        {
+            "Latitude": 44.188,
+            "Longitude": 10.708,
+            "Description": "<b>IK4WKU</b><br>JN54ie"
+        },
+        {
+            "Latitude": 45.854,
+            "Longitude": 10.375,
+            "Description": "<b>IK2UJS</b><br>JN55eu"
+        }
+    ]
+}; 
+        console.log(jsonData);
+
         console.log(jsonData);
 
         console.log(jsonData.MapConfig);
@@ -41,7 +72,7 @@
         {
             L.marker([qso.Latitude, qso.Longitude]).addTo(map).bindPopup(qso.Description);
         });
-    });
+//    });
 /*
     var map = L.map('map').setView([41.912, 13.330], 5);
 
