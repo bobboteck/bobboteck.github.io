@@ -12,11 +12,17 @@
   <div id="map" style="width:600px; height:500px"></div>
   
   <script>
-    fetch("data.json")
-    .then(response => {
+    fetch("./data.json")
+    .then(response => 
+    {
       return response.json();
     })
-    .then(jsondata => console.log(jsondata));
+    .then(jsondata =>
+    {
+        console.log(jsondata);
+
+        console.log(jsondata.MapConfig);
+    });
 
     var map = L.map('map').setView([41.912, 13.330], 5);
 
@@ -32,8 +38,8 @@
     marker.bindPopup("<b>Monte Cotento</b> 2015 m<br>I/LZ-008<br>JN61pv");
 
 
-    let qso1 = L.marker([44.188, 10.708]).addTo(map).bindPopup("<b>IK4WKU</b><br>JN54ie")
-    L.marker([45.854, 10.375]).addTo(map).bindPopup("<b>IK2UJS</b><br>JN55eu")
+    let qso1 = L.marker([44.188, 10.708]).addTo(map).bindPopup("<b>IK4WKU</b><br>JN54ie");
+    L.marker([45.854, 10.375]).addTo(map).bindPopup("<b>IK2UJS</b><br>JN55eu");
   </script>
 </body>
 </html>
