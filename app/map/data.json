@@ -1,0 +1,27 @@
+{
+    "MapConfig":
+    {
+        "Latitude": 41.912,
+        "Longitude": 13.330,
+        "Zoom": 5
+    },
+    "MyQTH": 
+    {
+        "Latitude": 41.912,
+        "Longitude": 13.330,
+        "Description": "<b>Monte Cotento</b> 2015 m<br>I/LZ-008<br>JN61pv"
+    },
+    "qsos":
+    [
+        {
+            "Latitude": 44.188,
+            "Longitude": 10.708,
+            "Description": "<b>IK4WKU</b><br>JN54ie"
+        },
+        {
+            "Latitude": 45.854,
+            "Longitude": 10.375,
+            "Description": "<b>IK2UJS</b><br>JN55eu"
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MAP</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+</head>
+<body>
+  <div id="map" style="width:600px; height:500px"></div>
+  
+  <script>
+    fetch("data.json")
+    .then(response => {
+      return response.json();
+    })
+    .then(jsondata => console.log(jsondata));
+
+    var map = L.map('map').setView([41.912, 13.330], 5);
+
+    var Stamen_Terrain = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.{ext}', {
+      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      subdomains: 'abcd',
+      minZoom: 0,
+      maxZoom: 18,
+      ext: 'png'
+    }).addTo(map);
+
+    var marker = L.marker([41.912, 13.330]).addTo(map);
+    marker.bindPopup("<b>Monte Cotento</b> 2015 m<br>I/LZ-008<br>JN61pv");
+
+
+    let qso1 = L.marker([44.188, 10.708]).addTo(map).bindPopup("<b>IK4WKU</b><br>JN54ie")
+    L.marker([45.854, 10.375]).addTo(map).bindPopup("<b>IK2UJS</b><br>JN55eu")
+  </script>
+</body>
+</html>
+
+<!-- 
+  https://leafletjs.com/examples/quick-start/
+  https://github.com/jleh/qth-locator
+  https://www.delftstack.com/howto/javascript/load-json-file-in-javascript/
+  https://www.giangrandi.org/electronics/radio/qthloccalc.shtml
+-->
