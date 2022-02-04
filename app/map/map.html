@@ -37,7 +37,7 @@
         var myPosition = L.marker([jsonData.MyQTH.Latitude, jsonData.MyQTH.Longitude]).addTo(map);
         myPosition.bindPopup(jsonData.MyQTH.Description);
 
-        jsonData.QSOs.array.forEach(qso => 
+        jsonData.QSOs.forEach(qso => 
         {
             L.marker([qso.Latitude, qso.Longitude]).addTo(map).bindPopup(qso.Description);
         });
