@@ -23,7 +23,7 @@
 
         console.log(jsonData.MapConfig);
 
-        var map = L.map('map').setView([jsondata.MapConfig.Latitude, jsondata.MapConfig.Longitude], jsondata.MapConfig.Zoom);
+        var map = L.map('map').setView([jsonData.MapConfig.Latitude, jsonData.MapConfig.Longitude], jsonData.MapConfig.Zoom);
 
         var Stamen_Terrain = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.{ext}', 
         {
@@ -34,10 +34,10 @@
             ext: 'png'
         }).addTo(map);
 
-        var myPosition = L.marker([MyQTH.Latitude, MyQTH.Longitude]).addTo(map);
-        myPosition.bindPopup(MyQTH.Description);
+        var myPosition = L.marker([jsonData.MyQTH.Latitude, jsonData.MyQTH.Longitude]).addTo(map);
+        myPosition.bindPopup(jsonData.MyQTH.Description);
 
-        QSOs.array.forEach(qso => 
+        jsonData.QSOs.array.forEach(qso => 
         {
             L.marker([qso.Latitude, qso.Longitude]).addTo(map).bindPopup(qso.Description);
         });
