@@ -9,29 +9,63 @@
     {
         "Latitude": 41.912,
         "Longitude": 13.330,
-        "Description": "<b>Monte Cotento</b> 2015 m<br>I/LZ-008<br>JN61pv"
+        "isPortable": true,
+        "Location": "<b>Monte Cotento</b> 2015 m<br>I/LZ-008<br>JN61pv",
+        "Locator": "JN61pv",
+        "Reference": "SOTA I/LZ-008"
     },
     "QSOs":
     [
         {
+
+            "Description": "<b>IK4WKU</b><br>JN54ie",
+            "Call": "IK4WKU",
             "Latitude": 44.188,
             "Longitude": 10.708,
-            "Description": "<b>IK4WKU</b><br>JN54ie"
+            "Locator": "JN54ie",
+            "Band": "2m",
+            "Frequency": "",
+            "Mode": "SSB",
+            "RSTr": 59,
+            "RSTs": 59,
+            "TxPower": 0,
+            "RxPower": 0,
+            "UtcTime": "2003-07-12T08:55:00Z",
+            "Note": ""
         },
         {
+
+            "Description": "<b>IK2UJS</b><br>JN55eu",
+            "Call": "IK2UJS",
             "Latitude": 45.854,
             "Longitude": 10.375,
-            "Description": "<b>IK2UJS</b><br>JN55eu"
+            "Locator": "JN55eu",
+            "Band": "2m",
+            "Frequency": "",
+            "Mode": "SSB",
+            "RSTr": 59,
+            "RSTs": 59,
+            "TxPower": 0,
+            "RxPower": 0,
+            "UtcTime": "2003-07-12T08:58:00Z",
+            "Note": ""
         },
         {
+
+            "Description": "<b>IN3GEN/IN3</b><br>JN56tc",
+            "Call": "IN3GEN/IN3",
             "Latitude": 46.104,
             "Longitude": 11.625,
-            "Description": "<b>IN3GEN/IN3</b>JN56TC<br>",
-            "QRZ": "IN3GEN/IN3",
-            "Locator": "JN56TC",
-            "Band": "2 m",
+            "Locator": "JN56tc",
+            "Band": "2m",
+            "Frequency": "",
             "Mode": "SSB",
-            "Time": "0906"
+            "RSTr": 59,
+            "RSTs": 59,
+            "TxPower": 0,
+            "RxPower": 0,
+            "UtcTime": "2003-07-12T09:06:00Z",
+            "Note": ""
         }
     ]
 }
