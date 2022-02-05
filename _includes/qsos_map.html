@@ -6,7 +6,8 @@
 
 console.log(window.location.href);
 
-fetch("/assets/blog/2003-07-12-sota-monte-cotento/data.json")
+//fetch("/assets/blog/2003-07-12-sota-monte-cotento/data.json")
+fetch("{{ include.mapdata }}")
 .then(response => 
 {
     return response.json();
