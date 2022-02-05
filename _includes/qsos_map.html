@@ -3,10 +3,6 @@
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 
 <script>
-
-console.log(window.location.href);
-
-//fetch("/assets/blog/2003-07-12-sota-monte-cotento/data.json")
 fetch("{{ include.mapdata }}")
 .then(response => 
 {
@@ -14,7 +10,14 @@ fetch("{{ include.mapdata }}")
 })
 .then(jsonData =>
 {
-    //var map = L.map('map').setView([jsonData.MapConfig.Latitude, jsonData.MapConfig.Longitude], jsonData.MapConfig.Zoom);
+    const stationIcon = L.icon(
+    {
+        iconUrl: '/asset/icon/map-station.png',
+        iconSize: [41,41],
+        iconAnchor: [20,40],
+        popupAnchor: [20,0]
+    });
+
     const map = L.map('map').setView([jsonData.MapConfig.Latitude, jsonData.MapConfig.Longitude], jsonData.MapConfig.Zoom);
 
     var Stamen_Terrain = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.{ext}', 
@@ -27,7 +30,7 @@ fetch("{{ include.mapdata }}")
     }).addTo(map);
 
     let myPopUpDescription = jsonData.MyQTH.Location + "<br />" + jsonData.MyQTH.Locator + "<br />" + jsonData.MyQTH.Reference;
-    var myPosition = L.marker([jsonData.MyQTH.Latitude, jsonData.MyQTH.Longitude]).addTo(map);
+    var myPosition = L.marker([jsonData.MyQTH.Latitude, jsonData.MyQTH.Longitude], {icon: stationIcon}).addTo(map);
     myPosition.bindPopup(myPopUpDescription);
 
     jsonData.QSOs.forEach(qso => 
