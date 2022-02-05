@@ -22,6 +22,16 @@
             "Latitude": 45.854,
             "Longitude": 10.375,
             "Description": "<b>IK2UJS</b><br>JN55eu"
+        },
+        {
+            "Latitude": 46.104,
+            "Longitude": 11.625,
+            "Description": "<b>IN3GEN/IN3</b>JN56TC<br>",
+            "QRZ": "IN3GEN/IN3",
+            "Locator": "JN56TC",
+            "Band": "2 m",
+            "Mode": "SSB",
+            "Time": "0906"
         }
     ]
 }
