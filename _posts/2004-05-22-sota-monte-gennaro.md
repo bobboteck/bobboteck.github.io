@@ -51,9 +51,9 @@ Verso le 16 capiamo che per tornare alla macchina ci sono da fare diversi chilom
 
 ![Attività in 144 MHz](/assets/blog/2004-05-22-sota-monte-gennaro/2004-05-22-sota-monte-gennaro-06.jpg){: .align-center}
 
-La giornata non è stata delle migliori sia per quanto riguarda sia il meteo che la propagazione, però possiamo dire che è stata una esperienza positiva e speriamo di poterci ripetere presto.
+La giornata non è stata delle migliori sia per quanto riguarda il meteo che la propagazione, però possiamo dire che è stata una esperienza positiva e speriamo di poterci ripetere presto.
 
-## Il log dell'attività in 50 MHz
+## Il log dei collegamenti in 50 MHz
 
 |N°|Ora|Frequenza|Modo|Nominativo|RSTi|RSTr|Locator|QRB|
 |:---|:---:|:---:|:---:|:---|:---:|:---:|:---:|---:|
@@ -70,7 +70,7 @@ QRB Totale: 240 --- DX: IZ0EMY 60Km
 
 ![La mappa dei collegamenti in 50 MHz](/assets/blog/2004-05-22-sota-monte-gennaro/2004-05-22-sota-monte-gennaro-07.jpg){: .align-center}
 
-## Il log dell'attività in 144 MHz
+## Il log dei collegamenti in 144 MHz
 
 |N°|Ora|Frequenza|Modo|Nominativo|RSTi|RSTr|Locator|QRB|
 |:---|:---:|:---:|:---:|:---|:---:|:---:|:---:|---:|

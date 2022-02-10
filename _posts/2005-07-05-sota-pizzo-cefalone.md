@@ -53,7 +53,7 @@ Vediamo addensarsi nubi sempre più nere nei dintorni e sembra che sotto scenda 
 
 A Campo Imperatore troviamo Gianni e Cesare che ci aspettano, non potendo salire verso il Corno Grande come volevano fare visto il tempo pessimo. Una sosta ristoratrice al bar, quattro chiacchiere e si riprende la macchina per Roma lasciando il Pizzo Cefalone e le altre cime del Gran Sasso incappucciate di dense nuvole nere.
 
-## Il log dell'attivazione
+## Il log dei collegamenti
 
 |N°|Ora|Frequenza|Modo|Nominativo|RSTi|RSTr|Locator|QRB|
 |:---|:---:|:---:|:---:|:---|:---:|:---:|:---:|---:|
@@ -76,6 +76,7 @@ A Campo Imperatore troviamo Gianni e Cesare che ci aspettano, non potendo salire
 
 ## La mappa dei collegamenti
 
-{% include qsos_map.html mapdata="/assets/blog/2005-07-05-sota-pizzo-cefalone/data.json" %}
+{% include qsos_map.html mapcontainer="map" mapdata="/assets/blog/2005-07-05-sota-pizzo-cefalone/data.json" %}
 
-**Attenzione** questa attivazione è stata effettuata con le referenze del SOTA Italia che utilizzavamo a quel tempo, e non a quello internazionale, quindi i dati dell'attivazione non sono riportati nel DB del programma SOTA ufficiale{: .notice--warning}
+**Attenzione** questa attivazione è stata effettuata con le referenze del SOTA Italia che utilizzavamo a quel tempo, e non a quello internazionale, quindi i dati dell'attivazione non sono riportati nel DB del programma SOTA ufficiale
+{: .notice--warning}

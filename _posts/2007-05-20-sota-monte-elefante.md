@@ -1,6 +1,6 @@
 ---
 title: "Attivazione SOTA monte Elefante"
-excerpt: ""
+excerpt: "Dopo quasi un anno dall'ultima attivazione eccoci alla prova sul monte Elefante"
 header: 
     overlay_color: "#000"
     overlay_filter: "0.5"
@@ -68,7 +68,7 @@ Quindi senza perdermi in troppe parole vi lascerei alla visione del filmato. L'u
 
 ## Mappa dei collegamenti di IW0GTG
 
-{% include qsos_map.html mapdata="/assets/blog/2007-05-20-sota-monte-elefante/data-iw0gtg.json" %}
+{% include qsos_map.html mapcontainer="mapGtg" mapdata="/assets/blog/2007-05-20-sota-monte-elefante/data-iw0gtg.json" %}
 
 ## Log dei collegamenti di IW0GTF
 
@@ -83,7 +83,7 @@ Quindi senza perdermi in troppe parole vi lascerei alla visione del filmato. L'u
 
 ## Mappa dei collegamenti di IW0GTF
 
-{% include qsos_map.html mapdata="/assets/blog/2007-05-20-sota-monte-elefante/data-iw0gtf.json" %}
+{% include qsos_map.html mapcontainer="mapGtf" mapdata="/assets/blog/2007-05-20-sota-monte-elefante/data-iw0gtf.json" %}
 
 **Attenzione** questa attivazione è stata effettuata con le referenze del SOTA Italia che utilizzavamo a quel tempo, e non a quello internazionale, quindi i dati dell'attivazione non sono riportati nel DB del programma SOTA ufficiale
 {: .notice--warning}

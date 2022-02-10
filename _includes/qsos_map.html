@@ -18,9 +18,9 @@ fetch("{{ include.mapdata }}")
         popupAnchor: [20,0]
     });
 
-    const map = L.map('map').setView([jsonData.MapConfig.Latitude, jsonData.MapConfig.Longitude], jsonData.MapConfig.Zoom);
+    let map = L.map('{include.mapcontainer}').setView([jsonData.MapConfig.Latitude, jsonData.MapConfig.Longitude], jsonData.MapConfig.Zoom);
 
-    var Stamen_Terrain = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.{ext}', 
+    let Stamen_Terrain = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.{ext}', 
     {
         attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         subdomains: 'abcd',
@@ -30,7 +30,7 @@ fetch("{{ include.mapdata }}")
     }).addTo(map);
 
     let myPopUpDescription = jsonData.MyQTH.Location + "<br />" + jsonData.MyQTH.Locator + "<br />" + jsonData.MyQTH.Reference;
-    var myPosition = L.marker([jsonData.MyQTH.Latitude, jsonData.MyQTH.Longitude], {icon: stationIcon}).addTo(map);
+    let myPosition = L.marker([jsonData.MyQTH.Latitude, jsonData.MyQTH.Longitude], {icon: stationIcon}).addTo(map);
     myPosition.bindPopup(myPopUpDescription);
 
     jsonData.QSOs.forEach(qso => 
@@ -42,5 +42,5 @@ fetch("{{ include.mapdata }}")
 </script>
 
 <p>
-    <div id="map" style="max-width: 100%;height: 450px;"></div>
+    <div id="{include.mapcontainer}" style="max-width: 100%;height: 450px;"></div>
 </p>

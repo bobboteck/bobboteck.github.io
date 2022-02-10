@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MAP 2</title>
+
+</head>
+<body>
+  <div id="map-a" style="width:600px; height:500px"></div>
+
+  <div id="map-b" style="width:600px; height:500px"></div>
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+  <script>
+function showMap(mapcontainer, tileRef, jsonData)
+{
+
+  console.log(jsonData);
+
+  console.log(jsonData);
+
+  console.log(jsonData.MapConfig);
+
+  var map = L.map(mapcontainer).setView([jsonData.MapConfig.Latitude, jsonData.MapConfig.Longitude], jsonData.MapConfig.Zoom);
+
+  var Stamen_Terrain = L.tileLayer(tileRef, 
+  {
+    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    subdomains: 'abcd',
+    minZoom: 0,
+    maxZoom: 10,
+    ext: 'png'
+  }).addTo(map);
+
+  var myPosition = L.marker([jsonData.MyQTH.Latitude, jsonData.MyQTH.Longitude]).addTo(map);
+  myPosition.bindPopup(jsonData.MyQTH.Description);
+
+  jsonData.QSOs.forEach(qso => 
+  {
+    L.marker([qso.Latitude, qso.Longitude]).addTo(map).bindPopup(qso.Description);
+  });
+}
+
+  const data = 
+  {
+    "MapConfig":
+    {
+      "Latitude": 42.479,
+      "Longitude": 12.958,
+      "Zoom": 5
+    },
+    "MyQTH": 
+    {
+      "Latitude": 42.479,
+      "Longitude": 12.958,
+      "isPortable": true,
+      "Location": "<b>Monte Elefante</b> 2015 m",
+      "Locator": "JN62ll",
+      "References": 
+      [
+        {
+            "Reference" : ""
+        }
+      ]
+    },
+    "QSOs":
+    [
+      {
+        "Call": "IW0HLZ",
+        "Latitude": 41.938,
+        "Longitude": 12.542,
+        "Locator": "JN61gw",
+        "QRB": 0,
+        "Band": "6m",
+        "Frequency": "",
+        "Mode": "SSB",
+        "RSTr": 53,
+        "RSTs": 59,
+        "TxPower": 0.5,
+        "RxPower": 0,
+        "UtcTime": "2007-05-20",
+        "Note": ""
+      },
+      {
+        "Call": "IW0FFK",
+        "Latitude": 41.771,
+        "Longitude": 12.458,
+        "Locator": "JN61fs",
+        "QRB": 0,
+        "Band": "6m",
+        "Frequency": "",
+        "Mode": "SSB",
+        "RSTr": 59,
+        "RSTs": 59,
+        "TxPower": 0.5,
+        "RxPower": 0,
+        "UtcTime": "2007-05-20T",
+        "Note": ""
+      }
+    ]
+  }; 
+
+  showMap('map-a', 'https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.{ext}', data);
+
+  showMap('map-b', 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', data);
+
+  </script>
+</body>
+</html>
+
+<!-- 
+  https://leafletjs.com/examples/quick-start/
+  https://github.com/jleh/qth-locator
+  https://www.delftstack.com/howto/javascript/load-json-file-in-javascript/
+  https://www.giangrandi.org/electronics/radio/qthloccalc.shtml
+-->

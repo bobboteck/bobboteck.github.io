@@ -71,7 +71,7 @@ Non è male anche perchè qualche settimana più tardi guardando la classifica d
 |11|IZ3CDH|3|152|1|#513|203|203|
 |12|IW7BVY|2|146|-|-|174|174|
 
-## Il log dell'attivazione
+## Il log dei collegamenti
 
 |N°|Ora|Frequenza|Modo|Nominativo|RSTi|RSTr|Locator|QRB|
 |:---|:---:|:---:|:---:|:---|:---:|:---:|:---:|---:|
@@ -89,4 +89,7 @@ QRB Totale: 2174 km --- DX: IK2UJS 501Km
 
 ## La mappa dei collegamenti
 
-{% include qsos_map.html mapdata="/assets/blog/2003-07-12-sota-monte-cotento/data.json" %}
+{% include qsos_map.html mapcontainer="map" mapdata="/assets/blog/2003-07-12-sota-monte-cotento/data.json" %}
+
+**Attenzione** questa attivazione è stata effettuata con le referenze del SOTA Italia che utilizzavamo a quel tempo, e non a quello internazionale, quindi i dati dell'attivazione non sono riportati nel DB del programma SOTA ufficiale
+{: .notice--warning}
