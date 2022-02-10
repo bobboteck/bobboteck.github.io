@@ -1,0 +1,121 @@
+{
+    "MapConfig":
+    {
+        "Latitude": 42.479,
+        "Longitude": 12.958,
+        "Zoom": 5
+    },
+    "MyQTH": 
+    {
+        "Latitude": 42.479,
+        "Longitude": 12.958,
+        "isPortable": true,
+        "Location": "<b>Monte Elefante</b> 2015 m",
+        "Locator": "JN62ll",
+        "References": 
+        [
+            {
+                "Reference" : ""
+            }
+        ]
+    },
+    "QSOs":
+    [
+		{
+            "Call": "IW0HLZ",
+            "Latitude": 41.938,
+            "Longitude": 12.542,
+            "Locator": "JN61gw",
+            "QRB": 0,
+            "Band": "6m",
+            "Frequency": "",
+            "Mode": "SSB",
+            "RSTr": 53,
+            "RSTs": 59,
+            "TxPower": 0.5,
+            "RxPower": 0,
+            "UtcTime": "2007-05-20",
+            "Note": ""
+        },
+		{
+            "Call": "IW0FFK",
+            "Latitude": 41.771,
+            "Longitude": 12.458,
+            "Locator": "JN61fs",
+            "QRB": 0,
+            "Band": "6m",
+            "Frequency": "",
+            "Mode": "SSB",
+            "RSTr": 59,
+            "RSTs": 59,
+            "TxPower": 0.5,
+            "RxPower": 0,
+            "UtcTime": "2007-05-20T",
+            "Note": ""
+        },
+		{
+            "Call": "I0/ZL2OG",
+            "Latitude": 41.313,
+            "Longitude": 12.542,
+            "Locator": "JN61gh",
+            "QRB": 0,
+            "Band": "6m",
+            "Frequency": "",
+            "Mode": "SSB",
+            "RSTr": 53,
+            "RSTs": 59,
+            "TxPower": 0.5,
+            "RxPower": 0,
+            "UtcTime": "2007-05-20T",
+            "Note": ""
+        },
+		{
+            "Call": "I0DGB/6",
+            "Latitude": 42.813,
+            "Longitude": 13.875,
+            "Locator": "JN62wt",
+            "QRB": 0,
+            "Band": "6m",
+            "Frequency": "",
+            "Mode": "SSB",
+            "RSTr": 51,
+            "RSTs": 59,
+            "TxPower": 0.5,
+            "RxPower": 0,
+            "UtcTime": "2007-05-20T",
+            "Note": ""
+        },
+		{
+            "Call": "IZ5IOM/5",
+            "Latitude": 43.938,
+            "Longitude": 10.708,
+            "Locator": "JN53iw",
+            "QRB": 0,
+            "Band": "6m",
+            "Frequency": "",
+            "Mode": "SSB",
+            "RSTr": 51,
+            "RSTs": 59,
+            "TxPower": 0.5,
+            "RxPower": 0,
+            "UtcTime": "2007-05-20T",
+            "Note": ""
+        },
+		{
+            "Call": "IZ0CUV",
+            "Latitude": 42.813,
+            "Longitude": 12.792,
+            "Locator": "JN62jt",
+            "QRB": 0,
+            "Band": "6m",
+            "Frequency": "",
+            "Mode": "SSB",
+            "RSTr": 59,
+            "RSTs": 59,
+            "TxPower": 0.5,
+            "RxPower": 0,
+            "UtcTime": "2007-05-20T",
+            "Note": ""
+        }		
+    ]
+}

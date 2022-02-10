@@ -1,0 +1,84 @@
+{
+    "MapConfig":
+    {
+        "Latitude": 42.479,
+        "Longitude": 12.958,
+        "Zoom": 5
+    },
+    "MyQTH": 
+    {
+        "Latitude": 42.479,
+        "Longitude": 12.958,
+        "isPortable": true,
+        "Location": "<b>Monte Elefante</b> 2015 m",
+        "Locator": "JN62ll",
+        "References": []
+    },
+    "QSOs":
+    [
+        {
+            "Call": "IT9TVF",
+            "Latitude": 48.146,
+            "Longitude": 13.208,
+            "Locator": "JN68od",
+            "QRB": 0,
+            "Band": "2m",
+            "Frequency": "",
+            "Mode": "SSB",
+            "RSTr": 59,
+            "RSTs": 59,
+            "TxPower": 0,
+            "RxPower": 0,
+            "UtcTime": "2007-05-20T12:13:00Z",
+            "Note": ""
+        },
+		{
+            "Call": "IW0SAF",
+            "Latitude": 43.063,
+            "Longitude": 12.292,
+            "Locator": "JN63db",
+            "QRB": 0,
+            "Band": "2m",
+            "Frequency": "",
+            "Mode": "SSB",
+            "RSTr": 59,
+            "RSTs": 59,
+            "TxPower": 0,
+            "RxPower": 0,
+            "UtcTime": "2007-05-20T13:45:00Z",
+            "Note": ""
+        },
+		{
+            "Call": "IW0HLZ",
+            "Latitude": 41.938,
+            "Longitude": 12.542,
+            "Locator": "JN61gw",
+            "QRB": 0,
+            "Band": "2m",
+            "Frequency": "",
+            "Mode": "SSB",
+            "RSTr": 59,
+            "RSTs": 59,
+            "TxPower": 0,
+            "RxPower": 0,
+            "UtcTime": "2007-05-20T14:25:00Z",
+            "Note": ""
+        },
+		{
+            "Call": "IW0FFK",
+            "Latitude": 41.771,
+            "Longitude": 12.458,
+            "Locator": "JN61fs",
+            "QRB": 0,
+            "Band": "2m",
+            "Frequency": "",
+            "Mode": "SSB",
+            "RSTr": 59,
+            "RSTs": 59,
+            "TxPower": 0,
+            "RxPower": 0,
+            "UtcTime": "2007-05-20T14:48:00Z",
+            "Note": ""
+        }
+    ]
+}
