@@ -85,4 +85,5 @@ Quindi senza perdermi in troppe parole vi lascerei alla visione del filmato. L'u
 
 {% include qsos_map.html mapdata="/assets/blog/2007-05-20-sota-monte-elefante/data-iw0gtf.json" %}
 
-**Attenzione** questa attivazione è stata effettuata con le referenze del SOTA Italia che utilizzavamo a quel tempo, e non a quello internazionale, quindi i dati dell'attivazione non sono riportati nel DB del programma SOTA ufficiale {: .notice--warning}
+**Attenzione** questa attivazione è stata effettuata con le referenze del SOTA Italia che utilizzavamo a quel tempo, e non a quello internazionale, quindi i dati dell'attivazione non sono riportati nel DB del programma SOTA ufficiale
+{: .notice--warning}

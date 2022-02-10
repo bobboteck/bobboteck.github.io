@@ -78,4 +78,4 @@ A Campo Imperatore troviamo Gianni e Cesare che ci aspettano, non potendo salire
 
 {% include qsos_map.html mapdata="/assets/blog/2005-07-05-sota-pizzo-cefalone/data.json" %}
 
-**Attenzione** questa attivazione è stata effettuata con le referenze del SOTA Italia che utilizzavamo a quel tempo, e non a quello internazionale, quindi i dati dell'attivazione non sono riportati nel DB del programma SOTA ufficiale {: .notice--warning}
+**Attenzione** questa attivazione è stata effettuata con le referenze del SOTA Italia che utilizzavamo a quel tempo, e non a quello internazionale, quindi i dati dell'attivazione non sono riportati nel DB del programma SOTA ufficiale{: .notice--warning}
