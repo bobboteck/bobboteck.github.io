@@ -61,7 +61,7 @@ Quindi senza perdermi in troppe parole vi lascerei alla visione del filmato. L'u
 
 |N°|Ora|Frequenza|Modo|Nominativo|RSTi|RSTr|Locator|
 |:---|:---:|:---:|:---:|:---|:---:|:---:|:---:|
-|001|1213|144|SSB|IT9TVF|59|59|JN68OD|
+|001|1213|144|SSB|IT9TVF|59|59|JM68OD|
 |002|1345|144|SSB|IW0SAF|59|59|JN63DB|
 |003|1425|144|SSB|IW0HLZ|59|59|JN61GW|
 |004|1448|144|SSB|IW0FFK|59|59|JN61FS|
