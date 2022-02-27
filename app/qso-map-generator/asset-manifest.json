@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/app/qso-map-generator/static/css/main.d612f1ad.css",
+    "main.js": "/app/qso-map-generator/static/js/main.012ff7a5.js",
+    "static/js/787.bd46ee61.chunk.js": "/app/qso-map-generator/static/js/787.bd46ee61.chunk.js",
+    "index.html": "/app/qso-map-generator/index.html",
+    "main.d612f1ad.css.map": "/app/qso-map-generator/static/css/main.d612f1ad.css.map",
+    "main.012ff7a5.js.map": "/app/qso-map-generator/static/js/main.012ff7a5.js.map",
+    "787.bd46ee61.chunk.js.map": "/app/qso-map-generator/static/js/787.bd46ee61.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d612f1ad.css",
+    "static/js/main.012ff7a5.js"
+  ]
+}
