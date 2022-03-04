@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/app/qso-map-generator/static/css/main.d612f1ad.css",
-    "main.js": "/app/qso-map-generator/static/js/main.2177cba3.js",
+    "main.css": "/app/qso-map-generator/static/css/main.1f9a66de.css",
+    "main.js": "/app/qso-map-generator/static/js/main.e7cd2eaa.js",
     "static/js/787.bd46ee61.chunk.js": "/app/qso-map-generator/static/js/787.bd46ee61.chunk.js",
     "index.html": "/app/qso-map-generator/index.html",
-    "main.d612f1ad.css.map": "/app/qso-map-generator/static/css/main.d612f1ad.css.map",
-    "main.2177cba3.js.map": "/app/qso-map-generator/static/js/main.2177cba3.js.map",
+    "main.1f9a66de.css.map": "/app/qso-map-generator/static/css/main.1f9a66de.css.map",
+    "main.e7cd2eaa.js.map": "/app/qso-map-generator/static/js/main.e7cd2eaa.js.map",
     "787.bd46ee61.chunk.js.map": "/app/qso-map-generator/static/js/787.bd46ee61.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d612f1ad.css",
-    "static/js/main.2177cba3.js"
+    "static/css/main.1f9a66de.css",
+    "static/js/main.e7cd2eaa.js"
   ]
 }
