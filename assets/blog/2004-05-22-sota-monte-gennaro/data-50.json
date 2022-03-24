@@ -1,0 +1,112 @@
+{
+    "MapConfig": {
+      "Latitude": 41.825,
+      "Longitude": 12.533,
+      "Zoom": 9
+    },
+    "QTH": {
+      "Latitude": 42.066,
+      "Longitude": 12.8,
+      "Locator": "JN62jb",
+      "Location": "Monte Gennaro - 1272 m",
+      "References": [
+        {
+          "Code": "I/LZ-307",
+          "Type": "SOTA"
+        }
+      ],
+      "isPortable": true
+    },
+    "QSOs": [
+      {
+        "Date": "2004-05-22",
+        "Time": "10:12",
+        "CallSign": "I0SSH",
+        "Locator": "JN61fv",
+        "Latitude": 41.896,
+        "Longitude": 12.458,
+        "QRB": 33,
+        "Band": "6m",
+        "Mode": "SSB",
+        "Frequency": 50150,
+        "RstReceived": 59,
+        "RstSent": 59,
+        "Note": ""
+      },
+      {
+        "Date": "2004-05-22",
+        "Time": "10:18",
+        "CallSign": "IW0CJQ",
+        "Locator": "JN61ft",
+        "Latitude": 41.813,
+        "Longitude": 12.458,
+        "QRB": 39,
+        "Band": "6m",
+        "Mode": "SSB",
+        "Frequency": 50150,
+        "RstReceived": 59,
+        "RstSent": 59,
+        "Note": ""
+      },
+      {
+        "Date": "2004-05-22",
+        "Time": "10:26",
+        "CallSign": "IZ0EMY",
+        "Locator": "JN61kl",
+        "Latitude": 41.479,
+        "Longitude": 12.875,
+        "QRB": 65,
+        "Band": "6m",
+        "Mode": "SSB",
+        "Frequency": 50150,
+        "RstReceived": 59,
+        "RstSent": 59,
+        "Note": ""
+      },
+      {
+        "Date": "2004-05-22",
+        "Time": "10:30",
+        "CallSign": "IW0BSQ",
+        "Locator": "JN61gv",
+        "Latitude": 41.896,
+        "Longitude": 12.542,
+        "QRB": 28,
+        "Band": "6m",
+        "Mode": "SSB",
+        "Frequency": 50150,
+        "RstReceived": 59,
+        "RstSent": 59,
+        "Note": ""
+      },
+      {
+        "Date": "2004-05-22",
+        "Time": "10:37",
+        "CallSign": "IW0GUJ",
+        "Locator": "JN62fd",
+        "Latitude": 42.146,
+        "Longitude": 12.458,
+        "QRB": 29,
+        "Band": "6m",
+        "Mode": "SSB",
+        "Frequency": 50150,
+        "RstReceived": 59,
+        "RstSent": 59,
+        "Note": ""
+      },
+      {
+        "Date": "2004-05-22",
+        "Time": "10:43",
+        "CallSign": "IW0AEN",
+        "Locator": "JN61gu",
+        "Latitude": 41.854,
+        "Longitude": 12.542,
+        "QRB": 31,
+        "Band": "6m",
+        "Mode": "SSB",
+        "Frequency": 50150,
+        "RstReceived": 59,
+        "RstSent": 59,
+        "Note": ""
+      }
+    ]
+  }
