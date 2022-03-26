@@ -1,5 +1,5 @@
 ---
-title: "QSO Map generatr"
+title: "QSO Map generator"
 excerpt: "QSO Map generator is an application to generate data file and get HTML and Javascript, to include an interactive Map of QSO in an WEB page"
 header: 
     teaser: /assets/apps/qso-map-generator/qso-map-generator-teaser.jpg
