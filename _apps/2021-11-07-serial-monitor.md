@@ -15,4 +15,5 @@ If you don't have a **Serial Monitor** installed on your PC, don't panic now you
 
 ![Serial monitor](/assets/apps/serial-monitor/serial-monitor-teaser.png){: .align-center}
 
-**[Click here to open the Serial Monitor app](https://bobboteck.github.io/app/serial-monitor/index.html)**{: .text-center}
+**[Click here to open the Serial Monitor Application](https://bobboteck.github.io/app/serial-monitor/index.html)**
+{: .text-center}
