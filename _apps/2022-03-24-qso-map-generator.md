@@ -9,7 +9,8 @@ classes: wide
 
 **QSO Map generator** is an application to generate data file and get HTML and Javascript, to include an interactive Map of QSO in an WEB page.
 
-**[Click here to open the QSO Map generator app](https://bobboteck.github.io/app/qso-map-generator/index.html)**{: .text-center}
+**[Click here to open the QSO Map generator app](https://bobboteck.github.io/app/qso-map-generator/index.html)**
+{: .text-center}
 
 With the data file and a specific web page you can add in your web site a Map as show inthe picture below or as you can see in some pages of this web site ([for example here](https://bobboteck.github.io/sota/sota-monte-elefante/)).
 
