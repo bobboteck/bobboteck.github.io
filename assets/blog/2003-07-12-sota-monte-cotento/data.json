@@ -12,7 +12,13 @@
         "isPortable": true,
         "Location": "<b>Monte Cotento</b> 2015 m",
         "Locator": "JN61pv",
-        "Reference": "SOTA I/LZ-008"
+        "Reference": 
+        [
+            {
+                "Code": "I/LZ-008",
+                "Type": "SOTA"
+            }
+        ]
     },
     "QSOs":
     [

@@ -15,7 +15,7 @@ fetch("{{ include.mapdata }}")
         iconUrl: '/assets/icon/map-station.png',
         iconSize: [41,41],
         iconAnchor: [20,40],
-        popupAnchor: [20,0]
+        popupAnchor: [0,-30]
     });
 
     let map = L.map('{{ include.mapcontainer }}').setView([jsonData.MapConfig.Latitude, jsonData.MapConfig.Longitude], jsonData.MapConfig.Zoom);
@@ -29,7 +29,19 @@ fetch("{{ include.mapdata }}")
         ext: 'png'
     }).addTo(map);
 
-    let myPopUpDescription = jsonData.MyQTH.Location + "<br />" + jsonData.MyQTH.Locator + "<br />" + jsonData.MyQTH.Reference;
+    let myPopUpDescription = jsonData.MyQTH.Location + "<br />" + jsonData.MyQTH.Locator;
+
+    if(jsonData.MyQTH.Reference !== null && jsonData.MyQTH.Reference !== undefined && jsonData.MyQTH.Reference.lenght > 0)
+    {
+        let reference = "<table><thead><tr><th>Reference</th><th>Type</th></tr></thead><tbody>";
+        jsonData.MyQTH.Reference.forEach(ref =>
+        {
+            reference = reference + "<tr><td>" + ref.Code + "</td><td>" + ref.Type + "</td></tr>";
+        });
+        reference = reference + "</tbody></table>";
+        myPopUpDescription = myPopUpDescription + reference;
+    }
+
     let myPosition = L.marker([jsonData.MyQTH.Latitude, jsonData.MyQTH.Longitude], {icon: stationIcon}).addTo(map);
     myPosition.bindPopup(myPopUpDescription);
 
