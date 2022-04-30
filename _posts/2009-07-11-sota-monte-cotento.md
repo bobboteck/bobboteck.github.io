@@ -43,6 +43,10 @@ gallery:
 
 ## L'attivazione
 
+Dopo molto tempo decidiamo di riprendere la'attività SOTA, e dopo varie ipotesi puntiamo a quella che è stata la cima della nostra prima attivazione il monte Cotento.
+Al solito portiamo su l'attrezzatura per attivare i 2 metri, quindi la nostra direttiva da 9 elementi, l'idea è quella di riprendere la pratica con il SOTA, quindi non abbiamo grosse pretese per l'attivazione, provando con un QRP spinto con un 1 Watt scarso.
+I collegamenti messi a log non sono tantissimi, ma comunque ci danno soddisfazione, chissà se il problema eravamo noi che non riuscivamo a farci sentire oppure legato più che altro alla scarsità di stazioni sui 144 MHz.
+
 ## Foto dell'attivazione
 
 {% include gallery caption="SOTA Monte Cotento 2009" %}
@@ -65,7 +69,7 @@ gallery:
 
 ## Mappa dei collegamenti
 
-
+{% include qsos_map.html mapcontainer="mapGtf" mapdata="/assets/blog/2009-07-11-sota-monte-cotento/data.json" %}
 
 **Attenzione** questa attivazione è stata effettuata con le referenze del SOTA Italia che utilizzavamo a quel tempo, e non a quello internazionale, quindi i dati dell'attivazione non sono riportati nel DB del programma SOTA ufficiale
 {: .notice--warning}
