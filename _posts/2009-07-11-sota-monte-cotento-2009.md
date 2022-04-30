@@ -27,10 +27,6 @@ gallery:
     image_path: /assets/blog/2009-07-11-sota-monte-cotento/2009-07-11-sota-monte-cotento-01-th.jpg
     alt: "Andrea (IZ0QYI) alle prese con le chiamate e l'antenna in polarizzazione obliqua"
     title: "Andrea (IZ0QYI) alle prese con le chiamate e l'antenna in polarizzazione obliqua"
-  - url: /assets/blog/2009-07-11-sota-monte-cotento/2009-07-11-sota-monte-cotento-02.jpg
-    image_path: /assets/blog/2009-07-11-sota-monte-cotento/2009-07-11-sota-monte-cotento-02-th.jpg
-    alt: "Sempre Andrea (IZ0QYI) soddisfatto dei primi QSO"
-    title: "Sempre Andrea (IZ0QYI) soddisfatto dei primi QSO"
   - url: /assets/blog/2009-07-11-sota-monte-cotento/2009-07-11-sota-monte-cotento-03.jpg
     image_path: /assets/blog/2009-07-11-sota-monte-cotento/2009-07-11-sota-monte-cotento-03-th.jpg
     alt: "Un intruso al microfono (IW0GTF)"
@@ -39,6 +35,10 @@ gallery:
     image_path: /assets/blog/2009-07-11-sota-monte-cotento/2009-07-11-sota-monte-cotento-04-th.jpg
     alt: "Postazione radio"
     title: "Postazione radio"
+  - url: /assets/blog/2009-07-11-sota-monte-cotento/2009-07-11-sota-monte-cotento-02.jpg
+    image_path: /assets/blog/2009-07-11-sota-monte-cotento/2009-07-11-sota-monte-cotento-02-th.jpg
+    alt: "Andrea (IZ0QYI) soddisfatto dei primi QSO"
+    title: "Andrea (IZ0QYI) soddisfatto dei primi QSO"
 ---
 
 ## L'attivazione
