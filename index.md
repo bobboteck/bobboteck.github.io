@@ -36,7 +36,7 @@ feature_row:
     btn_class: "btn--primary"
 
 footer: 
-  - excerpt: "I'm member of [Officine Robotiche](https://www.officinerobotiche.it/) a Social Promotion Association, whose declared purpose is to spread the STEAM knowledge with Robotics"
+  - excerpt: "I'm member of [Officine Robotiche](https://www.officinerobotiche.it/) a group of friends, whose declared purpose is to spread the STEAM knowledge with Robotics"
 ---
 
 {% include feature_row %}

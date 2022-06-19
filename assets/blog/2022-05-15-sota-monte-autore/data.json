@@ -1,0 +1,53 @@
+{
+  "MapConfig": {
+    "Latitude": 47.249,
+    "Longitude": 5.537,
+    "Zoom": 5
+  },
+  "QTH": {
+    "Latitude": 41.979,
+    "Longitude": 13.208,
+    "Locator": "JN61ox",
+    "Location": "Monte Autore 1855m slm",
+    "References": [
+      {
+        "Code": "I/LZ-301",
+        "Type": "SOTA"
+      }
+    ],
+    "isPortable": true
+  },
+  "QSOs": [
+    {
+      "Date": "2022-05-14",
+      "Time": "12:21",
+      "CallSign": "GB0WAO",
+      "Locator": "JO01dr",
+      "Latitude": 51.729,
+      "Longitude": 0.292,
+      "QRB": 1459,
+      "Band": "20",
+      "Mode": "SSB",
+      "Frequency": 14188,
+      "RstReceived": 44,
+      "RstSent": 59,
+      "TxPower": 5
+    },
+    {
+      "Date": "2022-05-14",
+      "Time": "12:21",
+      "CallSign": "EC1DJ",
+      "Locator": "IN80gh",
+      "Latitude": 40.32,
+      "Longitude": -3.43,
+      "QRB": 1406,
+      "Band": "20",
+      "Mode": "SSB",
+      "Frequency": 14268,
+      "RstReceived": 53,
+      "RstSent": 59,
+      "TxPower": 5,
+      "Note": ""
+    }
+  ]
+}
