@@ -47,10 +47,14 @@ gallery:
     title: "Rifugio di fortuna, per riparasi dal sole, e antenne in bella vista"
   - url: /assets/blog/2022-05-15-sota-monte-autore/2022-05-15-sota-monte-autore-06.jpg
     image_path: /assets/blog/2022-05-15-sota-monte-autore/2022-05-15-sota-monte-autore-06-th.jpg
-    alt: "Immancabile selfie insieme al dipolo a V rovesciata"
-    title: "Immancabile selfie insieme al dipolo a V rovesciata"
+    alt: "Il dipolo montato sulla canna da pesca con il balun 1:1"
+    title: "Il dipolo montato sulla canna da pesca con il balun 1:1"
   - url: /assets/blog/2022-05-15-sota-monte-autore/2022-05-15-sota-monte-autore-07.jpg
     image_path: /assets/blog/2022-05-15-sota-monte-autore/2022-05-15-sota-monte-autore-07-th.jpg
+    alt: "Immancabile selfie insieme al dipolo a V rovesciata"
+    title: "Immancabile selfie insieme al dipolo a V rovesciata"
+  - url: /assets/blog/2022-05-15-sota-monte-autore/2022-05-15-sota-monte-autore-08.jpg
+    image_path: /assets/blog/2022-05-15-sota-monte-autore/2022-05-15-sota-monte-autore-08-th.jpg
     alt: "La difficoltà di tenere con una sola mano radio e ccordatore"
     title: "La difficoltà di tenere con una sola mano radio e ccordatore"
 ---

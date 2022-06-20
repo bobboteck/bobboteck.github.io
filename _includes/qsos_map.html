@@ -29,12 +29,12 @@ fetch("{{ include.mapdata }}")
         ext: 'png'
     }).addTo(map);
 
-    let myPopUpDescription = jsonData.MyQTH.Location + "<br />" + jsonData.MyQTH.Locator;
+    let myPopUpDescription = jsonData.QTH.Location + "<br />" + jsonData.QTH.Locator;
 
-    if(jsonData.MyQTH.Reference !== null && jsonData.MyQTH.Reference !== undefined && jsonData.MyQTH.Reference.lenght > 0)
+    if(jsonData.QTH.Reference !== null && jsonData.QTH.Reference !== undefined && jsonData.QTH.Reference.lenght > 0)
     {
         let reference = "<table><thead><tr><th>Reference</th><th>Type</th></tr></thead><tbody>";
-        jsonData.MyQTH.Reference.forEach(ref =>
+        jsonData.QTH.Reference.forEach(ref =>
         {
             reference = reference + "<tr><td>" + ref.Code + "</td><td>" + ref.Type + "</td></tr>";
         });
@@ -42,7 +42,7 @@ fetch("{{ include.mapdata }}")
         myPopUpDescription = myPopUpDescription + reference;
     }
 
-    let myPosition = L.marker([jsonData.MyQTH.Latitude, jsonData.MyQTH.Longitude], {icon: stationIcon}).addTo(map);
+    let myPosition = L.marker([jsonData.QTH.Latitude, jsonData.QTH.Longitude], {icon: stationIcon}).addTo(map);
     myPosition.bindPopup(myPopUpDescription);
 
     jsonData.QSOs.forEach(qso => 
