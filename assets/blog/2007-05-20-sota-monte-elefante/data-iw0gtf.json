@@ -17,7 +17,7 @@
     "QSOs":
     [
 		{
-            "Call": "IW0HLZ",
+            "CallSign": "IW0HLZ",
             "Latitude": 41.938,
             "Longitude": 12.542,
             "Locator": "JN61gw",
@@ -33,7 +33,7 @@
             "Note": ""
         },
 		{
-            "Call": "IW0FFK",
+            "CallSign": "IW0FFK",
             "Latitude": 41.771,
             "Longitude": 12.458,
             "Locator": "JN61fs",
@@ -49,7 +49,7 @@
             "Note": ""
         },
 		{
-            "Call": "I0/ZL2OG",
+            "CallSign": "I0/ZL2OG",
             "Latitude": 41.313,
             "Longitude": 12.542,
             "Locator": "JN61gh",
@@ -65,7 +65,7 @@
             "Note": ""
         },
 		{
-            "Call": "I0DGB/6",
+            "CallSign": "I0DGB/6",
             "Latitude": 42.813,
             "Longitude": 13.875,
             "Locator": "JN62wt",
@@ -81,7 +81,7 @@
             "Note": ""
         },
 		{
-            "Call": "IZ5IOM/5",
+            "CallSign": "IZ5IOM/5",
             "Latitude": 43.938,
             "Longitude": 10.708,
             "Locator": "JN53iw",
@@ -97,7 +97,7 @@
             "Note": ""
         },
 		{
-            "Call": "IZ0CUV",
+            "CallSign": "IZ0CUV",
             "Latitude": 42.813,
             "Longitude": 12.792,
             "Locator": "JN62jt",

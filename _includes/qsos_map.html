@@ -47,7 +47,7 @@ fetch("{{ include.mapdata }}")
 
     jsonData.QSOs.forEach(qso => 
     {
-        let qsoDescription = "<b>" + qso.Call + "</b><br />" + qso.Locator;
+        let qsoDescription = "<b>" + qso.CallSign + "</b><br />" + qso.Locator;
         L.marker([qso.Latitude, qso.Longitude]).addTo(map).bindPopup(qsoDescription);
     });
 });

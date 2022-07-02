@@ -17,7 +17,7 @@
     "QSOs":
     [
         {
-            "Call": "IK0BDO/5",
+            "CallSign": "IK0BDO/5",
             "Latitude": 43.146,
             "Longitude": 10.958,
             "Locator": "JN53ld",
@@ -33,7 +33,7 @@
             "Note": ""
         },
         {
-            "Call": "IZ0LZC",
+            "CallSign": "IZ0LZC",
             "Latitude": 42.479,
             "Longitude": 12.958,
             "Locator": "JN62ll",
@@ -49,7 +49,7 @@
             "Note": ""
         },
         {
-            "Call": "IK0VVG/0",
+            "CallSign": "IK0VVG/0",
             "Latitude": 41.979,
             "Longitude": 13.125,
             "Locator": "JN61nx",
@@ -65,7 +65,7 @@
             "Note": ""
         },
         {
-            "Call": "IK0RMR",
+            "CallSign": "IK0RMR",
             "Latitude": 41.729,
             "Longitude": 12.708,
             "Locator": "JN61ir",
@@ -81,7 +81,7 @@
             "Note": ""
         },
         {
-            "Call": "IK1YNZ",
+            "CallSign": "IK1YNZ",
             "Latitude": 43.813,
             "Longitude": 7.708,
             "Locator": "JN33ut",
@@ -97,7 +97,7 @@
             "Note": ""
         },
         {
-            "Call": "IW1RLC/1",
+            "CallSign": "IW1RLC/1",
             "Latitude": 44.229,
             "Longitude": 8.292,
             "Locator": "JN44df",
@@ -113,7 +113,7 @@
             "Note": ""
         },
         {
-            "Call": "IK1INW/1",
+            "CallSign": "IK1INW/1",
             "Latitude": 44.438,
             "Longitude": 8.542,
             "Locator": "JN44gk",
@@ -129,7 +129,7 @@
             "Note": ""
         },
         {
-            "Call": "IW2BYV/2",
+            "CallSign": "IW2BYV/2",
             "Latitude": 44.729,
             "Longitude": 9.208,
             "Locator": "JN44or",
@@ -145,7 +145,7 @@
             "Note": ""
         },
         {
-            "Call": "IK1ZVH",
+            "CallSign": "IK1ZVH",
             "Latitude": 44.229,
             "Longitude": 8.458,
             "Locator": "JN44ff",
@@ -161,7 +161,7 @@
             "Note": ""
         },
         {
-            "Call": "IK2ECM/2",
+            "CallSign": "IK2ECM/2",
             "Latitude": 45.854,
             "Longitude": 10.375,
             "Locator": "JN55eu",
@@ -177,7 +177,7 @@
             "Note": ""
         },
         {
-            "Call": "IT9TVF",
+            "CallSign": "IT9TVF",
             "Latitude": 38.146,
             "Longitude": 13.208,
             "Locator": "JM68od",

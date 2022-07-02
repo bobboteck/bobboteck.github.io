@@ -17,7 +17,7 @@
     "QSOs":
     [
         {
-            "Call": "IT9TVF",
+            "CallSign": "IT9TVF",
             "Latitude": 38.146,
             "Longitude": 13.208,
             "Locator": "JM68od",
@@ -33,7 +33,7 @@
             "Note": ""
         },
 		{
-            "Call": "IW0SAF",
+            "CallSign": "IW0SAF",
             "Latitude": 43.063,
             "Longitude": 12.292,
             "Locator": "JN63db",
@@ -49,7 +49,7 @@
             "Note": ""
         },
 		{
-            "Call": "IW0HLZ",
+            "CallSign": "IW0HLZ",
             "Latitude": 41.938,
             "Longitude": 12.542,
             "Locator": "JN61gw",
@@ -65,7 +65,7 @@
             "Note": ""
         },
 		{
-            "Call": "IW0FFK",
+            "CallSign": "IW0FFK",
             "Latitude": 41.771,
             "Longitude": 12.458,
             "Locator": "JN61fs",

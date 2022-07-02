@@ -23,7 +23,7 @@
     "QSOs":
     [
         {
-            "Call": "IK4WKU",
+            "CallSign": "IK4WKU",
             "Latitude": 44.188,
             "Longitude": 10.708,
             "Locator": "JN54ie",
@@ -38,7 +38,7 @@
             "Note": ""
         },
         {
-            "Call": "IK2UJS",
+            "CallSign": "IK2UJS",
             "Latitude": 45.854,
             "Longitude": 10.375,
             "Locator": "JN55eu",
@@ -53,7 +53,7 @@
             "Note": ""
         },
         {
-            "Call": "IN3GEN/IN3",
+            "CallSign": "IN3GEN/IN3",
             "Latitude": 46.104,
             "Longitude": 11.625,
             "Locator": "JN56tc",
@@ -68,7 +68,7 @@
             "Note": ""
         },
         {
-            "Call": "IC8CQF",
+            "CallSign": "IC8CQF",
             "Latitude": 40.563,
             "Longitude": 12.208,
             "Locator": "JN60cn",
@@ -83,7 +83,7 @@
             "Note": ""
         },
         {
-            "Call": "IZ6EGX/I6",
+            "CallSign": "IZ6EGX/I6",
             "Latitude": 42.438,
             "Longitude": 13.708,
             "Locator": "JN62uk",
@@ -98,7 +98,7 @@
             "Note": ""
         },
         {
-            "Call": "I0ZQT",
+            "CallSign": "I0ZQT",
             "Latitude": 41.604,
             "Longitude": 12.542,
             "Locator": "JN61go",
@@ -113,7 +113,7 @@
             "Note": ""
         },
         {
-            "Call": "I0DPM",
+            "CallSign": "I0DPM",
             "Latitude": 42.979,
             "Longitude": 12.458,
             "Locator": "JN62fx",
@@ -128,7 +128,7 @@
             "Note": ""
         },
         {
-            "Call": "IK0BDO/I5",
+            "CallSign": "IK0BDO/I5",
             "Latitude": 43.104,
             "Longitude": 10.625,
             "Locator": "JN53hc",
@@ -143,7 +143,7 @@
             "Note": ""
         },
         {
-            "Call": "IK0IXO",
+            "CallSign": "IK0IXO",
             "Latitude": 42.021,
             "Longitude": 11.875,
             "Locator": "JN52wa",
