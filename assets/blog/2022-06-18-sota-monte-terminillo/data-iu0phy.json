@@ -1,0 +1,98 @@
+{
+    "MapConfig": {
+      "Latitude": 51.998,
+      "Longitude": 7.295,
+      "Zoom": 4
+    },
+    "QTH": {
+      "Latitude": 42.479,
+      "Longitude": 12.958,
+      "Locator": "JN62ll",
+      "Location": "Monte Terminillo 2217 metri",
+      "References": [
+        {
+          "Code": "I/LZ-305",
+          "Type": "SOTA"
+        }
+      ],
+      "isPortable": true
+    },
+    "Equipment": {
+      "Radios": [
+        {
+          "Brand": "Yaesu",
+          "Model": "FT-817",
+          "PowerSupply": "12V 7Ah"
+        }
+      ],
+      "Antennas": [
+        {
+          "Brand": "IU0PHY",
+          "Model": "HFWire",
+          "Other": "Random Wire and Un-Un 9-1 and ATU-100 tuner"
+        }
+      ]
+    },
+    "QSOs": [
+      {
+        "Date": "2022-06-11",
+        "Time": "11:43",
+        "CallSign": "EI8HIB/P",
+        "Locator": "IO63ea",
+        "Latitude": 53.021,
+        "Longitude": -7.625,
+        "QRB": 1923,
+        "Band": "20",
+        "Mode": "SSB",
+        "RstReceived": 44,
+        "RstSent": 56,
+        "TxPower": 5,
+        "Note": "SOTA summit to summit"
+      },
+      {
+        "Date": "2022-06-11",
+        "Time": "12:02",
+        "CallSign": "IZ8EPX",
+        "Locator": "JM89di",
+        "Latitude": 39.354,
+        "Longitude": 16.292,
+        "QRB": 446,
+        "Band": "40",
+        "Mode": "SSB",
+        "RstReceived": 59,
+        "RstSent": 59,
+        "TxPower": 5,
+        "Note": ""
+      },
+      {
+        "Date": "2022-06-11",
+        "Time": "12:11",
+        "CallSign": "8S8S",
+        "Locator": "JP90eh",
+        "Latitude": 60.313,
+        "Longitude": 18.375,
+        "QRB": 2017,
+        "Band": "20",
+        "Mode": "SSB",
+        "RstReceived": 52,
+        "RstSent": 59,
+        "TxPower": 5,
+        "Note": ""
+      },
+      {
+        "Date": "2022-06-11",
+        "Time": "12:58",
+        "CallSign": "IK0PHY",
+        "Locator": "JN61qn",
+        "Latitude": 41.563,
+        "Longitude": 13.375,
+        "QRB": 108,
+        "Band": "40",
+        "Mode": "SSB",
+        "RstReceived": 51,
+        "RstSent": 59,
+        "TxPower": 5,
+        "Note": ""
+      }
+    ]
+  }

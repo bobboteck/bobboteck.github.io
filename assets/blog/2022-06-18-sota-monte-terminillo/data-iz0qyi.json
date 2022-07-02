@@ -1,0 +1,128 @@
+{
+  "MapConfig": {
+    "Latitude": 46.74,
+    "Longitude": 9.404,
+    "Zoom": 5
+  },
+  "QTH": {
+    "Latitude": 42.479,
+    "Longitude": 12.958,
+    "Locator": "JN62ll",
+    "Location": "Monte Terminillo 2217m",
+    "References": [
+      {
+        "Code": "I/LZ-305",
+        "Type": "SOTA"
+      }
+    ],
+    "isPortable": true
+  },
+  "Equipment": {
+    "Radios": [
+      {
+        "Brand": "Yaesu",
+        "Model": "FT-817",
+        "PowerSupply": "12V 7Ah Battery"
+      }
+    ],
+    "Antennas": [
+      {
+        "Brand": "IU0PHY",
+        "Model": "50Dipole",
+        "Other": "Dipole for 50MHz based on coaxial cable"
+      }
+    ]
+  },
+  "QSOs": [
+    {
+      "Date": "2022-06-11",
+      "Time": "09:30",
+      "CallSign": "PA5HR",
+      "Locator": "JO32jj",
+      "Latitude": 52.396,
+      "Longitude": 6.792,
+      "QRB": 1195,
+      "Band": "6",
+      "Mode": "SSB",
+      "RstReceived": 51,
+      "RstSent": 59,
+      "TxPower": 5,
+      "Note": ""
+    },
+    {
+      "Date": "2022-06-11",
+      "Time": "09:53",
+      "CallSign": "SV3RPQ",
+      "Locator": "KM18af",
+      "Latitude": 38.229,
+      "Longitude": 22.042,
+      "QRB": 902,
+      "Band": "6",
+      "Mode": "SSB",
+      "RstReceived": 57,
+      "RstSent": 59,
+      "TxPower": 5,
+      "Note": ""
+    },
+    {
+      "Date": "2022-06-11",
+      "Time": "10:08",
+      "CallSign": "IU5ICR",
+      "Locator": "JN53ho",
+      "Latitude": 43.604,
+      "Longitude": 10.625,
+      "QRB": 227,
+      "Band": "6",
+      "Mode": "SSB",
+      "RstReceived": 55,
+      "RstSent": 59,
+      "TxPower": 5,
+      "Note": ""
+    },
+    {
+      "Date": "2022-06-11",
+      "Time": "10:09",
+      "CallSign": "IZ5EME",
+      "Locator": "jn52ns",
+      "Latitude": 42.771,
+      "Longitude": 11.125,
+      "QRB": 153,
+      "Band": "6",
+      "Mode": "SSB",
+      "RstReceived": 55,
+      "RstSent": 59,
+      "TxPower": 5,
+      "Note": ""
+    },
+    {
+      "Date": "2022-06-11",
+      "Time": "10:10",
+      "CallSign": "I0KIB",
+      "Locator": "JN61bw",
+      "Latitude": 41.938,
+      "Longitude": 12.125,
+      "QRB": 91,
+      "Band": "6",
+      "Mode": "SSB",
+      "RstReceived": 55,
+      "RstSent": 59,
+      "TxPower": 5,
+      "Note": ""
+    },
+    {
+      "Date": "2022-06-11",
+      "Time": "10:13",
+      "CallSign": "IK5GYH",
+      "Locator": "JN54ka",
+      "Latitude": 44.021,
+      "Longitude": 10.875,
+      "QRB": 241,
+      "Band": "6",
+      "Mode": "SSB",
+      "RstReceived": 55,
+      "RstSent": 59,
+      "TxPower": 5,
+      "Note": ""
+    }
+  ]
+}
