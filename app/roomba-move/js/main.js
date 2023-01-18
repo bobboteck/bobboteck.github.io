@@ -92,7 +92,7 @@ disconnectButton.addEventListener("click", () =>
     }
 });
 
-var joy = new JoyStick("joyDiv", { autoReturnToCenter: false }, (stickData) =>
+var joy = new JoyStick("joyDiv", { autoReturnToCenter: true }, (stickData) =>
 {
     let joyX = stickData.x;
     let joyY = stickData.y;
