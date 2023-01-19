@@ -130,7 +130,8 @@ const testButton = document.getElementById("test");
 testButton.addEventListener("click", () =>
 {
     //const bufferToSend = new Uint8Array(['#', 33, 33, 'A', 65]);
-    const bufferToSend = new Uint8Array([35, 0, 1, 0, 1, 10]);
+    //const bufferToSend = new Uint8Array([35, 0, 1, 0, 1, 10]);
+    const bufferToSend = new Uint8Array([35, 100, 0, 100, 0, 10]);
 
     btCharacteristic.writeValue(bufferToSend);
 });
