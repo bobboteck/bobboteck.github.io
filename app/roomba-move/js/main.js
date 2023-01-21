@@ -107,10 +107,10 @@ var joy = new JoyStick("joyDiv", { autoReturnToCenter: true }, (stickData) =>
     lblYValueNormalized.innerHTML = joyYn + "-" + joyYBytes[0] + "-" + joyYBytes[1];;
 
     const bufferToSend = new Uint8Array([35, 0, 0, 0, 0, 10]);
-    bufferToSend[1] = joyXBytes[1];
-    bufferToSend[2] = joyXBytes[0];
-    bufferToSend[3] = joyYBytes[1];
-    bufferToSend[4] = joyYBytes[0];
+    bufferToSend[1] = joyYBytes[0];
+    bufferToSend[2] = joyYBytes[1];
+    bufferToSend[3] = joyXBytes[0];
+    bufferToSend[4] = joyXBytes[1];
 
     btCharacteristic.writeValue(bufferToSend);
 });
