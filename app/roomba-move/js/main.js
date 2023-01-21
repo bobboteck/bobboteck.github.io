@@ -101,6 +101,15 @@ var joy = new JoyStick("joyDiv", { autoReturnToCenter: true }, (stickData) =>
     let joyXn = map(joyX, -100, 100, -2000, 2000);
     let joyYn = map(joyY, -100, 100, -500, 500);
 
+    if(joyXn > 0)
+    {
+        joyXn = 2000 - joyXn;
+    }
+    else if(joyXn < 0)
+    {
+        joyXn = 2000 + joyXn;
+    }
+
     let joyXBytes = intToByteArray(joyXn);
     let joyYBytes = intToByteArray(joyYn);
     lblXValueNormalized.innerHTML = joyXn + "-" + joyXBytes[0] + "-" + joyXBytes[1];
