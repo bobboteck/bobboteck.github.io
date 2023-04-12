@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en" class="h-100">
+    <head>
+        <title>CW Trainer</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Web CW Trainer">
+        <meta name="author" content="Roberto D'Amico, Bobboteck, IU0PHY">
+
+        <meta property="article:author" content="Roberto D'Amico, Bobboteck, IU0PHY">
+        <meta property="og:type" content="application">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:site_name" content="Bobboteck">
+        <meta property="og:title" content="CW Trainer">
+        <meta property="og:url" content="https://bobboteck.github.io/app/serial-monitor/index.html">
+        <meta property="og:description" content="Web CW Trainer">
+        <link rel="canonical" href="https://bobboteck.github.io/app/serial-monitor/index.html">
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Roberto D'Amico",
+    "url": "https://bobboteck.github.io/"
+}
+</script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+        <!-- Favicons -->
+        <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+        <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png"> -->
+        <link rel="icon" href="../../favicon.ico">
+        <meta name="theme-color" content="#10c963">
+
+        <!-- Custom styles for this template -->
+        <link href="css/styles.css" rel="stylesheet">
+    </head>
+    <body class="d-flex flex-column h-100">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">CW Trainer</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="https://bobboteck.github.io/">My Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Apps</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="https://bobboteck.github.io/app/serial-monitor/index.html">Serial Monitor</a></li>
+                                    <li><a class="dropdown-item" href="https://bobboteck.github.io/app/qso-map-generator/index.html">QSO Map generator</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="https://bobboteck.github.io/app/serpicobt/index.html">SERPICO Console</a></li>
+                                    <li><a class="dropdown-item" href="https://bobboteck.github.io/app/joy/index.html">Joystick</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Help</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="flex-shrink-0">
+            <div class="container">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        Character speed (wpm)
+                        <select class="form-select" aria-label="Default select example">
+                            <option value=""></option>
+                            <option value="15">15</option>
+                            <option value="20" selected>20</option>
+                            <option value="25">25</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        Spacing speed (wpm - for Farnsworth mode)
+                        <select class="form-select" aria-label="Default select example">
+                            <option value="0">0</option>
+                            <option value="10" selected>10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="25">25</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mb-3"">
+                    <div class="col-md-6">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="checkSendChars" checked>
+                            <label class="form-check-label" for="checkSendChars">Select the characters to transmit</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charA" value="A">
+                            <label class="form-check-label font-monospace" for="charA">A</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charB" value="B">
+                            <label class="form-check-label font-monospace" for="charB">B</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charC" value="C">
+                            <label class="form-check-label font-monospace" for="charC">C</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charD" value="D">
+                            <label class="form-check-label font-monospace" for="charD">D</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charE" value="E">
+                            <label class="form-check-label font-monospace" for="charE">E</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charF" value="F">
+                            <label class="form-check-label font-monospace" for="charF">F</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charG" value="G">
+                            <label class="form-check-label font-monospace" for="charG">G</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charH" value="H">
+                            <label class="form-check-label font-monospace" for="charH">H</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charI" value="I">
+                            <label class="form-check-label font-monospace" for="charI">I</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charJ" value="J">
+                            <label class="form-check-label font-monospace" for="charJ">J</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charK" value="K">
+                            <label class="form-check-label font-monospace" for="charK">K</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charL" value="L">
+                            <label class="form-check-label font-monospace" for="charL">L</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charM" value="M">
+                            <label class="form-check-label font-monospace" for="charM">M</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charN" value="N">
+                            <label class="form-check-label font-monospace" for="charN">N</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charO" value="O">
+                            <label class="form-check-label font-monospace" for="charO">O</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charP" value="P">
+                            <label class="form-check-label font-monospace" for="charP">P</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charQ" value="Q">
+                            <label class="form-check-label font-monospace" for="charQ">Q</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charR" value="R">
+                            <label class="form-check-label font-monospace" for="charR">R</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charS" value="S">
+                            <label class="form-check-label font-monospace" for="charS">S</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charT" value="T">
+                            <label class="form-check-label font-monospace" for="charT">T</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charU" value="U">
+                            <label class="form-check-label font-monospace" for="charU">U</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charV" value="V">
+                            <label class="form-check-label font-monospace" for="charV">V</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charW" value="W">
+                            <label class="form-check-label font-monospace" for="charW">W</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charX" value="X">
+                            <label class="form-check-label font-monospace" for="charX">X</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charY" value="Y">
+                            <label class="form-check-label font-monospace" for="charY">Y</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="charZ" value="Z">
+                            <label class="form-check-label font-monospace" for="charZ">Z</label>
+                        </div>
+                        <div class="input-group mt-3 mb-3">
+                            <button class="btn btn-info" type="button" id="btnGenerate">Generate</button>
+                            <input id="txtToSend" type="password" class="form-control font-monospace" placeholder="" aria-label="Text to be sended" aria-describedby="btnGenerate" disabled>
+                            <button class="btn btn-info" type="button" id="btnShow">Show</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="checkSendText">
+                                <label class="form-check-label" for="checkSendText">Write the text to transmit</label>
+                            </div>
+                            <textarea class="form-control" id="freeTextArea" rows="5" disabled></textarea>
+                          </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-4">&nbsp;</div>
+                    <div class="d-grid gap-2 d-flex justify-content-center col-md-4">
+                            <button type="button" class="btn btn-outline-success" style="width: inherit">Play</button>
+                            <button type="button" class="btn btn-outline-danger" style="width: inherit" disabled>Pause</button>
+                            <button type="button" class="btn btn-outline-secondary" style="width: inherit" disabled>Rewind</button>
+                    </div>
+                    <div class="col-md-4">&nbsp;</div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer mt-auto py-3 bg-light">
+            <div class="container">
+                <span class="text-muted">© 2023 Roberto D'Amico.</span>
+                <span class="me-5">
+                    <ul class="footerSocial">
+                        <li><a href="https://github.com/bobboteck" rel="nofollow noopener noreferrer"><i class="bi bi-github githubColor"></i> GitHub</a></li>
+                        <li><a href="https://twitter.com/bobboteck" rel="nofollow noopener noreferrer"><i class="bi bi-twitter twitterColor"></i> Twitter</a></li>
+                        <li><a href="https://www.youtube.com/c/RobertoDAmico" rel="nofollow noopener noreferrer"><i class="bi bi-youtube youtubeColor"></i> YouTube</a></li>
+                        <li><a href="https://www.linkedin.com/in/r-damico" rel="nofollow noopener noreferrer"><i class="bi bi-linkedin linkedinColor"></i> LinkedIn</a></li>
+                        <li><a href="https://instagram.com/bobboteck" rel="nofollow noopener noreferrer"><i class="bi bi-instagram instagramColor"></i> Instagram</a></li>
+                    </ul>
+                </span>
+                <span class="text-muted">Use <a href="https://github.com/bobboteck/bobboteck.github.io/issues/new/choose">GitHub Issue</a> for problem or suggestion</span>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script>
+window._gaq = window._gaq || [];
+_gaq.push(['_setAccount', 'UA-98811481-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+const charsAll = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+
+const ckSendChars = document.getElementById("checkSendChars");
+const ckSendText = document.getElementById("checkSendText");
+const btnGenerate = document.getElementById("btnGenerate");
+const txtToSend = document.getElementById("txtToSend");
+const btnShow = document.getElementById("btnShow");
+const freeTextArea = document.getElementById("freeTextArea");
+
+ckSendChars.addEventListener("click", () =>
+{
+    if(ckSendChars.checked)
+    {
+        ckSendText.checked = false;
+        freeTextArea.disabled = true;
+        btnGenerate.disabled = false;
+        btnShow.disabled = false;
+    }
+});
+
+ckSendText.addEventListener("click", () =>
+{
+    if(ckSendText.checked)
+    {
+        ckSendChars.checked = false;
+        freeTextArea.disabled = false;
+        btnGenerate.disabled = true;
+        btnShow.disabled = true;
+    }
+});
+
+btnGenerate.addEventListener("click", () =>
+{
+    let charsToSend = [];
+    let messageToSend = "";
+
+    charsAll.forEach(character =>
+    {
+        if(document.getElementById("char"+character).checked)
+        {
+            charsToSend.push(character);
+        }
+    });
+
+    console.log(charsToSend);
+
+    if(charsToSend.length > 0)
+    {
+        for(let charsGroup=0; charsGroup<5; charsGroup++)
+        {
+            for(let charOfGroup=0;charOfGroup<5;charOfGroup++)
+            {
+                messageToSend += charsToSend[Math.floor(Math.random() * charsToSend.length)];
+            }
+
+            messageToSend += " ";
+        }
+    }
+    else
+    {
+        alert("Select chars");
+    }
+
+    txtToSend.setAttribute("type","password");
+    txtToSend.value = messageToSend;
+});
+
+btnShow.addEventListener("click", () =>
+{
+    txtToSend.setAttribute("type","text");
+});
+        </script>
+    </body>
+</html>
