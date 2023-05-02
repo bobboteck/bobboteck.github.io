@@ -73,7 +73,7 @@
                 <div class="row mb-3">
                     <div class="col-md-6">
                         Character speed (wpm)
-                        <select class="form-select" aria-label="Default select example">
+                        <select id="characterSpeed" class="form-select" aria-label="Select character speed (wpm)">
                             <option value=""></option>
                             <option value="15">15</option>
                             <option value="20" selected>20</option>
@@ -82,7 +82,7 @@
                     </div>
                     <div class="col-md-6">
                         Spacing speed (wpm - for Farnsworth mode)
-                        <select class="form-select" aria-label="Default select example">
+                        <select id="spacingSpeed" class="form-select" aria-label="Select spacing speed (wpm - for Farnsworth mode)">
                             <option value="0">0</option>
                             <option value="10" selected>10</option>
                             <option value="15">15</option>
@@ -220,9 +220,8 @@
                 <div class="row mb-3">
                     <div class="col-md-4">&nbsp;</div>
                     <div class="d-grid gap-2 d-flex justify-content-center col-md-4">
-                            <button type="button" class="btn btn-outline-success" style="width: inherit">Play</button>
-                            <button type="button" class="btn btn-outline-danger" style="width: inherit" disabled>Pause</button>
-                            <button type="button" class="btn btn-outline-secondary" style="width: inherit" disabled>Rewind</button>
+                            <button id="btnPlay" type="button" class="btn btn-outline-success" style="width: inherit">Play</button>
+                            <button id="btnRewind" type="button" class="btn btn-outline-secondary" style="width: inherit" disabled>Rewind</button>
                     </div>
                     <div class="col-md-4">&nbsp;</div>
                 </div>
@@ -244,6 +243,7 @@
             </div>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://fkurz.net/ham/jscwlib/src/jscwlib.js"></script>
         <script>
 window._gaq = window._gaq || [];
 _gaq.push(['_setAccount', 'UA-98811481-1']);
@@ -254,7 +254,12 @@ _gaq.push(['_trackPageview']);
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
 
+const jsCw = new jscw();
+jsCw.setVolume(0.5);
+
 const charsAll = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+const playStatus = { notStarded: 0, playing: 1, paused: 2 };
+let isPlaying = playStatus.notStarded;
 
 const ckSendChars = document.getElementById("checkSendChars");
 const ckSendText = document.getElementById("checkSendText");
@@ -262,6 +267,12 @@ const btnGenerate = document.getElementById("btnGenerate");
 const txtToSend = document.getElementById("txtToSend");
 const btnShow = document.getElementById("btnShow");
 const freeTextArea = document.getElementById("freeTextArea");
+const characterSpeed = document.getElementById("characterSpeed");
+const spacingSpeed = document.getElementById("spacingSpeed");
+const btnPlay = document.getElementById("btnPlay");
+const btnRewind = document.getElementById("btnRewind");
+
+let messageToSend = "";
 
 ckSendChars.addEventListener("click", () =>
 {
@@ -288,7 +299,7 @@ ckSendText.addEventListener("click", () =>
 btnGenerate.addEventListener("click", () =>
 {
     let charsToSend = [];
-    let messageToSend = "";
+    //let messageToSend = "";
 
     charsAll.forEach(character =>
     {
@@ -319,11 +330,53 @@ btnGenerate.addEventListener("click", () =>
 
     txtToSend.setAttribute("type","password");
     txtToSend.value = messageToSend;
+
+    jsCw.setEff(characterSpeed.value);
+    jsCw.setWpm(spacingSpeed.value);
+
+//    jsCw.init();
+//    jsCw.setText(messageToSend);
 });
 
 btnShow.addEventListener("click", () =>
 {
     txtToSend.setAttribute("type","text");
+});
+
+btnPlay.addEventListener("click", () =>
+{
+    if(isPlaying === playStatus.notStarded)
+    {
+        jsCw.init();
+        jsCw.setText(messageToSend);
+        jsCw.play();
+        isPlaying = playStatus.playing;
+        btnPlay.innerText = "Pause";
+        btnRewind.disabled = true;
+    }
+    else if(isPlaying === playStatus.playing)
+    {
+        jsCw.pause();
+        isPlaying = playStatus.paused;
+        btnPlay.innerText = "Play";
+        btnRewind.disabled = false;
+    }
+    else if(isPlaying === playStatus.paused)
+    {
+        jsCw.pause();
+        isPlaying = playStatus.playing;
+        btnPlay.innerText = "Pause";
+        btnRewind.disabled = true;
+    }
+});
+
+btnRewind.addEventListener("click", () =>
+{
+    jsCw.stop();
+    jsCw.pause();
+    isPlaying = playStatus.notStarded;
+    btnPlay.innerText = "Play";
+    btnRewind.disabled = true;
 });
         </script>
     </body>
