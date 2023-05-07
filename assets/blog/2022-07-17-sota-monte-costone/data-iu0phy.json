@@ -1,8 +1,8 @@
 {
     "MapConfig": {
-      "Latitude": 44.009,
-      "Longitude": 12.371,
-      "Zoom": 7
+      "Latitude": 44.934,
+      "Longitude": 12.964,
+      "Zoom": 6
     },
     "QTH": {
       "Locator": "JN62qe",
@@ -14,8 +14,8 @@
         }
       ],
       "isPortable": true,
-      "Latitude": 41.953,
-      "Longitude": 12.518
+      "Latitude": 42.188,
+      "Longitude": 13.375
     },
     "QSOs": [
       {

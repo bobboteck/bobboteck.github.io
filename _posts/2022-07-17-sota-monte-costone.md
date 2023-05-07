@@ -5,7 +5,7 @@ header:
     overlay_color: "#000"
     overlay_filter: "0.5"
     overlay_image: /assets/blog/2022-07-17-sota-monte-costone/2022-07-17-sota-monte-costone-teaser.jpg
-    teaser: /assets/blog/2022-07-17-sota-monte-costone/2022-07-17-sota-monte-costone.jpg
+    teaser: /assets/blog/2022-07-17-sota-monte-costone/2022-07-17-sota-monte-costone-teaser.jpg
 categories:
   #- Blog
   - SOTA
@@ -46,14 +46,14 @@ gallery:
     image_path: /assets/blog/2022-07-17-sota-monte-costone/2022-07-17-sota-monte-costone-05-th.jpg
     alt: "Cartello presso il rifuggio domani ci aspettano gli ultimi 170 metri di disliello"
     title: "Cartello presso il rifuggio domani ci aspettano gli ultimi 170 metri di disliello"
-  - url: /assets/blog/2022-07-17-sota-monte-costone/2022-07-17-sota-monte-costone-06.jpg
-    image_path: /assets/blog/2022-07-17-sota-monte-costone/2022-07-17-sota-monte-costone-06-th.jpg
-    alt: "Finito di montare la tenda in cui passeremo la notte"
-    title: "Finito di montare la tenda in cui passeremo la notte"
   - url: /assets/blog/2022-07-17-sota-monte-costone/2022-07-17-sota-monte-costone-07.jpg
     image_path: /assets/blog/2022-07-17-sota-monte-costone/2022-07-17-sota-monte-costone-07-th.jpg
     alt: "Bandiere al vento, il sole comincia a calare"
     title: "Bandiere al vento, il sole comincia a calare"
+- url: /assets/blog/2022-07-17-sota-monte-costone/2022-07-17-sota-monte-costone-06.jpg
+    image_path: /assets/blog/2022-07-17-sota-monte-costone/2022-07-17-sota-monte-costone-06-th.jpg
+    alt: "Finito di montare la tenda in cui passeremo la notte"
+    title: "Finito di montare la tenda in cui passeremo la notte"
   - url: /assets/blog/2022-07-17-sota-monte-costone/2022-07-17-sota-monte-costone-08.jpg
     image_path: /assets/blog/2022-07-17-sota-monte-costone/2022-07-17-sota-monte-costone-08-th.jpg
     alt: "Si sale verso la cima - IU0PHY"
@@ -70,6 +70,10 @@ gallery:
     image_path: /assets/blog/2022-07-17-sota-monte-costone/2022-07-17-sota-monte-costone-11-th.jpg
     alt: "Finalmente in cima"
     title: "Finalmente in cima"
+  - url: /assets/blog/2022-07-17-sota-monte-costone/2022-07-17-sota-monte-costone-15.jpg
+    image_path: /assets/blog/2022-07-17-sota-monte-costone/2022-07-17-sota-monte-costone-15-th.jpg
+    alt: "Roberto IU0PHY in condizioni precarie mentre attiva la cima in VHF"
+    title: "Roberto IU0PHY in condizioni precarie mentre attiva la cima in VHF"
   - url: /assets/blog/2022-07-17-sota-monte-costone/2022-07-17-sota-monte-costone-12.jpg
     image_path: /assets/blog/2022-07-17-sota-monte-costone/2022-07-17-sota-monte-costone-12-th.jpg
     alt: "Andrea IZ0QYI durante l'attività in VHF"
