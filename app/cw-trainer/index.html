@@ -299,7 +299,7 @@ ckSendText.addEventListener("click", () =>
 btnGenerate.addEventListener("click", () =>
 {
     let charsToSend = [];
-    //let messageToSend = "";
+    messageToSend = "";
 
     charsAll.forEach(character =>
     {
@@ -330,9 +330,10 @@ btnGenerate.addEventListener("click", () =>
 
     txtToSend.setAttribute("type","password");
     txtToSend.value = messageToSend;
+    console.log(messageToSend);
 
-    jsCw.setEff(characterSpeed.value);
-    jsCw.setWpm(spacingSpeed.value);
+//    jsCw.setEff(characterSpeed.value);
+//    jsCw.setWpm(spacingSpeed.value);
 
 //    jsCw.init();
 //    jsCw.setText(messageToSend);
@@ -347,6 +348,8 @@ btnPlay.addEventListener("click", () =>
 {
     if(isPlaying === playStatus.notStarded)
     {
+        jsCw.setEff(spacingSpeed.value);
+        jsCw.setWpm(characterSpeed.value);
         jsCw.init();
         jsCw.setText(messageToSend);
         jsCw.play();

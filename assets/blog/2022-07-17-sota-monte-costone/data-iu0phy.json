@@ -1,0 +1,117 @@
+{
+    "MapConfig": {
+      "Latitude": 44.009,
+      "Longitude": 12.371,
+      "Zoom": 7
+    },
+    "QTH": {
+      "Locator": "JN62qe",
+      "Location": "Monte Costone  2271m slm",
+      "References": [
+        {
+          "Code": "I/AB-007",
+          "Type": "SOTA"
+        }
+      ],
+      "isPortable": true,
+      "Latitude": 41.953,
+      "Longitude": 12.518
+    },
+    "QSOs": [
+      {
+        "Date": "2022-07-17",
+        "Time": "07:24",
+        "CallSign": "IQ3QC",
+        "Locator": "JN66ea",
+        "Latitude": 46.021,
+        "Longitude": 12.375,
+        "QRB": 434,
+        "Band": "2",
+        "Mode": "SSB",
+        "Frequency": 144000,
+        "RstReceived": 59,
+        "RstSent": 59,
+        "TxPower": 2.5
+      },
+      {
+        "Date": "2022-07-17",
+        "Time": "07:38",
+        "CallSign": "I0LYO",
+        "Locator": "JN62kc",
+        "Latitude": 42.104,
+        "Longitude": 12.875,
+        "QRB": 42,
+        "Band": "2",
+        "Mode": "SSB",
+        "Frequency": 144000,
+        "RstReceived": 59,
+        "RstSent": 59,
+        "TxPower": 2.5,
+        "Note": "S2S I/LZ-042"
+      },
+      {
+        "Date": "2022-07-17",
+        "Time": "08:26",
+        "CallSign": "IW0HLE",
+        "Locator": "JN61vo",
+        "Latitude": 41.604,
+        "Longitude": 13.792,
+        "QRB": 73,
+        "Band": "2",
+        "Mode": "SSB",
+        "Frequency": 144000,
+        "RstReceived": 59,
+        "RstSent": 59,
+        "TxPower": 2.5,
+        "Note": "S2S I/LZ-043"
+      },
+      {
+        "Date": "2022-07-17",
+        "Time": "08:27",
+        "CallSign": "IU0LII",
+        "Locator": "JN61vo",
+        "Latitude": 41.604,
+        "Longitude": 13.792,
+        "QRB": 73,
+        "Band": "2",
+        "Mode": "SSB",
+        "Frequency": 144000,
+        "RstReceived": 59,
+        "RstSent": 59,
+        "TxPower": 2.5,
+        "Note": "S2S I/LZ-043"
+      },
+      {
+        "Date": "2022-07-17",
+        "Time": "08:39",
+        "CallSign": "IZ0CVN",
+        "Locator": "JN61dr",
+        "Latitude": 41.729,
+        "Longitude": 12.292,
+        "QRB": 103,
+        "Band": "2",
+        "Mode": "SSB",
+        "Frequency": 144000,
+        "RstReceived": 59,
+        "RstSent": 59,
+        "TxPower": 2.5,
+        "Note": ""
+      },
+      {
+        "Date": "2022-07-17",
+        "Time": "08:40",
+        "CallSign": "IW0BCF",
+        "Locator": "JN61gu",
+        "Latitude": 41.854,
+        "Longitude": 12.542,
+        "QRB": 78,
+        "Band": "2",
+        "Mode": "SSB",
+        "Frequency": 144000,
+        "RstReceived": 59,
+        "RstSent": 59,
+        "TxPower": 2.5,
+        "Note": ""
+      }
+    ]
+  }
