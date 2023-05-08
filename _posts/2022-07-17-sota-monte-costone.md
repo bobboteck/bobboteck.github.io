@@ -50,7 +50,7 @@ gallery:
     image_path: /assets/blog/2022-07-17-sota-monte-costone/2022-07-17-sota-monte-costone-07-th.jpg
     alt: "Bandiere al vento, il sole comincia a calare"
     title: "Bandiere al vento, il sole comincia a calare"
-- url: /assets/blog/2022-07-17-sota-monte-costone/2022-07-17-sota-monte-costone-06.jpg
+  - url: /assets/blog/2022-07-17-sota-monte-costone/2022-07-17-sota-monte-costone-06.jpg
     image_path: /assets/blog/2022-07-17-sota-monte-costone/2022-07-17-sota-monte-costone-06-th.jpg
     alt: "Finito di montare la tenda in cui passeremo la notte"
     title: "Finito di montare la tenda in cui passeremo la notte"
