@@ -97,7 +97,7 @@ Qualche giorno prima cominciamo a preparare tutto il materiale, tenda, sacchi a 
 
 Sabato pomeriggio partiamo da **Roma**, con un caldo infernale, prima di arrivare a **Campo Felice**, si prende una strada bianca (meglio avere una macchina alta per percorrerla) che porta fino ad una vecchia **miniera di bauxite**, dove è stato ricavato un piazzale e si può lasciare la macchina per incamminarsi verso il rifugio. Per raggiungere il **rifugio Sebastiani** si segue il sentiero C1, le indicazioni riportano 1h45’, ad un certo punto si incontra un bivio per il sentiero C1 bis, ma ci hanno detto che è un po’ più difficile anche se c’è meno strada da fare, quindi noi abbiamo proseguito per il C1. Dopo circa 460 m di dislivello si arriva al rifugio, noi abbiamo impiegato 1h50’, il sentiero è quasi sempre in salita e verso la fine ci sono dei tratti più ripidi che mettono a dura prova, soprattutto con uno zaino pesante.
 
-[![Percorso dalla miniera di Bauxite al rifugio Sebstiani](/assets/blog/2022-07-17-sota-monte-costone/2022-07-17-sota-monte-costone-Percorso-Miniera-Bauxite-Rifugio-Sebastiani.png){: .align-center}](https://www.komoot.com/it-it/tour/846007744?ref=wtd)
+{% include komoot_tour.html tourid="846007744" %}
 
 Montato la **tenda**, abbiamo gustato una buona cena e passato una bella serata con le persone che erano lì al rifugio per passare la notte. Abbiamo conosciuto anche un radioamatore svizzero, di cui però non ricordo il nominativo, e insieme abbiamo spiegato agli altri cosa fanno i radioamatori e fatto ascoltare qualcosa con un piccolo ricevitore tascabile.
 
@@ -106,7 +106,7 @@ Finalmente fuori ci apprestiamo a smontare la tenda, fare colazione, sistemare n
 
 La vetta è proprio sopra il rifugio, sono circa 170 m di dislivello per circa 700 m di percorso, la cosa che rende la salita più difficile (e peggio ancora la discesa) è il brecciolino che si trova nel tratto finale.
 
-[![Percorso dal rifugio Sebstiani alla cima del monte costone](/assets/blog/2022-07-17-sota-monte-costone/2022-07-17-sota-monte-costone-Percorso-Rifugio-Sebastiani-Monte-Costone.png){: .align-center}](https://www.komoot.com/it-it/tour/846632519?ref=wtd)
+{% include komoot_tour.html tourid="846632519" %}
 
 Giunti in cima, per prima cosa scattiamo la foto di rito, e poi cominciamo a capire come sistemare le nostre attrezzature per non dare troppo fastidio, naturalmente in quel momento (9:00 locali) ci siamo solo noi in cima. La solitudine dura poco perché ad un certo punto ci accorgiamo di un Grifone che vola sopra le nostre teste, purtroppo era troppo in alto per fare una foto decente con lo smartphone (almeno con il mio) e poi si è allontanato sempre di più fino a sparire. Dopo qualche minuto Andrea lo rivede, guardando meglio intorno vediamo che ce ne sono altri, uno ci passa di fianco, sarà volato un metro più in alto della nostra posizione, è così vicino che sentiamo il fruscio dell’aria mossa dalle sue ali, è uno spettacolo che ripaga ampiamente della fatica fatta per raggiungere quella cima, capirete se non abbiamo neanche minimamente pensato a fare una foto.
 
