@@ -78,7 +78,7 @@ author:
       url: "https://instagram.com/bobboteck"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:roberto.damico@officinerobotiche.it"
+      url: "mailto:bobboteck-at-gmail.com"
 
 # Site Footer
 footer:
@@ -100,7 +100,7 @@ footer:
       url: "https://instagram.com/bobboteck"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:roberto.damico@officinerobotiche.it"
+      url: "mailto:bobboteck-at-gmail.com"
 
 teaser: /assets/images/intro.jpg
 
