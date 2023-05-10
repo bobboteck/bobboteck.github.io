@@ -91,11 +91,11 @@ gallery:
 ## L'attivazione
 
 Avendo iniziato la mia vita di radioamatore con la **licenza speciale** (in Italia era quella che si otteneva senza l’esame di telegrafia), che hai tempi permetteva di operare solo dalle VHF in su, i 144 MHz sono sempre stati la mia passione, specialmente quando cominciai a fare attività in SSB. Oggi purtroppo noto un certo silenzio a 144.300, quindi i contest sono una buona occasione per fare qualche **QSO** su queste frequenze.
-Un contest classico, a cui abbiamo partecipato spesso, è l’**APULIA VHF QRP TEST**, che ben si adatta alle attivazioni **SOTA**. Insieme sempre ad **Andrea IZ0QYI**, segniamo la data sul calendario e cominciamo a pensare ad una possibile cima da attivare, fino a quando non vedo un post, sul forum del SOTA, di **Andrea IW0HK** della sua attivazione del **monte Costone [I/AB-007](https://www.sotadata.org.uk/en/summit/I/AB-007)**, e scatta l’idea di raggiungere il rifugio Sebastiani a quota 2102, pernottare lì in tenda, e la mattina raggiungere **"facilmente"** la cima a  2271 m in tempo per l’inizio del contest.
+Un contest classico, a cui abbiamo partecipato spesso, è l’[**APULIA VHF QRP TEST**](https://www.arimolfetta.it/apulia-vhf-qrp-test/), che ben si adatta alle attivazioni **SOTA**. Insieme sempre ad **Andrea IZ0QYI**, segniamo la data sul calendario e cominciamo a pensare ad una possibile cima da attivare, fino a quando non vedo un post, sul forum del SOTA, di **Andrea IW0HK** della sua attivazione del **monte Costone [I/AB-007](https://www.sotadata.org.uk/en/summit/I/AB-007)**, e scatta l’idea di raggiungere il rifugio Sebastiani a quota 2102, pernottare lì in tenda, e la mattina raggiungere **"facilmente"** la cima a  2271 m in tempo per l’inizio del contest.
 
 Qualche giorno prima cominciamo a preparare tutto il materiale, tenda, sacchi a pelo, radio, antenna … ed è in quel momento che mi accorgo di aver smarrito alcuni pezzi fondamentali per il montaggio della Yagi 9 elementi che di solito usiamo per le attivazioni SOTA in VHF. Visto il pochissimo tempo che potevamo dedicare alla risoluzione del problema antenna, optiamo come alternativa, per portare due **HB9** pieghevoli.
 
-Sabato pomeriggio partiamo da **Roma**, con un caldo infernale, prima di arrivare a **Campo Felice**, si prende una strada bianca (meglio avere una macchina alta per percorrerla) che porta fino ad una vecchia **miniera di bauxite**, dove è stato ricavato un piazzale e si può lasciare la macchina per incamminarsi verso il rifugio. Per raggiungere il **rifugio Sebastiani** si segue il sentiero C1, le indicazioni riportano 1h45’, ad un certo punto si incontra un bivio per il sentiero C1 bis, ma ci hanno detto che è un po’ più difficile anche se c’è meno strada da fare, quindi noi abbiamo proseguito per il C1. Dopo circa 460 m di dislivello si arriva al rifugio, noi abbiamo impiegato 1h50’, il sentiero è quasi sempre in salita e verso la fine ci sono dei tratti più ripidi che mettono a dura prova, soprattutto con uno zaino pesante.
+Sabato pomeriggio partiamo da **Roma**, con un caldo infernale, prima di arrivare a **Campo Felice**, si prende una strada bianca (meglio avere una macchina alta per percorrerla) che porta fino ad una vecchia **miniera di bauxite**, dove è stato ricavato un piazzale e si può lasciare la macchina per incamminarsi verso il rifugio. Per raggiungere il [**rifugio Sebastiani**](https://www.rifugiovincenzosebastiani.it/) si segue il sentiero C1, le indicazioni riportano 1h45’, ad un certo punto si incontra un bivio per il sentiero C1 bis, ma ci hanno detto che è un po’ più difficile anche se c’è meno strada da fare, quindi noi abbiamo proseguito per il C1. Dopo circa 460 m di dislivello si arriva al rifugio, noi abbiamo impiegato 1h50’, il sentiero è quasi sempre in salita e verso la fine ci sono dei tratti più ripidi che mettono a dura prova, soprattutto con uno zaino pesante.
 
 {% include komoot_tour.html tourid="846007744" %}
 
@@ -122,6 +122,8 @@ Giunti alla macchina finalmente ci liberiamo del peso degli zaini, ci concediamo
 
 Torniamo a casa, stanchi sicuramente, ma contenti della bellissima esperienza, e soddisfatti dei risultati ottenuti. Andrea ha messo a log **16 QSO di cui 3 S2S**, io mi sono fermato a **6 QSO, anche io con 3 S2S**, praticamente gli stessi, ma è bello vedere che il contest ha spinto anche altri ad andare in montagna non solo noi.
 
+La [classifica finale del Contest](https://www.arimolfetta.it/wp-content/uploads/2022/08/classificaapuliavhfqrptest2022.pdf) vede me (IU0PHY) in 9° e ultima posizione con 1425 punti, mentre Andrea (IZ0QYI) è arrivato in 6° posizione con 3845 punti, entrambi nella categoria 2, quella con potenza inferiore ai 3 W.
+
 ## Foto dell'attivazione
 
 {% include gallery caption="SOTA Monte Costone" %}
@@ -132,24 +134,7 @@ Torniamo a casa, stanchi sicuramente, ma contenti della bellissima esperienza, e
 
 ## Log dei collegamenti di IZ0QYI
 
-|N°|Ora|Frequenza|Modo|Nominativo|Locatore|RSTi|RSTr|
-|:---|:---:|:---:|:---:|:---|:---:|:---:|:---:|:---:|
-|001||144|SSB|||59|59|
-|002||144|SSB|||59|59|
-|003||144|SSB|||59|59|
-|004||144|SSB|||59|59|
-|005||144|SSB|||59|59|
-|006||144|SSB|||59|59|
-|007||144|SSB|||59|59|
-|008||144|SSB|||59|59|
-|009||144|SSB|||59|59|
-|010||144|SSB|||59|59|
-|011||144|SSB|||59|59|
-|012||144|SSB|||59|59|
-|013||144|SSB|||59|59|
-|014||144|SSB|||59|59|
-|015||144|SSB|||59|59|
-|016||144|SSB|||59|59|
+{% include qsos_tab.html tabContainer="tabQyi" tabData="/assets/blog/2022-07-17-sota-monte-costone/data-iz0qyi.json" %}
 
 ## Mappa dei collegamenti di IZ0QYI
 
@@ -157,14 +142,7 @@ Torniamo a casa, stanchi sicuramente, ma contenti della bellissima esperienza, e
 
 ## Log dei collegamenti di IU0PHY
 
-|N°|Ora|Frequenza|Modo|Nominativo|Locatora|RSTi|RSTr|
-|:---|:---:|:---:|:---:|:---|:---:|:---:|:---:|:---:|
-|001|0724|144|SSB|IQ3QC|JN66ea|59|59|
-|002|1202|144|SSB|I0LYO|JN62kc|59|59|
-|003|1211|144|SSB|IW0HLE|JN61vo|59|59|
-|004|1258|144|SSB|IU0LII|JN61vo|59|59|
-|005|1258|144|SSB|IZ0CVN|JN61dr|59|59|
-|006|1258|144|SSB|IW0BCF|JN61gu|59|59|
+{% include qsos_tab.html tabContainer="tabPhy" tabData="/assets/blog/2022-07-17-sota-monte-costone/data-iu0phy.json" %}
 
 ## Mappa dei collegamenti di IU0PHY
 
