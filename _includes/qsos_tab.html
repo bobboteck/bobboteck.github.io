@@ -6,27 +6,36 @@ fetch("{{ include.tabData }}")
 })
 .then(jsonData =>
 {
-    let tableHeadHtml = "<table><thead><tr><th style='text-align: left'>N°</th><th style='text-align: center'>Ora</th><th style='text-align: center'>Frequenza</th><th style='text-align: center'>Modo</th><th style='text-align: left'>Nominativo</th><th style='text-align: center'>RSTi</th><th style='text-align: center'>RSTr</th><th style='text-align: center'>Locatore</th><th style='text-align: center'>QRB</th></tr></thead><tbody>";
-
-    jsonData.QSOs.map((qso, index) => 
+    let tableHeadHtml = "";
+    
+    if(jsonData.QSOs > 0)
     {
-        tableHeadHtml += "<tr><td style='text-align: left'>" + index +
-            "</td><td style='text-align: center'>" + qso.Time + 
-            "</td><td style='text-align: center'>" + qso.Band + 
-            "</td><td style='text-align: center'>" + qso.Mode + 
-            "</td><td style='text-align: left'>" + qso.CallSign + 
-            "</td><td style='text-align: center'>" + qso.RstSent + 
-            "</td><td style='text-align: center'>" + qso.RstReceived + 
-            "</td><td style='text-align: center'>" + qso.Locator + 
-            "</td><td style='text-align: center'>" + qso.QRB + "</td></tr>";
-    });
+        tableHeadHtml = "<table style='display: table;'><thead><tr><th style='text-align: left'>N°</th><th style='text-align: center'>Ora</th><th style='text-align: center'>Frequenza</th><th style='text-align: center'>Modo</th><th style='text-align: left'>Nominativo</th><th style='text-align: center'>RSTi</th><th style='text-align: center'>RSTr</th><th style='text-align: center'>Locatore</th><th style='text-align: center'>QRB</th></tr></thead><tbody>";
 
-    tableHeadHtml += "</tbody></table>"
+        jsonData.QSOs.map((qso, index) => 
+        {
+            tableHeadHtml += "<tr><td style='text-align: left'>" + index +
+                "</td><td style='text-align: center'>" + qso.Time + 
+                "</td><td style='text-align: center'>" + qso.Band + 
+                "</td><td style='text-align: center'>" + qso.Mode + 
+                "</td><td style='text-align: left'>" + qso.CallSign + 
+                "</td><td style='text-align: center'>" + qso.RstSent + 
+                "</td><td style='text-align: center'>" + qso.RstReceived + 
+                "</td><td style='text-align: center'>" + qso.Locator + 
+                "</td><td style='text-align: center'>" + qso.QRB + "</td></tr>";
+        });
+
+        tableHeadHtml += "</tbody></table>";
+    }
+    else
+    {
+        tableHeadHtml += "<span>NO QSO Data!</span>";
+    }
 
     document.getElementById("{{ include.tabContainer }}").innerHTML = tableHeadHtml;
 });
 </script>
 
 <p>
-    <div id="{{ include.tabContainer }}" style="max-width: 100%;height: 450px;"></div>
+    <div id="{{ include.tabContainer }}" style="max-width: 100%"></div>
 </p>
