@@ -10,7 +10,7 @@ fetch("{{ include.tabData }}")
     
     if(jsonData.QSOs.length > 0)
     {
-        tableHeadHtml = "<table style='display: table;'><thead><tr><th style='text-align: left'>N°</th><th style='text-align: center'>Ora</th><th style='text-align: center'>Frequenza</th><th style='text-align: center'>Modo</th><th style='text-align: left'>Nominativo</th><th style='text-align: center'>RSTi</th><th style='text-align: center'>RSTr</th><th style='text-align: center'>Locatore</th><th style='text-align: center'>QRB</th></tr></thead><tbody>";
+        tableHeadHtml = "<table style='display: table;'><thead><tr><th style='text-align: left'>N°</th><th style='text-align: center'>Ora</th><th style='text-align: center'>Banda</th><th style='text-align: center'>Modo</th><th style='text-align: left'>Nominativo</th><th style='text-align: center'>RSTi</th><th style='text-align: center'>RSTr</th><th style='text-align: center'>Locatore</th><th style='text-align: center'>QRB</th></tr></thead><tbody>";
 
         jsonData.QSOs.map((qso, index) => 
         {
