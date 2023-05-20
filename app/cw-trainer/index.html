@@ -99,7 +99,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="row mb-3"">
+                <div class="row mb-3">
                     <div class="col-md-6">
                         <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" id="checkSendChars" checked>
@@ -209,6 +209,47 @@
                             <input class="form-check-input" type="checkbox" id="charZ" value="Z">
                             <label class="form-check-label font-monospace" for="charZ">Z</label>
                         </div>
+                        <div style="clear: both;"></div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="char0" value="0">
+                            <label class="form-check-label font-monospace" for="char0">0</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="char1" value="1">
+                            <label class="form-check-label font-monospace" for="char1">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="char2" value="2">
+                            <label class="form-check-label font-monospace" for="char2">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="char3" value="3">
+                            <label class="form-check-label font-monospace" for="char3">3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="char4" value="4">
+                            <label class="form-check-label font-monospace" for="char4">4</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="char5" value="5">
+                            <label class="form-check-label font-monospace" for="char5">5</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="char6" value="6">
+                            <label class="form-check-label font-monospace" for="char6">6</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="char7" value="7">
+                            <label class="form-check-label font-monospace" for="char7">7</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="char8" value="8">
+                            <label class="form-check-label font-monospace" for="char8">8</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="char9" value="9">
+                            <label class="form-check-label font-monospace" for="char9">9</label>
+                        </div>
                         <div class="input-group mt-3 mb-3">
                             <button class="btn btn-info" type="button" id="btnGenerate">Generate</button>
                             <input id="txtToSend" type="password" class="form-control font-monospace" placeholder="" aria-label="Text to be sended" aria-describedby="btnGenerate" disabled>
@@ -221,7 +262,7 @@
                                 <input class="form-check-input" type="checkbox" id="checkSendText">
                                 <label class="form-check-label" for="checkSendText">Write the text to transmit</label>
                             </div>
-                            <textarea class="form-control" id="freeTextArea" rows="5" disabled></textarea>
+                            <textarea class="form-control" id="freeTextArea" rows="6" disabled></textarea>
                           </div>
                     </div>
                 </div>
@@ -265,7 +306,7 @@ _gaq.push(['_trackPageview']);
 const jsCw = new jscw();
 jsCw.setVolume(0.5);
 
-const charsAll = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+const charsAll = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9'];
 const playStatus = { notStarded: 0, playing: 1, paused: 2 };
 let isPlaying = playStatus.notStarded;
 
@@ -291,6 +332,14 @@ ckSendChars.addEventListener("click", () =>
         btnGenerate.disabled = false;
         btnShow.disabled = false;
     }
+    else
+    {
+        ckSendChars.checked = false;
+        freeTextArea.disabled = false;
+        btnGenerate.disabled = true;
+        btnShow.disabled = true;
+        ckSendText.checked = true;
+    }
 });
 
 ckSendText.addEventListener("click", () =>
@@ -301,6 +350,14 @@ ckSendText.addEventListener("click", () =>
         freeTextArea.disabled = false;
         btnGenerate.disabled = true;
         btnShow.disabled = true;
+    }
+    else
+    {
+        ckSendText.checked = false;
+        freeTextArea.disabled = true;
+        btnGenerate.disabled = false;
+        btnShow.disabled = false;
+        ckSendChars.checked = true;
     }
 });
 
@@ -340,11 +397,13 @@ btnGenerate.addEventListener("click", () =>
     txtToSend.value = messageToSend;
     console.log(messageToSend);
 
-//    jsCw.setEff(characterSpeed.value);
-//    jsCw.setWpm(spacingSpeed.value);
-
-//    jsCw.init();
-//    jsCw.setText(messageToSend);
+    if(isPlaying !== playStatus.notStarded)
+    {
+        isPlaying = playStatus.notStarded;
+        btnRewind.disabled = true;
+        jsCw.stop();
+        jsCw.pause();
+    }
 });
 
 btnShow.addEventListener("click", () =>
@@ -359,11 +418,21 @@ btnPlay.addEventListener("click", () =>
         jsCw.setEff(spacingSpeed.value);
         jsCw.setWpm(characterSpeed.value);
         jsCw.init();
-        jsCw.setText(messageToSend);
+
+        if(ckSendChars.checked)
+        {
+            jsCw.setText(messageToSend);
+        }
+        else
+        {
+            jsCw.setText(freeTextArea.value);
+        }
+
         jsCw.play();
         isPlaying = playStatus.playing;
         btnPlay.innerText = "Pause";
         btnRewind.disabled = true;
+        btnGenerate.disabled = true;
     }
     else if(isPlaying === playStatus.playing)
     {
@@ -371,6 +440,10 @@ btnPlay.addEventListener("click", () =>
         isPlaying = playStatus.paused;
         btnPlay.innerText = "Play";
         btnRewind.disabled = false;
+        if(ckSendChars.checked)
+        {
+            btnGenerate.disabled = false;
+        }
     }
     else if(isPlaying === playStatus.paused)
     {
@@ -378,6 +451,7 @@ btnPlay.addEventListener("click", () =>
         isPlaying = playStatus.playing;
         btnPlay.innerText = "Pause";
         btnRewind.disabled = true;
+        btnGenerate.disabled = true;
     }
 });
 
@@ -389,6 +463,21 @@ btnRewind.addEventListener("click", () =>
     btnPlay.innerText = "Play";
     btnRewind.disabled = true;
 });
+
+jsCw.onFinished = function() 
+{
+    if(isPlaying === playStatus.playing)
+    {
+        console.log("END");
+        isPlaying = playStatus.notStarded;
+        btnPlay.innerText = "Play";
+        btnRewind.disabled = true;
+        if(ckSendChars.checked)
+        {
+            btnGenerate.disabled = false;
+        }
+    }
+}
         </script>
     </body>
 </html>
