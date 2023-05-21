@@ -9,6 +9,16 @@ main > .container
     font-size: 10pt;
 }
 
+.footerIconLabel
+{
+    display: flex;
+}
+
+.footerIconLabelSpace
+{
+    padding-left: 5px;
+}
+
 .githubColor
 {
     color: #171516;
