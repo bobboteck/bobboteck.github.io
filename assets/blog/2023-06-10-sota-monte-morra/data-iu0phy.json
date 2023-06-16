@@ -1,0 +1,236 @@
+{
+  "MapConfig": {
+    "Latitude": 49.038,
+    "Longitude": 10.283,
+    "Zoom": 5
+  },
+  "QTH": {
+    "Latitude": 42.031137,
+    "Longitude": 12.831102,
+    "Locator": "JN62ja",
+    "Location": "Monte Morra 1034 metri nel parco dei Monti Licretili",
+    "References": [
+      {
+        "Code": "I/LZ-304",
+        "Type": "SOTA"
+      },
+      {
+        "Code": "I-0713",
+        "Type": "POTA"
+      }
+    ],
+    "isPortable": true
+  },
+  "Equipment": {
+    "Radios": [
+      {
+        "Brand": "Yaesu",
+        "Model": "FT-817",
+        "PowerSupply": "LiFePO4 12V 8Ah"
+      }
+    ],
+    "Antennas": [
+      {
+        "Brand": "IU0PHY",
+        "Model": "40m Inverted V",
+        "Other": "Home made"
+      }
+    ]
+  },
+  "QSOs": [
+    {
+      "Date": "2023-06-10",
+      "Time": "08:45",
+      "CallSign": "I4VIL",
+      "Locator": "JN54ES",
+      "Latitude": 44.771,
+      "Longitude": 10.375,
+      "QRB": 363,
+      "Band": "40",
+      "Mode": "SSB",
+      "RstReceived": 59,
+      "RstSent": 59,
+      "TxPower": 5
+    },
+    {
+      "Date": "2023-06-10",
+      "Time": "08:59",
+      "CallSign": "OK2PDT",
+      "Locator": "JN89CG",
+      "Latitude": 49.271,
+      "Longitude": 16.208,
+      "QRB": 849,
+      "Band": "40",
+      "Mode": "SSB",
+      "RstReceived": 59,
+      "RstSent": 59,
+      "TxPower": 5,
+      "Note": ""
+    },
+    {
+      "Date": "2023-06-10",
+      "Time": "09:25",
+      "CallSign": "II0PEG",
+      "Locator": "JN63FC",
+      "Latitude": 43.104,
+      "Longitude": 12.458,
+      "QRB": 124,
+      "Band": "40",
+      "Mode": "SSB",
+      "RstReceived": 59,
+      "RstSent": 59,
+      "TxPower": 5,
+      "Note": ""
+    },
+    {
+      "Date": "2023-06-10",
+      "Time": "09:34",
+      "CallSign": "9A8RA/P",
+      "Locator": "JN83ln",
+      "Latitude": 43.563,
+      "Longitude": 16.958,
+      "QRB": 381,
+      "Band": "40",
+      "Mode": "SSB",
+      "RstReceived": 55,
+      "RstSent": 59,
+      "TxPower": 5,
+      "Note": "S2S 9A/DH-038"
+    },
+    {
+      "Date": "2023-06-10",
+      "Time": "09:36",
+      "CallSign": "IN3NJB",
+      "Locator": "JN56LB",
+      "Latitude": 46.063,
+      "Longitude": 10.958,
+      "QRB": 473,
+      "Band": "40",
+      "Mode": "SSB",
+      "RstReceived": 53,
+      "RstSent": 59,
+      "TxPower": 5,
+      "Note": ""
+    },
+    {
+      "Date": "2023-06-10",
+      "Time": "09:37",
+      "CallSign": "SF7ILF",
+      "Locator": "JO65PJ",
+      "Latitude": 55.479,
+      "Longitude": 12.958,
+      "QRB": 1488,
+      "Band": "40",
+      "Mode": "SSB",
+      "RstReceived": 44,
+      "RstSent": 59,
+      "TxPower": 5,
+      "Note": "Non trovati riferimenti il QTH"
+    },
+    {
+      "Date": "2023-06-10",
+      "Time": "09:38",
+      "CallSign": "IS0LYN",
+      "Locator": "JN40HS",
+      "Latitude": 40.771,
+      "Longitude": 8.625,
+      "QRB": 374,
+      "Band": "40",
+      "Mode": "SSB",
+      "RstReceived": 59,
+      "RstSent": 59,
+      "TxPower": 5,
+      "Note": ""
+    },
+    {
+      "Date": "2023-06-10",
+      "Time": "09:44",
+      "CallSign": "IZ0DIB",
+      "Locator": "JN61FV",
+      "Latitude": 41.896,
+      "Longitude": 12.458,
+      "QRB": 31,
+      "Band": "40",
+      "Mode": "SSB",
+      "RstReceived": 59,
+      "RstSent": 59,
+      "TxPower": 5,
+      "Note": ""
+    },
+    {
+      "Date": "2023-06-10",
+      "Time": "10:15",
+      "CallSign": "IZ0XVK",
+      "Locator": "JN62JN",
+      "Latitude": 42.563,
+      "Longitude": 12.792,
+      "QRB": 60,
+      "Band": "40",
+      "Mode": "SSB",
+      "RstReceived": 53,
+      "RstSent": 59,
+      "TxPower": 5,
+      "Note": ""
+    },
+    {
+      "Date": "2023-06-10",
+      "Time": "10:34",
+      "CallSign": "IU0QME",
+      "Locator": "jn61fu",
+      "Latitude": 41.854,
+      "Longitude": 12.458,
+      "QRB": 33,
+      "Band": "40",
+      "Mode": "SSB",
+      "RstReceived": 53,
+      "RstSent": 59,
+      "TxPower": 5,
+      "Note": ""
+    },
+    {
+      "Date": "2023-06-10",
+      "Time": "12:08",
+      "CallSign": "IQ8DO",
+      "Locator": "JN71EB",
+      "Latitude": 41.063,
+      "Longitude": 14.375,
+      "QRB": 169,
+      "Band": "40",
+      "Mode": "SSB",
+      "RstReceived": 59,
+      "RstSent": 59,
+      "TxPower": 5,
+      "Note": ""
+    },
+    {
+      "Date": "2023-06-10",
+      "Time": "12:13",
+      "CallSign": "IQ5BL",
+      "Locator": "JN53OS",
+      "Latitude": 43.771,
+      "Longitude": 11.208,
+      "QRB": 233,
+      "Band": "40",
+      "Mode": "SSB",
+      "RstReceived": 59,
+      "RstSent": 59,
+      "TxPower": 5,
+      "Note": ""
+    },
+    {
+      "Date": "2023-06-10",
+      "Time": "12:27",
+      "CallSign": "IK6OAK",
+      "Locator": "JN72DC",
+      "Latitude": 42.104,
+      "Longitude": 14.292,
+      "QRB": 124,
+      "Band": "40",
+      "Mode": "SSB",
+      "RstReceived": 59,
+      "RstSent": 59,
+      "TxPower": 5,
+      "Note": ""
+    }
+  ]
+}
