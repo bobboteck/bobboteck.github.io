@@ -1,0 +1,151 @@
+{
+    "MapConfig": {
+      "Latitude": 43.612,
+      "Longitude": 8.13,
+      "Zoom": 5
+    },
+    "QTH": {
+      "Latitude": 42.104,
+      "Longitude": 12.875,
+      "Locator": "JN62kc",
+      "Location": "Monte Pellecchia",
+      "References": [
+        {
+          "Code": "I/LZ-042",
+          "Type": "SOTA"
+        },
+        {
+          "Code": "I-0713",
+          "Type": "POTA"
+        }
+      ],
+      "isPortable": true
+    },
+    "Equipment": {
+      "Radios": [
+        {
+          "Brand": "Yaesu",
+          "Model": "FT-817",
+          "PowerSupply": "LiFePO4 12V 8Ah"
+        }
+      ],
+      "Antennas": [
+        {
+          "Brand": "IU0PHY",
+          "Model": "40m Inverted V",
+          "Other": "Home made"
+        },
+        {
+            "Brand": "QRPGuys",
+            "Model": "Portable No Tune End Fed Half Wave Antenna",
+            "Other": "9 meters of 0,75mm vire for the aerial"
+        }
+      ]
+    },
+    "QSOs": [
+      {
+        "Date": "2023-06-25",
+        "Time": "09:38",
+        "CallSign": "S57S",
+        "Locator": "JN76JB",
+        "Latitude": 46.063,
+        "Longitude": 14.792,
+        "QRB": 466,
+        "Band": "40",
+        "Mode": "SSB",
+        "RstReceived": 51,
+        "RstSent": 59,
+        "TxPower": 5
+      },
+      {
+        "Date": "2023-06-25",
+        "Time": "09:42",
+        "CallSign": "S5/IV3NGF",
+        "Locator": "JN66uh",
+        "Latitude": 46.313,
+        "Longitude": 13.708,
+        "QRB": 473,
+        "Band": "40",
+        "Mode": "SSB",
+        "RstReceived": 59,
+        "RstSent": 51,
+        "TxPower": 5,
+        "Note": "S2S - S5/JA-066"
+      },
+      {
+        "Date": "2023-06-25",
+        "Time": "09:43",
+        "CallSign": "IU4FLP/4",
+        "Locator": "JN54HK",
+        "Latitude": 44.438,
+        "Longitude": 10.625,
+        "QRB": 317,
+        "Band": "40",
+        "Mode": "SSB",
+        "RstReceived": 36,
+        "RstSent": 57,
+        "TxPower": 5,
+        "Note": ""
+      },
+      {
+        "Date": "2023-06-25",
+        "Time": "09:45",
+        "CallSign": "S57ILF",
+        "Locator": "JN76AK",
+        "Latitude": 46.438,
+        "Longitude": 14.042,
+        "QRB": 491,
+        "Band": "40",
+        "Mode": "SSB",
+        "RstReceived": 36,
+        "RstSent": 57,
+        "TxPower": 5,
+        "Note": ""
+      },
+      {
+        "Date": "2023-06-25",
+        "Time": "10:13",
+        "CallSign": "IK0XFD",
+        "Locator": "jn61gv",
+        "Latitude": 41.896,
+        "Longitude": 12.542,
+        "QRB": 36,
+        "Band": "40",
+        "Mode": "SSB",
+        "RstReceived": 31,
+        "RstSent": 59,
+        "TxPower": 5,
+        "Note": ""
+      },
+      {
+        "Date": "2023-06-25",
+        "Time": "10:23",
+        "CallSign": "IS0LYN",
+        "Locator": "JN40HS",
+        "Latitude": 40.771,
+        "Longitude": 8.625,
+        "QRB": 384,
+        "Band": "40",
+        "Mode": "SSB",
+        "RstReceived": 55,
+        "RstSent": 57,
+        "TxPower": 5,
+        "Note": ""
+      },
+      {
+        "Date": "2023-06-25",
+        "Time": "11:55",
+        "CallSign": "ED5R",
+        "Locator": "IM98OL",
+        "Latitude": 38.479,
+        "Longitude": -0.792,
+        "QRB": 1226,
+        "Band": "20",
+        "Mode": "SSB",
+        "RstReceived": 55,
+        "RstSent": 57,
+        "TxPower": 5,
+        "Note": ""
+      }
+    ]
+  }
