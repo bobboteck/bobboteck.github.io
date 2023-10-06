@@ -92,9 +92,13 @@ Il confronto tra le antenne, purtroppo è da rifare, in quanto anche se io utili
 
 ### Conclusioni
 
-**Radio** - La cima si presta bene al posizionamento di antenne di tutti i tipi, anche se non è altissima la cima, il suo orizzonte risulta molto aperto anche per collegamenti in VHF. Non abbiamo riscontrato disturbi da parte dei ripetitori vicini.
+#### Radio
 
-**Trekking** - Purtroppo il sentiero non segnato non ci ha aiutato, almeno nell’ascesa, mentre in discesa abbiamo trovato dei segni rosso giallo, e altri rosso rosso, a volte su rocce a volte sugli alberi, ci hanno permesso di seguire una pista almeno fino alla struttura dei ripetitori, poi da lì abbiamo ripreso la strada bianca che ci ha riportato al punto di partenza.
+La cima si presta bene al posizionamento di antenne di tutti i tipi, anche se non è altissima la cima, il suo orizzonte risulta molto aperto anche per collegamenti in VHF. Non abbiamo riscontrato disturbi da parte dei ripetitori vicini.
+
+#### Trekking
+
+Purtroppo il sentiero non segnato non ci ha aiutato, almeno nell’ascesa, mentre in discesa abbiamo trovato dei segni rosso giallo, e altri rosso rosso, a volte su rocce a volte sugli alberi, ci hanno permesso di seguire una pista almeno fino alla struttura dei ripetitori, poi da lì abbiamo ripreso la strada bianca che ci ha riportato al punto di partenza.
 
 Qui c'è la traccia percorsa alla partenza, anche se non è sicuramente un esempio da seguire.
 {% include komoot_tour.html tourid="1312707252" %}
