@@ -1,0 +1,263 @@
+{
+    "MapConfig": {
+      "Latitude": 43.085,
+      "Longitude": 12.261,
+      "Zoom": 6
+    },
+    "QTH": {
+      "Latitude": 42.063,
+      "Longitude": 13.208,
+      "Locator": "JN62OB",
+      "Location": "Monte Midia",
+      "References": [
+        {
+          "Code": "I/AB-304",
+          "Type": "SOTA"
+        }
+      ],
+      "isPortable": true
+    },
+    "Equipment": {
+        "Radios": [
+          {
+            "Brand": "Yaesu",
+            "Model": "FT-817",
+            "PowerSupply": "LiFePO4 12V 8Ah"
+          }
+        ],
+        "Antennas": [
+          {
+            "Brand": "IU0PHY",
+            "Model": "DRV VHF",
+            "Other": "Home made"
+          }
+        ]
+    },
+    "QSOs": [
+      {
+        "Date": "2023-09-17",
+        "Time": "09:45",
+        "CallSign": "IW6DCN",
+        "Locator": "JN63MH",
+        "Latitude": 43.313,
+        "Longitude": 13.042,
+        "QRB": 140,
+        "Band": "2",
+        "Mode": "SSB",
+        "RstReceived": 57,
+        "RstSent": 59,
+        "TxPower": 5,
+        "Note": "S2S - I/MC-020"
+      },
+      {
+        "Date": "2023-09-17",
+        "Time": "09:55",
+        "CallSign": "IW5BCC",
+        "Locator": "JN53QK",
+        "Latitude": 43.438,
+        "Longitude": 11.375,
+        "QRB": 214,
+        "Band": "2",
+        "Mode": "SSB",
+        "RstReceived": 57,
+        "RstSent": 52,
+        "TxPower": 5,
+        "Note": ""
+      },
+      {
+        "Date": "2023-09-17",
+        "Time": "09:55",
+        "CallSign": "IW5RFA",
+        "Locator": "JN53OW",
+        "Latitude": 43.938,
+        "Longitude": 11.208,
+        "QRB": 264,
+        "Band": "2",
+        "Mode": "SSB",
+        "RstReceived": 57,
+        "RstSent": 52,
+        "TxPower": 5,
+        "Note": "S2S - I/TO-097"
+      },
+      {
+        "Date": "2023-09-17",
+        "Time": "10:05",
+        "CallSign": "IK1YNZ",
+        "Locator": "JN33UT",
+        "Latitude": 43.813,
+        "Longitude": 7.708,
+        "QRB": 488,
+        "Band": "2",
+        "Mode": "SSB",
+        "RstReceived": 58,
+        "RstSent": 57,
+        "TxPower": 5,
+        "Note": ""
+      },
+      {
+        "Date": "2023-09-17",
+        "Time": "10:12",
+        "CallSign": "I0FHZ",
+        "Locator": "JN62AP",
+        "Latitude": 42.646,
+        "Longitude": 12.042,
+        "QRB": 116,
+        "Band": "2",
+        "Mode": "SSB",
+        "RstReceived": 59,
+        "RstSent": 59,
+        "TxPower": 5,
+        "Note": ""
+      },
+      {
+        "Date": "2023-09-17",
+        "Time": "10:21",
+        "CallSign": "IC8TEM",
+        "Locator": "JN70CN",
+        "Latitude": 40.563,
+        "Longitude": 14.208,
+        "QRB": 187,
+        "Band": "2",
+        "Mode": "SSB",
+        "RstReceived": 59,
+        "RstSent": 51,
+        "TxPower": 5,
+        "Note": ""
+      },
+      {
+        "Date": "2023-09-17",
+        "Time": "10:23",
+        "CallSign": "IU8MNI/M",
+        "Locator": "JN70FB",
+        "Latitude": 40.063,
+        "Longitude": 14.458,
+        "QRB": 246,
+        "Band": "2",
+        "Mode": "SSB",
+        "RstReceived": 59,
+        "RstSent": 58,
+        "TxPower": 5,
+        "Note": ""
+      },
+      {
+        "Date": "2023-09-17",
+        "Time": "10:32",
+        "CallSign": "IK0TIX",
+        "Locator": "JN61FT",
+        "Latitude": 41.813,
+        "Longitude": 12.458,
+        "QRB": 68,
+        "Band": "2",
+        "Mode": "SSB",
+        "RstReceived": 59,
+        "RstSent": 59,
+        "TxPower": 5,
+        "Note": ""
+      },
+      {
+        "Date": "2023-09-17",
+        "Time": "10:39",
+        "CallSign": "IW0DMT",
+        "Locator": "jn61gv",
+        "Latitude": 41.896,
+        "Longitude": 12.542,
+        "QRB": 58,
+        "Band": "2",
+        "Mode": "SSB",
+        "RstReceived": 59,
+        "RstSent": 59,
+        "TxPower": 5,
+        "Note": ""
+      },
+      {
+        "Date": "2023-09-17",
+        "Time": "10:41",
+        "CallSign": "IW2NHE",
+        "Locator": "JN55FW",
+        "Latitude": 45.938,
+        "Longitude": 10.458,
+        "QRB": 484,
+        "Band": "2",
+        "Mode": "SSB",
+        "RstReceived": 59,
+        "RstSent": 59,
+        "TxPower": 5,
+        "Note": "S2S - I/LO-073"
+      },
+      {
+        "Date": "2023-09-17",
+        "Time": "10:46",
+        "CallSign": "IZ1BPN",
+        "Locator": "JN34NU",
+        "Latitude": 44.854,
+        "Longitude": 7.125,
+        "QRB": 581,
+        "Band": "2",
+        "Mode": "SSB",
+        "RstReceived": 51,
+        "RstSent": 51,
+        "TxPower": 5,
+        "Note": "S2S - I/PM-395"
+      },
+      {
+        "Date": "2023-09-17",
+        "Time": "10:50",
+        "CallSign": "IU0MBJ",
+        "Locator": "JN61HX",
+        "Latitude": 41.979,
+        "Longitude": 12.625,
+        "QRB": 49,
+        "Band": "2",
+        "Mode": "SSB",
+        "RstReceived": 59,
+        "RstSent": 59,
+        "TxPower": 5,
+        "Note": ""
+      },
+      {
+        "Date": "2023-09-17",
+        "Time": "10:57",
+        "CallSign": "IZ0DZX",
+        "Locator": "jn61gw",
+        "Latitude": 41.938,
+        "Longitude": 12.542,
+        "QRB": 57,
+        "Band": "2",
+        "Mode": "SSB",
+        "RstReceived": 59,
+        "RstSent": 59,
+        "TxPower": 5,
+        "Note": ""
+      },
+      {
+        "Date": "2023-09-17",
+        "Time": "11:00",
+        "CallSign": "IZ0AVH",
+        "Locator": "jn61gw",
+        "Latitude": 41.938,
+        "Longitude": 12.542,
+        "QRB": 57,
+        "Band": "2",
+        "Mode": "SSB",
+        "RstReceived": 59,
+        "RstSent": 59,
+        "TxPower": 5,
+        "Note": ""
+      },
+      {
+        "Date": "2023-09-17",
+        "Time": "11:02",
+        "CallSign": "IW0BNW",
+        "Locator": "JN61FV",
+        "Latitude": 41.896,
+        "Longitude": 12.458,
+        "QRB": 65,
+        "Band": "2",
+        "Mode": "SSB",
+        "RstReceived": 55,
+        "RstSent": 59,
+        "TxPower": 5,
+        "Note": ""
+      }
+    ]
+  }
