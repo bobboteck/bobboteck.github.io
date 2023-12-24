@@ -48,6 +48,12 @@ fetch("{{ include.mapdata }}")
     jsonData.QSOs.forEach(qso => 
     {
         let qsoDescription = "<b>" + qso.CallSign + "</b><br />" + qso.Locator;
+
+        if(qso.Note != undefined && qso.Note != "")
+        {
+            qsoDescription += "<br />" + qso.Note;
+        }
+
         L.marker([qso.Latitude, qso.Longitude]).addTo(map).bindPopup(qsoDescription);
     });
 });
