@@ -32,52 +32,40 @@ toc_sticky: true
 gallery:
   - url: /assets/blog/2023-10-07-sota-monte-cervia/2023-10-07-sota-monte-cervia-01.jpg
     image_path: /assets/blog/2023-10-07-sota-monte-cervia/2023-10-07-sota-monte-cervia-01-th.jpg
-    alt: ""
-    title: ""
+    alt: "Si parte"
+    title: "Si parte"
   - url: /assets/blog/2023-10-07-sota-monte-cervia/2023-10-07-sota-monte-cervia-02.jpg
     image_path: /assets/blog/2023-10-07-sota-monte-cervia/2023-10-07-sota-monte-cervia-02-th.jpg
-    alt: ""
-    title: ""
+    alt: "Ecco la salita"
+    title: "Ecco la salita"
   - url: /assets/blog/2023-10-07-sota-monte-cervia/2023-10-07-sota-monte-cervia-03.jpg
     image_path: /assets/blog/2023-10-07-sota-monte-cervia/2023-10-07-sota-monte-cervia-03-th.jpg
-    alt: ""
-    title: ""
+    alt: "Un uomo solo al comando"
+    title: "Un uomo solo al comando"
   - url: /assets/blog/2023-10-07-sota-monte-cervia/2023-10-07-sota-monte-cervia-04.jpg
     image_path: /assets/blog/2023-10-07-sota-monte-cervia/2023-10-07-sota-monte-cervia-04-th.jpg
-    alt: ""
-    title: ""
+    alt: "La croce"
+    title: "La croce"
   - url: /assets/blog/2023-10-07-sota-monte-cervia/2023-10-07-sota-monte-cervia-05.jpg
     image_path: /assets/blog/2023-10-07-sota-monte-cervia/2023-10-07-sota-monte-cervia-05-th.jpg
-    alt: ""
-    title: ""
+    alt: "QSO in corso"
+    title: "QSO in corso"
   - url: /assets/blog/2023-10-07-sota-monte-cervia/2023-10-07-sota-monte-cervia-06.jpg
     image_path: /assets/blog/2023-10-07-sota-monte-cervia/2023-10-07-sota-monte-cervia-06-th.jpg
-    alt: ""
-    title: ""
+    alt: "Il panorama che si gode dalla postazione radio di oggi"
+    title: "Il panorama che si gode dalla postazione radio di oggi"
   - url: /assets/blog/2023-10-07-sota-monte-cervia/2023-10-07-sota-monte-cervia-07.jpg
     image_path: /assets/blog/2023-10-07-sota-monte-cervia/2023-10-07-sota-monte-cervia-07-th.jpg
-    alt: ""
-    title: ""
+    alt: "Il dipolo dei 40 metri"
+    title: "Il dipolo dei 40 metri"
   - url: /assets/blog/2023-10-07-sota-monte-cervia/2023-10-07-sota-monte-cervia-08.jpg
     image_path: /assets/blog/2023-10-07-sota-monte-cervia/2023-10-07-sota-monte-cervia-08-th.jpg
-    alt: ""
-    title: ""
+    alt: "Inizia la discesa con vista sul lago del Turano"
+    title: "Inizia la discesa con vista sul lago del Turano"
   - url: /assets/blog/2023-10-07-sota-monte-cervia/2023-10-07-sota-monte-cervia-09.jpg
     image_path: /assets/blog/2023-10-07-sota-monte-cervia/2023-10-07-sota-monte-cervia-09-th.jpg
-    alt: ""
-    title: ""
-  - url: /assets/blog/2023-10-07-sota-monte-cervia/2023-10-07-sota-monte-cervia-10.jpg
-    image_path: /assets/blog/2023-10-07-sota-monte-cervia/2023-10-07-sota-monte-cervia-10-th.jpg
-    alt: ""
-    title: ""
-  - url: /assets/blog/2023-10-07-sota-monte-cervia/2023-10-07-sota-monte-cervia-11.jpg
-    image_path: /assets/blog/2023-10-07-sota-monte-cervia/2023-10-07-sota-monte-cervia-11-th.jpg
-    alt: ""
-    title: ""
-  - url: /assets/blog/2023-10-07-sota-monte-cervia/2023-10-07-sota-monte-cervia-12.jpg
-    image_path: /assets/blog/2023-10-07-sota-monte-cervia/2023-10-07-sota-monte-cervia-12-th.jpg
-    alt: ""
-    title: ""
+    alt: "Ancora primo tratto della discesa vista lago"
+    title: "Ancora primo tratto della discesa vista lago"
 ---
 
 ## L'attivazione
