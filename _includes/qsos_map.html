@@ -13,8 +13,24 @@ fetch("{{ include.mapdata }}")
     const stationIcon = L.icon(
     {
         iconUrl: '/assets/icon/map-station.png',
+        iconSize: [26,41],
+        iconAnchor: [13,40],
+        popupAnchor: [0,-30]
+    });
+
+    const s2sIcon = L.icon(
+    {
+        iconUrl: '/assets/icon/marker-sota.png',
         iconSize: [41,41],
-        iconAnchor: [20,40],
+        iconAnchor: [12,40],
+        popupAnchor: [0,-30]
+    });
+
+    const p2pIcon = L.icon(
+    {
+        iconUrl: '/assets/icon/marker-pota.png',
+        iconSize: [41,41],
+        iconAnchor: [12,40],
         popupAnchor: [0,-30]
     });
 
@@ -31,10 +47,10 @@ fetch("{{ include.mapdata }}")
 
     let myPopUpDescription = jsonData.QTH.Location + "<br />" + jsonData.QTH.Locator;
 
-    if(jsonData.QTH.Reference !== null && jsonData.QTH.Reference !== undefined && jsonData.QTH.Reference.lenght > 0)
+    if(jsonData.QTH.References !== null && jsonData.QTH.References !== undefined && jsonData.QTH.References.lenght > 0)
     {
         let reference = "<table><thead><tr><th>Reference</th><th>Type</th></tr></thead><tbody>";
-        jsonData.QTH.Reference.forEach(ref =>
+        jsonData.QTH.References.forEach(ref =>
         {
             reference = reference + "<tr><td>" + ref.Code + "</td><td>" + ref.Type + "</td></tr>";
         });
@@ -45,16 +61,31 @@ fetch("{{ include.mapdata }}")
     let myPosition = L.marker([jsonData.QTH.Latitude, jsonData.QTH.Longitude], {icon: stationIcon}).addTo(map);
     myPosition.bindPopup(myPopUpDescription);
 
-    jsonData.QSOs.forEach(qso => 
+    jsonData.QSOs.forEach(qso =>
     {
         let qsoDescription = "<b>" + qso.CallSign + "</b><br />" + qso.Locator;
+        let qsoNote = "";
 
-        if(qso.Note != undefined && qso.Note != "")
+        if(qso.Note !== null && qso.Note !== undefined && qso.Note !== "")
         {
-            qsoDescription += "<br />" + qso.Note;
+            qsoNote = qso.Note;
         }
 
-        L.marker([qso.Latitude, qso.Longitude]).addTo(map).bindPopup(qsoDescription);
+        if(qsoNote.includes("S2S:"))
+        {
+            let s2sAssociations = qsoNote.substring(4, qsoNote.indexOf('/'));
+            let s2sRegion = qsoNote.substring(qsoNote.indexOf('/') + 1, qsoNote.indexOf('-'));
+            let s2sSummit = qsoNote.substring(qsoNote.indexOf('-') + 1);
+            let s2sReference = qsoNote.substring(qsoNote.indexOf('S2S:')+4)
+
+            qsoDescription += "<b>SOTA: </b><a href='https://sotl.as/summits/" + s2sReference + "'>" + s2sReference + "</a>";
+
+            L.marker([qso.Latitude, qso.Longitude], {icon: s2sIcon}).addTo(map).bindPopup(qsoDescription);
+        }
+        else
+        {
+            L.marker([qso.Latitude, qso.Longitude]).addTo(map).bindPopup(qsoDescription);
+        }
     });
 });
 </script>

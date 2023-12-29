@@ -96,7 +96,7 @@
         "RstReceived": 58,
         "RstSent": 55,
         "TxPower": 5,
-        "Note": "S2S -- I/LO-253"
+        "Note": "S2S:I/LO-253"
       },
       {
         "Date": "2023-10-07",
@@ -111,7 +111,7 @@
         "RstReceived": 58,
         "RstSent": 55,
         "TxPower": 5,
-        "Note": "S2S -- HB/GR-110"
+        "Note": "S2S:HB/GR-110"
       },
       {
         "Date": "2023-10-07",
@@ -126,7 +126,7 @@
         "RstReceived": 58,
         "RstSent": 55,
         "TxPower": 5,
-        "Note": "S2S -- S5/TK-027"
+        "Note": "S2S:S5/TK-027"
       },
       {
         "Date": "2023-10-07",
@@ -141,7 +141,7 @@
         "RstReceived": 58,
         "RstSent": 55,
         "TxPower": 5,
-        "Note": "S2S -- I/VE-191"
+        "Note": "S2S:I/VE-191"
       },
       {
         "Date": "2023-10-07",
@@ -156,7 +156,7 @@
         "RstReceived": 58,
         "RstSent": 55,
         "TxPower": 5,
-        "Note": "S2S -- I/AA-084"
+        "Note": "S2S:I/AA-084"
       },
       {
         "Date": "2023-10-07",
@@ -276,7 +276,7 @@
         "RstReceived": 58,
         "RstSent": 55,
         "TxPower": 5,
-        "Note": "S2S -- 9A/AG-010"
+        "Note": "S2S:9A/AG-010"
       },
       {
         "Date": "2023-10-07",
@@ -291,7 +291,7 @@
         "RstReceived": 58,
         "RstSent": 55,
         "TxPower": 5,
-        "Note": "S2S -- HB/ER-098"
+        "Note": "S2S:HB/ER-098"
       },
       {
         "Date": "2023-10-07",
@@ -306,7 +306,7 @@
         "RstReceived": 58,
         "RstSent": 55,
         "TxPower": 5,
-        "Note": "S2S -- I/ER-098 ---- P2P -- I-052"
+        "Note": "S2S:I/ER-098,P2P:I-052"
       },
       {
         "Date": "2023-10-07",
@@ -321,7 +321,7 @@
         "RstReceived": 58,
         "RstSent": 55,
         "TxPower": 5,
-        "Note": "S2S -- OM/PO-051"
+        "Note": "S2S:OM/PO-051"
       }
     ]
   }
