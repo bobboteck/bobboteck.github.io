@@ -47,7 +47,7 @@
         "RstReceived": 59,
         "RstSent": 59,
         "TxPower": 2.5,
-        "Note": "S2S I/LZ-042"
+        "Note": "S2S:I/LZ-042"
       },
       {
         "Date": "2022-07-17",
@@ -63,7 +63,7 @@
         "RstReceived": 59,
         "RstSent": 59,
         "TxPower": 2.5,
-        "Note": "S2S I/LZ-043"
+        "Note": "S2S:I/LZ-043"
       },
       {
         "Date": "2022-07-17",
@@ -79,7 +79,7 @@
         "RstReceived": 59,
         "RstSent": 59,
         "TxPower": 2.5,
-        "Note": "S2S I/LZ-043"
+        "Note": "S2S:I/LZ-043"
       },
       {
         "Date": "2022-07-17",

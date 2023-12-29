@@ -29,6 +29,14 @@ fetch("{{ include.mapdata }}")
     const p2pIcon = L.icon(
     {
         iconUrl: '/assets/icon/marker-pota.png',
+        iconSize: [26,41],
+        iconAnchor: [12,40],
+        popupAnchor: [0,-30]
+    });
+
+    const s2sp2pIcon = L.icon(
+    {
+        iconUrl: '/assets/icon/marker-sota-pota.png',
         iconSize: [41,41],
         iconAnchor: [12,40],
         popupAnchor: [0,-30]
@@ -71,16 +79,37 @@ fetch("{{ include.mapdata }}")
             qsoNote = qso.Note;
         }
 
-        if(qsoNote.includes("S2S:"))
+        if(qsoNote.includes("S2S:") && qsoNote.includes("P2P:"))
         {
-            let s2sAssociations = qsoNote.substring(4, qsoNote.indexOf('/'));
-            let s2sRegion = qsoNote.substring(qsoNote.indexOf('/') + 1, qsoNote.indexOf('-'));
-            let s2sSummit = qsoNote.substring(qsoNote.indexOf('-') + 1);
-            let s2sReference = qsoNote.substring(qsoNote.indexOf('S2S:')+4)
+            const s2sRefStartString = qsoNote.indexOf('S2S:') + 4;
+            const s2sReference = qsoNote.substring(s2sRefStartString, qsoNote.indexOf('-', s2sRefStartString) + 4);
+            qsoDescription += "<br /><b>SOTA: </b><a target='_blank' href='https://sotl.as/summits/" + s2sReference + "'>" + s2sReference + "</a>";
 
-            qsoDescription += "<b>SOTA: </b><a href='https://sotl.as/summits/" + s2sReference + "'>" + s2sReference + "</a>";
+            const p2pRefStartString = qsoNote.indexOf('P2P:') + 4;
+            const p2pReference = qsoNote.substring(p2pRefStartString, qsoNote.indexOf('-', p2pRefStartString) + 4);
+            qsoDescription += "<br /><b>POTA: </b><a target='_blank' href='https://pota.app/#/park/" + p2pReference + "'>" + p2pReference + "</a>";
+
+            L.marker([qso.Latitude, qso.Longitude], {icon: s2sp2pIcon}).addTo(map).bindPopup(qsoDescription);
+        }
+        else if(qsoNote.includes("S2S:"))
+        {
+            // let s2sAssociations = qsoNote.substring(4, qsoNote.indexOf('/'));
+            // let s2sRegion = qsoNote.substring(qsoNote.indexOf('/') + 1, qsoNote.indexOf('-'));
+            // let s2sSummit = qsoNote.substring(qsoNote.indexOf('-') + 1);
+            const s2sRefStartString = qsoNote.indexOf('S2S:') + 4;
+            const s2sReference = qsoNote.substring(s2sRefStartString, qsoNote.indexOf('-', s2sRefStartString) + 4);
+
+            qsoDescription += "<br /><b>SOTA: </b><a href='https://sotl.as/summits/" + s2sReference + "'>" + s2sReference + "</a>";
 
             L.marker([qso.Latitude, qso.Longitude], {icon: s2sIcon}).addTo(map).bindPopup(qsoDescription);
+        }
+        else if(qsoNote.includes("P2P:"))
+        {
+            const p2pRefStartString = qsoNote.indexOf('P2P:') + 4;
+            const p2pReference = qsoNote.substring(p2pRefStartString, qsoNote.indexOf('-', p2pRefStartString) + 4);
+            qsoDescription += "<br /><b>POTA: </b><a target='_blank' href='https://pota.app/#/park/" + p2pReference + "'>" + p2pReference + "</a>";
+
+            L.marker([qso.Latitude, qso.Longitude], {icon: p2pIcon}).addTo(map).bindPopup(qsoDescription);
         }
         else
         {

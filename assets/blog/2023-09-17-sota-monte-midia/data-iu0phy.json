@@ -47,7 +47,7 @@
         "RstReceived": 57,
         "RstSent": 59,
         "TxPower": 5,
-        "Note": "S2S - I/MC-020"
+        "Note": "S2S:I/MC-020"
       },
       {
         "Date": "2023-09-17",
@@ -77,7 +77,7 @@
         "RstReceived": 57,
         "RstSent": 52,
         "TxPower": 5,
-        "Note": "S2S - I/TO-097"
+        "Note": "S2S:I/TO-097"
       },
       {
         "Date": "2023-09-17",
@@ -182,7 +182,7 @@
         "RstReceived": 59,
         "RstSent": 59,
         "TxPower": 5,
-        "Note": "S2S - I/LO-073"
+        "Note": "S2S:I/LO-073"
       },
       {
         "Date": "2023-09-17",
@@ -197,7 +197,7 @@
         "RstReceived": 51,
         "RstSent": 51,
         "TxPower": 5,
-        "Note": "S2S - I/PM-395"
+        "Note": "S2S:I/PM-395"
       },
       {
         "Date": "2023-09-17",
