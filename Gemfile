@@ -5,8 +5,10 @@ source "https://rubygems.org"
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # gem "rails"
-gem "github-pages", "=228"
-gem "github-pages", group: :jekyll_plugins
+#gem "github-pages", group: :jekyll_plugins
+gem "minimal-mistakes-jekyll"
+gem "kramdown-parser-gfm"
+gem "jekyll", "=3.9.3"
 # gem "minimal-mistakes-jekyll"
 
 gem "tzinfo-data"
