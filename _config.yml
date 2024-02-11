@@ -192,5 +192,5 @@ tag_archive:
 analytics:
   provider: "google"
   google:
-    tracking_id: "UA-98811481-1"
+    tracking_id: "G-S9VGT9VX9Y"
     anonymize_ip: false # default
