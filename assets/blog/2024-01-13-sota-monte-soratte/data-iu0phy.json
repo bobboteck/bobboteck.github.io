@@ -1,0 +1,194 @@
+{
+    "MapConfig": {
+      "Latitude": 41.953,
+      "Longitude": 12.517,
+      "Zoom": 5
+    },
+    "QTH": {
+      "Latitude": 42.2457,
+      "Longitude": 12.5019,
+      "Locator": "JN62gf",
+      "Location": "Monte Soratte",
+      "References": [
+        {
+          "Code": "I/LZ-144",
+          "Type": "SOTA"
+        },
+        {
+          "Code": "I-0542",
+          "Type": "POTA"
+        }
+      ],
+      "isPortable": true
+    },
+    "Equipment": {
+        "Radios": [
+          {
+            "Brand": "Yaesu",
+            "Model": "FT-817",
+            "PowerSupply": "LiFePO4 12V 8Ah"
+          },
+          {
+            "Brand": "pofung",
+            "Model": "BF5RUV",
+            "PowerSupply": "Standard battery"
+          }
+        ],
+        "Antennas": [
+            {
+                "Brand": "IU0PHY",
+                "Model": "40m Inverted V",
+                "Other": "Home made"
+            },
+            {
+                "Brand": "IU0PHY",
+                "Model": "Vertical with coil tune",
+                "Other": "Home made"
+            },
+            {
+                "Brand": "pofung",
+                "Model": "Standard antenna",
+                "Other": ""
+            }
+        ]
+    },
+    "QSOs": [
+      {
+        "Date": "2024-01-13",
+        "Time": "10:30",
+        "CallSign": "F5PYI",
+        "Locator": "JN24lr",
+        "Latitude": 44.729,
+        "Longitude": 4.958,
+        "QRB": 672,
+        "Band": "40",
+        "Mode": "SSB",
+        "RstReceived": 59,
+        "RstSent": 59,
+        "TxPower": 5,
+        "Note": "P2P:F-3206"
+      },
+      {
+        "Date": "2024-01-13",
+        "Time": "11:20",
+        "CallSign": "II2WWA",
+        "Locator": "JN55fl",
+        "Latitude": 45.479,
+        "Longitude": 10.458,
+        "QRB": 398,
+        "Band": "40",
+        "Mode": "SSB",
+        "RstReceived": 59,
+        "RstSent": 59,
+        "TxPower": 5,
+        "Note": ""
+      },
+      {
+        "Date": "2024-01-13",
+        "Time": "11:26",
+        "CallSign": "IU8KRY",
+        "Locator": "jn70ev",
+        "Latitude": 40.896,
+        "Longitude": 14.375,
+        "QRB": 213,
+        "Band": "40",
+        "Mode": "SSB",
+        "RstReceived": 59,
+        "RstSent": 59,
+        "TxPower": 5,
+        "Note": ""
+      },
+      {
+        "Date": "2024-01-13",
+        "Time": "12:18",
+        "CallSign": "IU0QVH",
+        "Locator": "JN61gu",
+        "Latitude": 40.896,
+        "Longitude": 14.375,
+        "QRB": 42,
+        "Band": "2",
+        "Mode": "FM",
+        "RstReceived": 59,
+        "RstSent": 59,
+        "TxPower": 5,
+        "RxPower": 5,
+        "Note": "BF5RUV - Con antenna di serie"
+      },
+      {
+        "Date": "2024-01-13",
+        "Time": "12:20",
+        "CallSign": "IU0QVH",
+        "Locator": "JN61gu",
+        "Latitude": 41.854,
+        "Longitude": 12.542,
+        "QRB": 42,
+        "Band": "0.70",
+        "Mode": "FM",
+        "RstReceived": 59,
+        "RstSent": 59,
+        "TxPower": 5,
+        "RxPower": 5,
+        "Note": "BF5RUV - Con antenna di serie"
+      },
+      {
+        "Date": "2024-01-13",
+        "Time": "12:35",
+        "CallSign": "IW0HK",
+        "Locator": "JN61fv",
+        "Latitude": 41.896,
+        "Longitude": 12.458,
+        "QRB": 38,
+        "Band": "40",
+        "Mode": "SSB",
+        "RstReceived": 51,
+        "RstSent": 59,
+        "TxPower": 5,
+        "Note": ""
+      },
+      {
+        "Date": "2024-01-13",
+        "Time": "12:36",
+        "CallSign": "IK2LEY/P",
+        "Locator": "JN45qv",
+        "Latitude": 45.896,
+        "Longitude": 9.375,
+        "QRB": 480,
+        "Band": "40",
+        "Mode": "SSB",
+        "RstReceived": 54,
+        "RstSent": 55,
+        "TxPower": 5,
+        "Note": "S2S:I/LO-212,P2P:I-0643"
+      },
+      {
+        "Date": "2024-01-13",
+        "Time": "12:37",
+        "CallSign": "S57ILF",
+        "Locator": "JN76ak",
+        "Latitude": 46.438,
+        "Longitude": 14.042,
+        "QRB": 483,
+        "Band": "40",
+        "Mode": "SSB",
+        "RstReceived": 44,
+        "RstSent": 59,
+        "TxPower": 5,
+        "Note": ""
+      },
+      {
+        "Date": "2024-01-13",
+        "Time": "12:52",
+        "CallSign": "IZ6TSA",
+        "Locator": "JN63qo",
+        "Latitude": 43.604,
+        "Longitude": 13.375,
+        "QRB": 167,
+        "Band": "40",
+        "Mode": "SSB",
+        "RstReceived": 59,
+        "RstSent": 59,
+        "TxPower": 5,
+        "Note": ""
+      }
+    ]
+  }
