@@ -90,7 +90,7 @@
         const stationsData = LoadStationsData();
         let myStation = {};
 
-        console.log(stationsData);
+        //console.log(stationsData);
 
         var map = L.map('map').setView([41.912, 13.330], 6);
 
@@ -103,7 +103,7 @@
             ext: 'png'
         }).addTo(map);
 
-        DrawDataOnMap(stationsData, myStation);
+        //DrawDataOnMap(stationsData, myStation);
 
 
 function ApplyFilter()
@@ -332,18 +332,22 @@ function LoadStationsData()
                 "f76000": "",
                 "f122000": ""
             }
-        ]; 
+        ];
+
+        DrawDataOnMap(_stationsData, myStation);
     }
     else
     {
-        fetch("./data-microwave.json")
+        _stationsData = fetch("./data-microwave.json")
         .then(response => 
         {
-        return response.json();
+            return response.json();
         })
         .then(jsonData =>
         {
-            _stationsData = jsonData;
+            DrawDataOnMap(_stationsData, myStation);
+            
+            return jsonData;
         });
     }
 
