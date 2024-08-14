@@ -1,161 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>MAP</title>
-
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <title>MAP</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/qth-locator@2.1.0/lib/index.min.js"></script>
+    </head>
 <body>
-	<main class="flex-shrink-0">
-		<div class="container">
-			<div class="row">
-				<div class="col-4">
-					<div class="form-check form-switch">
-						  <input class="form-check-input" type="checkbox" id="FrequencyFilter1200" checked>
-						  <label class="form-check-label" for="FrequencyFilter1200">1.2 GHz</label>
-					</div>
-					<div class="form-check form-switch">
-						  <input class="form-check-input" type="checkbox" id="FrequencyFilter2300" checked>
-						  <label class="form-check-label" for="FrequencyFilter2300">2.3 GHz</label>
-					</div>
-					<div class="form-check form-switch">
-						  <input class="form-check-input" type="checkbox" id="FrequencyFilter5700" checked>
-						  <label class="form-check-label" for="FrequencyFilter5700">5.7 GHz</label>
-					</div>
-					<div class="form-check form-switch">
-						  <input class="form-check-input" type="checkbox" id="FrequencyFilter10000" checked>
-						  <label class="form-check-label" for="FrequencyFilter10000">10 GHz</label>
-					</div>
-					<button type="button" class="btn btn-primary mb-3" onclick="ApplyFilter()">Apply filter</button>
-				</div>
-				<div class="col-8">
-					<div id="map" style="width:600px; height:500px"></div>
-				</div>
-			</div>
-		</div>
-	</main>
-  
-  
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
-  <!-- Make sure you put this AFTER Leaflet's CSS -->
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <header class="ps-5">
+        <h2>Microwave</h2>
+    </header>
+    <main class="flex-shrink-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <h6>My station info</h6>
+                    <div class="mb-3">
+                        <label for="userCallsign" class="form-label">Callsign</label>
+                        <input type="text" class="form-control" id="userCallsign">
+                    </div>
+                    <div class="mb-3">
+                        <label for="userLocator" class="form-label">Locator</label>
+                        <input type="text" class="form-control" id="userLocator">
+                    </div>
+                    <button type="button" class="btn btn-primary mb-3" onclick="SetMyLocator()">Save</button>
+                    <h6>Filters</h6>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="FrequencyFilter1200" checked>
+                        <label class="form-check-label" for="FrequencyFilter1200">1.2 GHz</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="FrequencyFilter2300" checked>
+                        <label class="form-check-label" for="FrequencyFilter2300">2.3 GHz</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="FrequencyFilter5700" checked>
+                        <label class="form-check-label" for="FrequencyFilter5700">5.7 GHz</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="FrequencyFilter10000" checked>
+                        <label class="form-check-label" for="FrequencyFilter10000">10 GHz</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="FrequencyFilter24000" checked>
+                        <label class="form-check-label" for="FrequencyFilter24000">24 GHz</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="FrequencyFilter47000" checked>
+                        <label class="form-check-label" for="FrequencyFilter47000">47 GHz</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="FrequencyFilter76000" checked>
+                        <label class="form-check-label" for="FrequencyFilter76000">76 GHz</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="FrequencyFilter122000" checked>
+                        <label class="form-check-label" for="FrequencyFilter122000">122 GHz</label>
+                    </div>
+                    <button type="button" class="btn btn-primary mb-3" onclick="ApplyFilter()">Apply filter</button>
+                    <button type="button" class="btn btn-secondary mb-3" onclick="ResetFilter()">Reset filter</button>
+                </div>
+                <div class="col-8">
+                    <div id="map" style="width:700px; height:700px"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">This page and data are for test purpose only!</div>
+            <div class="col-4"></div>
+        </div>
+    </footer>
 
-  <script>
-/*    fetch("./data.json")
-    .then(response => 
-    {
-      return response.json();
-    })
-    .then(jsonData =>
-    {
-*/
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script>
 /*
-    "MapConfig":
-    {
-        "Latitude": 41.912,
-        "Longitude": 13.330,
-        "Zoom": 5
-    },
-    "OMs":
+    //const { locatorToLatLng, distance, bearingDistance, latLngToLocator } = require('qth-locator');
+    console.log(locatorToLatLng('IO91wm')); // [51.521, -0.125]
+    console.log(distance('IO91wm', 'KP20le')); // 1821.5 km
+    console.log(bearingDistance('FN20qr', 'KP21ol')); // 6586.72 km, 49.16 degrees
+    console.log(latLngToLocator(60.179, 24.945)); // KP21le
 */
-        const jsonData = 
-    [
-        {
-            "Latitude": 41.521,
-            "Longitude": 13.292,
-			"Locatore": "JN61pm",
-            "Description": "<b>IZ0JNY</b><br>JN61pm",
-			"F1200": "Verticale 10W",
-			"F2300": "",
-			"F5700": "",
-			"F10000": "100cm - 10W",
-			"F24000": "1.5W", 
-			"F47000": "",
-			"F76000": "",
-			"F122000": "",
-			"Up":"",
-			"Modi": "Fonia, Modi digitali, CW"
-        },
-        {
-            "Latitude": 41.854,
-            "Longitude": 12.458,
-			"Locatore": "JN61fu",
-            "Description": "<b>IZ0MJE </b><br>JN61fu",
-			"F1200": "X",
-			"F2300": "X",
-			"F5700": "",
-			"F10000": "X",
-			"F24000": "", 
-			"F47000": "",
-			"F76000": "",
-			"F122000": "",
-			"Up":""
-        }
-    ]; 
-        console.log(jsonData);
+        const iconRed = L.icon({ iconUrl: 'images/red-marker.png', iconSize: [26,41], iconAnchor: [12,40], popupAnchor: [0,-30] });
 
-        let map = L.map('map').setView([41.912, 13.330], 5);
-//let map = L.map('mapContainer').setView([longitude, latitude], 2);
-let Stamen_Terrain = L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', 
-{
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    subdomains: 'abcd',
-    minZoom: 0,
-    maxZoom: 10,
-    ext: 'png'
-}).addTo(map);
-//let myPosition = L.marker([longitude, latitude]).addTo(map).bindPopup(currentCallSign);
+        const stationsData = LoadStationsData();
+        let myStation = {};
 
-        //var myPosition = L.marker([jsonData.MyQTH.Latitude, jsonData.MyQTH.Longitude]).addTo(map);
-        //myPosition.bindPopup(jsonData.MyQTH.Description);
+        console.log(stationsData);
 
-        jsonData.forEach(qso => 
+        var map = L.map('map').setView([41.912, 13.330], 6);
+
+        let Stamen_Terrain = L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', 
         {
-            L.marker([qso.Latitude, qso.Longitude]).addTo(map).bindPopup(qso.Description);
-        });
-//    });
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            subdomains: 'abcd',
+            minZoom: 0,
+            maxZoom: 10,
+            ext: 'png'
+        }).addTo(map);
+
+        DrawDataOnMap(stationsData, myStation);
 
 
 function ApplyFilter()
 {
-	//https://forum.freecodecamp.org/t/filtering-json-object/244160/2
-	
-	//const jsonDataFiltered = jsonData.filter(d => d.F2300 === "");
-	let jsonDataFiltered = jsonData;
-	console.log("PRIMA: ", jsonDataFiltered);
-	
-	if(document.getElementById("FrequencyFilter2300").checked === false)
-	{
-		jsonDataFiltered = jsonDataFiltered.filter(d => d.F2300 !== "");
-	}
-	/*else
-	{}
-	*/
-	
-	
-	console.log("DOPO: ", jsonDataFiltered);
-	
-	map.eachLayer((layer) =>
-	{
-		if (layer instanceof L.Marker)
-		{
-			layer.remove();
-		}
-	});
-	
-	jsonDataFiltered.forEach(omData => 
-	{
-		L.marker([omData.Latitude, omData.Longitude]).addTo(map).bindPopup(omData.Description);
-	});
-}
-  </script>
-</body>
-</html>
+    let jsonDataFiltered = stationsData;
+    console.log("PRIMA: ", jsonDataFiltered);
 
+    jsonDataFiltered = FilterData(stationsData, QueryFilter());
+
+    console.log("DOPO: ", jsonDataFiltered);
+
+    DrawDataOnMap(jsonDataFiltered);
+}
+
+function QueryFilter()
+{
+    const query = [];
+
+    if(document.getElementById("FrequencyFilter1200").checked)
+    {
+        query.push("f1200");
+    }
+
+    if(document.getElementById("FrequencyFilter2300").checked)
+    {
+        query.push("f2300");
+    }
+
+    if(document.getElementById("FrequencyFilter5700").checked)
+    {
+        query.push("f5700");
+    }
+
+    if(document.getElementById("FrequencyFilter10000").checked)
+    {
+        query.push("f10000");
+    }
+
+    if(document.getElementById("FrequencyFilter24000").checked)
+    {
+        query.push("f24000");
+    }
+
+    if(document.getElementById("FrequencyFilter47000").checked)
+    {
+        query.push("f47000");
+    }
+
+    if(document.getElementById("FrequencyFilter76000").checked)
+    {
+        query.push("f76000");
+    }
+
+    if(document.getElementById("FrequencyFilter122000").checked)
+    {
+        query.push("f122000");
+    }
+
+    return query;
+}
+
+function FilterData(dataToFilter, query)
+{
+    const filteredData = dataToFilter.filter((item) => 
+    {
+        for (let key in query)
+        {
+            if (item[query[key]] !== undefined && item[query[key]].antenna !== undefined)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    });
+
+    return filteredData;
+}
+
+function DrawDataOnMap(data)
+{
+    map.eachLayer((layer) =>
+    {
+        if (layer instanceof L.Marker)
+        {
+            layer.remove();
+        }
+    });
+
+    data.forEach(station => 
+    {
+        L.marker(locatorToLatLng(station.locator, {icon: iconRed})).addTo(map).bindPopup(StationPopup(station));
+    });
+
+    if(myStation.locator !== undefined)
+    {
+        var myPosition = L.marker(locatorToLatLng(myStation.locator)).addTo(map);
+        myPosition.bindPopup(myStation.callSign);
+    }
+}
+
+function StationPopup(stationData)
+{
+    let stationView = "<b>" + stationData.callsign + "</b><br />" + stationData.locator + "<br />";
+
+    if(myStation !== undefined && myStation.locator !== undefined && myStation.locator !== "")
+    {
+        const fromMy = bearingDistance(myStation.locator, stationData.locator);
+        stationView += "<hr /><b>Distance:</b> " + parseInt(fromMy.km) + " Km<br /><b>Direction:</b> " + parseInt(fromMy.deg) + "°";
+    }
+
+    stationView += "<table><tr><th>Freq</th><th>Antenna</th><th>Power</th></tr>";
+
+    if(stationData.f1200 !== "")
+    {
+        stationView += "<tr><td>1.2 GHz</td><td>" + stationData.f1200.antenna + "</td><td>" + stationData.f1200.power + "</td></tr>"
+    }
+
+    if(stationData.f2300 !== "")
+    {
+        stationView += "<tr><td>2.3 GHz</td><td>" + stationData.f2300.antenna + "</td><td>" + stationData.f2300.power + "</td></tr>"
+    }
+
+    if(stationData.f5700 !== "")
+    {
+        stationView += "<tr><td>5.7 GHz</td><td>" + stationData.f5700.antenna + "</td><td>" + stationData.f5700.power + "</td></tr>"
+    }
+
+    if(stationData.f5700 !== "")
+    {
+        stationView += "<tr><td>5.7 GHz</td><td>" + stationData.f5700.antenna + "</td><td>" + stationData.f5700.power + "</td></tr>"
+    }
+
+    if(stationData.f10000 !== "")
+    {
+        stationView += "<tr><td>10 GHz</td><td>" + stationData.f10000.antenna + "</td><td>" + stationData.f10000.power + "</td></tr>"
+    }
+
+    if(stationData.f24000 !== "")
+    {
+        stationView += "<tr><td>24 GHz</td><td>" + stationData.f24000.antenna + "</td><td>" + stationData.f24000.power + "</td></tr>"
+    }
+
+    if(stationData.f47000 !== "")
+    {
+        stationView += "<tr><td>47 GHz</td><td>" + stationData.f47000.antenna + "</td><td>" + stationData.f47000.power + "</td></tr>"
+    }
+
+    if(stationData.f76000 !== "")
+    {
+        stationView += "<tr><td>76 GHz</td><td>" + stationData.f76000.antenna + "</td><td>" + stationData.f76000.power + "</td></tr>"
+    }
+
+    if(stationData.f122000 !== "")
+    {
+        stationView += "<tr><td>122 GHz</td><td>" + stationData.f122000.antenna + "</td><td>" + stationData.f122000.power + "</td></tr>"
+    }
+
+    stationView += "</table>"
+
+    return stationView;
+}
+
+function LoadStationsData()
+{
+    let _stationsData;
+
+    if(window.location.protocol === "file:")
+    {
+        _stationsData = 
+        [
+            {
+                "callsign": "IW3HWT",
+                "name": "Giuseppe (Beppe)",
+                "locator": "Jn55vt ma prevalentemente faccio attività portatile",
+                "f1200": {
+                    "antenna": "Direttiva, Parabola",
+                    "power": "1 - 50 Watt"
+                },
+                "f2300": {
+                    "antenna": "Direttiva, Parabola",
+                    "power": "1 - 50 Watt"
+                },
+                "f5700": "",
+                "f10000": {
+                    "antenna": "Parabola",
+                    "power": "1 - 10 Watt"
+                },
+                "f24000": "",
+                "f47000": "",
+                "f76000": "",
+                "f122000": ""
+            },
+            {
+                "callsign": "IK3GHY",
+                "name": "Giorgio",
+                "locator": "Jn65dm",
+                "f1200": "",
+                "f2300": "",
+                "f5700": {
+                    "antenna": "Parabola",
+                    "power": "1 - 50 Watt"
+                },
+                "f10000": {
+                    "antenna": "Parabola",
+                    "power": "20  - 50 Watt"
+                },
+                "f24000": {
+                    "antenna": "Parabola",
+                    "power": "1 - 5 Watt"
+                },
+                "f47000": "",
+                "f76000": "",
+                "f122000": ""
+            },
+            {
+                "callsign": "IZ6BMP",
+                "name": "Ottorino",
+                "locator": "JN72AG",
+                "f1200": "",
+                "f2300": "",
+                "f5700": "",
+                "f10000": "",
+                "f24000": "",
+                "f47000": "",
+                "f76000": "",
+                "f122000": ""
+            }
+        ]; 
+    }
+    else
+    {
+        fetch("./data-microwave.json")
+        .then(response => 
+        {
+        return response.json();
+        })
+        .then(jsonData =>
+        {
+            _stationsData = jsonData;
+        });
+    }
+
+    return _stationsData;
+}
+
+function SetMyLocator()
+{
+    const _userCallsign = document.getElementById("userCallsign").value;
+    const _userLocator = document.getElementById("userLocator").value;
+
+    myStation = { "callSign": _userCallsign, "locator": _userLocator };
+
+    /*
+    var myPosition = L.marker(locatorToLatLng(myStation.locator, {icon: iconRed})).addTo(map);
+    myPosition.bindPopup("<b>" + myStation.callSign + "</b><br />" + myStation.locator);
+    */
+
+    DrawDataOnMap(stationsData, myStation);
+}
+</script>
 <!-- 
   https://leafletjs.com/examples/quick-start/
   https://github.com/jleh/qth-locator
   https://www.delftstack.com/howto/javascript/load-json-file-in-javascript/
   https://www.giangrandi.org/electronics/radio/qthloccalc.shtml
 -->
+    </body>
+</html>
