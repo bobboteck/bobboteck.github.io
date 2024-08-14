@@ -87,7 +87,7 @@
 */
         const iconRed = L.icon({ iconUrl: 'images/red-marker.png', iconSize: [26,41], iconAnchor: [12,40], popupAnchor: [0,-30] });
 
-        const stationsData = LoadStationsData();
+        let stationsData = LoadStationsData();
         let myStation = {};
 
         //console.log(stationsData);
@@ -269,11 +269,11 @@ function StationPopup(stationData)
 
 function LoadStationsData()
 {
-    let _stationsData;
+    //let _stationsData;
 
     if(window.location.protocol === "file:")
     {
-        _stationsData = 
+        stationsData = 
         [
             {
                 "callsign": "IW3HWT",
@@ -334,7 +334,7 @@ function LoadStationsData()
             }
         ];
 
-        DrawDataOnMap(_stationsData, myStation);
+        DrawDataOnMap(stationsData, myStation);
     }
     else
     {
@@ -345,12 +345,12 @@ function LoadStationsData()
         })
         .then(jsonData =>
         {
-            _stationsData =  jsonData;
-            DrawDataOnMap(_stationsData, myStation);
+            stationsData =  jsonData;
+            DrawDataOnMap(stationsData, myStation);
         });
     }
 
-    return _stationsData;
+    //return _stationsData;
 }
 
 function SetMyLocator()
