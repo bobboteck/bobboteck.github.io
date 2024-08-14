@@ -338,16 +338,15 @@ function LoadStationsData()
     }
     else
     {
-        _stationsData = fetch("./data-microwave.json")
+        fetch("./data-microwave.json")
         .then(response => 
         {
             return response.json();
         })
         .then(jsonData =>
         {
+            _stationsData =  jsonData;
             DrawDataOnMap(_stationsData, myStation);
-            
-            return jsonData;
         });
     }
 
