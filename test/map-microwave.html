@@ -21,7 +21,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="userLocator" class="form-label">Locator</label>
-                        <input type="text" class="form-control" id="userLocator">
+                        <input type="text" class="form-control" id="userLocator" maxlength="6">
                     </div>
                     <button type="button" class="btn btn-primary mb-3" onclick="SetMyLocator()">Save</button>
                     <h6>Filters</h6>
@@ -86,9 +86,8 @@
     console.log(latLngToLocator(60.179, 24.945)); // KP21le
 */
         const iconRed = L.icon({ iconUrl: 'images/red-marker.png', iconSize: [26,41], iconAnchor: [12,40], popupAnchor: [0,-30] });
-
-        let stationsData = LoadStationsData();
         let myStation = {};
+        let stationsData = {};
 
         //console.log(stationsData);
 
@@ -104,7 +103,7 @@
         }).addTo(map);
 
         //DrawDataOnMap(stationsData, myStation);
-
+        LoadStationsData();
 
 function ApplyFilter()
 {
@@ -195,13 +194,26 @@ function DrawDataOnMap(data)
 
     data.forEach(station => 
     {
-        L.marker(locatorToLatLng(station.locator, {icon: iconRed})).addTo(map).bindPopup(StationPopup(station));
+        try
+        {
+            L.marker(locatorToLatLng(station.locator)).addTo(map).bindPopup(StationPopup(station));
+        }
+        catch
+        {
+            console.error("Il locatore di " + station.callsign + " non è un locatore valido [" + station.locator + "]");
+        }
     });
 
     if(myStation.locator !== undefined)
     {
-        var myPosition = L.marker(locatorToLatLng(myStation.locator)).addTo(map);
-        myPosition.bindPopup(myStation.callSign);
+        try
+        {
+            L.marker(locatorToLatLng(myStation.locator), {icon: iconRed}).addTo(map).bindPopup(myStation.callSign);
+        }
+        catch
+        {
+            alert("Il locatore indicato non è nel formato corretto, inserirlo nel formato corretto e salvare di nuovo");
+        }
     }
 }
 
@@ -273,7 +285,7 @@ function LoadStationsData()
 
     if(window.location.protocol === "file:")
     {
-        stationsData = 
+        stationsData =
         [
             {
                 "callsign": "IW3HWT",
@@ -300,7 +312,7 @@ function LoadStationsData()
             {
                 "callsign": "IK3GHY",
                 "name": "Giorgio",
-                "locator": "Jn65dm",
+                "locator": "11111Jn65dm",
                 "f1200": "",
                 "f2300": "",
                 "f5700": {
@@ -323,6 +335,19 @@ function LoadStationsData()
                 "callsign": "IZ6BMP",
                 "name": "Ottorino",
                 "locator": "JN72AG",
+                "f1200": "",
+                "f2300": "",
+                "f5700": "",
+                "f10000": "",
+                "f24000": "",
+                "f47000": "",
+                "f76000": "",
+                "f122000": ""
+            },
+            {
+                "callsign": "IK0WMJ",
+                "name": "GIANNI",
+                "locator": "JN61GW",
                 "f1200": "",
                 "f2300": "",
                 "f5700": "",
