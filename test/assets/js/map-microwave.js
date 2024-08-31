@@ -262,17 +262,34 @@ function DrawDataOnMap(data)
 
     let orderData = OrderData(data);
 
-    orderData.forEach(station => 
+    // orderData.forEach(station => 
+    // {
+    //     try
+    //     {
+    //         L.marker(locatorToLatLng(station.locator)).addTo(map).bindPopup(StationPopup(station));
+    //     }
+    //     catch
+    //     {
+    //         console.error("Il locatore di " + station.callsign + " non è un locatore valido [" + station.locator + "]");
+    //     }
+    // });
+
+    for(i=0;i<orderData.length;i++)
     {
         try
         {
-            L.marker(locatorToLatLng(station.locator)).addTo(map).bindPopup(StationPopup(station));
+            if(orderData[i].locator === orderData[i+1].locator)
+            {
+                console.log(orderData[i].callsign + " has same locator of " + orderData[i+1].callsign + "[" + orderData[i].locator + "]")
+            }
+
+            L.marker(locatorToLatLng(orderData[i].locator)).addTo(map).bindPopup(StationPopup(orderData[i]));
         }
         catch
         {
-            console.error("Il locatore di " + station.callsign + " non è un locatore valido [" + station.locator + "]");
+            console.error("Il locatore di " + orderData[i].callsign + " non è un locatore valido [" + orderData[i].locator + "]");
         }
-    });
+    }
 
     if(myStation.locator !== undefined)
     {
