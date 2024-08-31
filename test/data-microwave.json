@@ -2,7 +2,7 @@
     {
         "callsign": "IW3HWT",
         "name": "Giuseppe (Beppe)",
-        "locator": "Jn55vt ma prevalentemente faccio attività portatile",
+        "locator": "JN55VT MA PREVALENTEMENTE FACCIO ATTIVITÀ PORTATILE",
         "f1200": {
             "antenna": "Direttiva, Parabola",
             "power": "1 - 50 Watt"
@@ -24,9 +24,15 @@
     {
         "callsign": "IK3GHY",
         "name": "Giorgio",
-        "locator": "Jn65dm",
-        "f1200": "",
-        "f2300": "",
+        "locator": "JN65DM",
+        "f1200": {
+            "antenna": "Parabola",
+            "power": 500
+        },
+        "f2300": {
+            "antenna": "Parabola",
+            "power": 350
+        },
         "f5700": {
             "antenna": "Parabola",
             "power": "1 - 50 Watt"
@@ -85,7 +91,7 @@
     {
         "callsign": "IK7XLW",
         "name": "Salvatore (Rino)",
-        "locator": "jn80ft07",
+        "locator": "JN80FT07",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -246,7 +252,7 @@
     {
         "callsign": "IY4CHR",
         "name": "Giorgio",
-        "locator": "jn64gb",
+        "locator": "JN64GB",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -285,7 +291,7 @@
     {
         "callsign": "IZ2DJP ",
         "name": "Adelio ",
-        "locator": "Jn55fo",
+        "locator": "JN55FO",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -314,7 +320,7 @@
     {
         "callsign": "IW6NPK ",
         "name": "Luciano ",
-        "locator": "jn72cm",
+        "locator": "JN72CM",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -327,7 +333,7 @@
     {
         "callsign": "IT9LTA/I0",
         "name": "Camillo",
-        "locator": "Jn61ev",
+        "locator": "JN61EV",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -340,17 +346,17 @@
     {
         "callsign": "IZ0JNY",
         "name": "Ivan",
-        "locator": "JN61pm",
+        "locator": "JN61PM",
         "f1200": "",
         "f2300": "",
         "f5700": "",
         "f10000": {
-            "antenna": "Parabola, 100cm offset - Gibertini",
+            "antenna": "Parabola, 100cm offset",
             "power": "20  - 50 Watt"
         },
         "f24000": {
-            "antenna": "Parabola, 100cm offset - Gibertini",
-            "power": 18
+            "antenna": "Parabola, 100cm offset",
+            "power": "20 Watt"
         },
         "f47000": "",
         "f76000": "",
@@ -372,7 +378,7 @@
     {
         "callsign": "IK6LSF",
         "name": "mario",
-        "locator": "jn72sl",
+        "locator": "JN72SL",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -385,7 +391,7 @@
     {
         "callsign": "IZ2EWV",
         "name": "Alberto",
-        "locator": "JN45qo",
+        "locator": "JN45QO",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -437,20 +443,35 @@
     {
         "callsign": "IN3UFW ",
         "name": "Marco ",
-        "locator": "Jn55mv ",
+        "locator": "JN55MV ",
         "f1200": "",
         "f2300": "",
-        "f5700": "",
-        "f10000": "",
-        "f24000": "",
-        "f47000": "",
+        "f5700": {
+            "antenna": "80 cm Gibertini OTT 5 watt jxx feed",
+            "power": "4 Watt"
+        },
+        "f10000": {
+            "antenna": "80 cm procom 1,2 watt jxx feed",
+            "power": "1,2 Watt"
+        },
+        "f24000": {
+            "antenna": "kit in parabola ott 500 mw",
+            "power": "800 Mw"
+        },
+        "f47000": {
+            "antenna": "kit in parabola ott 100 mw",
+            "power": "250 Mw"
+        },
         "f76000": "",
-        "f122000": ""
+        "f122000": {
+            "antenna": "ok1fpc 250 uW parabola off set",
+            "power": "250 uW"
+        }
     },
     {
         "callsign": "IW6ATU",
         "name": "Guido",
-        "locator": "jn63qn",
+        "locator": "JN63QN",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -549,7 +570,7 @@
     {
         "callsign": "IU3KUW ",
         "name": "Mauro ",
-        "locator": "Jn55xi ",
+        "locator": "JN55XI ",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -562,7 +583,7 @@
     {
         "callsign": "IV3CWI ",
         "name": "Marco",
-        "locator": "Jn66oc",
+        "locator": "JN66OC",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -588,12 +609,27 @@
     {
         "callsign": "I3EME",
         "name": "marioi",
-        "locator": "jn65as",
-        "f1200": "",
-        "f2300": "",
-        "f5700": "",
-        "f10000": "",
-        "f24000": "",
+        "locator": "JN65AS",
+        "f1200": {
+            "antenna": "Parabola",
+            "power": "50 - 150 Watt"
+        },
+        "f2300": {
+            "antenna": "Parabola",
+            "power": "50 - 150 Watt"
+        },
+        "f5700": {
+            "antenna": "Parabola",
+            "power": "1 - 50 Watt"
+        },
+        "f10000": {
+            "antenna": "Parabola",
+            "power": "10 - 20 Watt"
+        },
+        "f24000": {
+            "antenna": "Parabola",
+            "power": "10 mW - 1 Watt"
+        },
         "f47000": "",
         "f76000": "",
         "f122000": ""
@@ -601,7 +637,7 @@
     {
         "callsign": "IT9DJF",
         "name": "Andrea",
-        "locator": "JM68ie62WR",
+        "locator": "JM68IE62WR",
         "f1200": {
             "antenna": "Direttiva",
             "power": "150  - 300 Watt"
@@ -623,7 +659,7 @@
     {
         "callsign": "IU5IAP ",
         "name": "Michele ",
-        "locator": "Jn53gq ",
+        "locator": "JN53GQ ",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -636,7 +672,7 @@
     {
         "callsign": "IZ5TEP ",
         "name": "Filippo ",
-        "locator": "Jn53du18",
+        "locator": "JN53DU18",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -662,7 +698,7 @@
     {
         "callsign": "IK2BUF",
         "name": "Piero",
-        "locator": "Jn45oo",
+        "locator": "JN45OO",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -783,7 +819,7 @@
     {
         "callsign": "I5MZY",
         "name": "Massimo ",
-        "locator": "Jn53ot ",
+        "locator": "JN53OT ",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -796,11 +832,23 @@
     {
         "callsign": "IK8XFR",
         "name": "Giuseppe ",
-        "locator": "JM89cj",
-        "f1200": "",
-        "f2300": "",
-        "f5700": "",
-        "f10000": "",
+        "locator": "JM89CJ",
+        "f1200": {
+            "antenna": "Direttiva",
+            "power": "1 - 50 Watt"
+        },
+        "f2300": {
+            "antenna": "Direttiva",
+            "power": "1 - 50 Watt"
+        },
+        "f5700": {
+            "antenna": "Pannello",
+            "power": "1 - 50 Watt"
+        },
+        "f10000": {
+            "antenna": "Parabola",
+            "power": "1 - 10 Watt"
+        },
         "f24000": "",
         "f47000": "",
         "f76000": "",
@@ -809,7 +857,7 @@
     {
         "callsign": "IK3HAR",
         "name": "Claudio",
-        "locator": "Jn55rk42cm",
+        "locator": "JN55RK42CM",
         "f1200": {
             "antenna": "Direttiva",
             "power": "1 - 50 Watt"
@@ -840,7 +888,7 @@
     {
         "callsign": "IW6CVN",
         "name": "francesco ",
-        "locator": "Vario portatile",
+        "locator": "VARIO PORTATILE",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -866,7 +914,7 @@
     {
         "callsign": "IV3CLI",
         "name": "Giacomo",
-        "locator": "Jn65qs",
+        "locator": "JN65QS",
         "f1200": {
             "antenna": "Direttiva",
             "power": "1 - 50 Watt"
@@ -904,7 +952,7 @@
     {
         "callsign": "IU2SVO ",
         "name": "MAURIZIO",
-        "locator": "jn45pq",
+        "locator": "JN45PQ",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -917,7 +965,7 @@
     {
         "callsign": "IT9BDM ",
         "name": "Carmelo ",
-        "locator": "Jm77ne",
+        "locator": "JM77NE",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -930,7 +978,7 @@
     {
         "callsign": "IK4HLV",
         "name": "Alfonso ",
-        "locator": "JN54mn",
+        "locator": "JN54MN",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -969,7 +1017,7 @@
     {
         "callsign": "IZ7NCT",
         "name": "Antonio",
-        "locator": "Jn90ae",
+        "locator": "JN90AE",
         "f1200": "",
         "f2300": {
             "antenna": "Parabola",
@@ -988,7 +1036,7 @@
     {
         "callsign": "IZ4MAO ",
         "name": "Roberto",
-        "locator": "Jn54hq",
+        "locator": "JN54HQ",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1027,7 +1075,7 @@
     {
         "callsign": "IZ5ILU",
         "name": "Massimiliano",
-        "locator": "Jn53ju",
+        "locator": "JN53JU",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1040,7 +1088,7 @@
     {
         "callsign": "IT9EWL ",
         "name": "Matteo ",
-        "locator": "jm78oe",
+        "locator": "JM78OE",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1053,7 +1101,7 @@
     {
         "callsign": "IW0REF",
         "name": "Claudio",
-        "locator": "jn62hm",
+        "locator": "JN62HM",
         "f1200": {
             "antenna": "Direttiva, 36el",
             "power": "50 - 150 Watt"
@@ -1081,9 +1129,15 @@
     {
         "callsign": "IW1AU ",
         "name": "Gian Maria ",
-        "locator": "Jn34xw ",
-        "f1200": "",
-        "f2300": "",
+        "locator": "JN34XW ",
+        "f1200": {
+            "antenna": "Direttiva",
+            "power": "1 - 50 Watt"
+        },
+        "f2300": {
+            "antenna": "Direttiva, Elica 20 spire (in valutazione)",
+            "power": "1 - 50 Watt"
+        },
         "f5700": "",
         "f10000": "",
         "f24000": "",
@@ -1107,7 +1161,7 @@
     {
         "callsign": "IZ2QCP",
         "name": "Marco",
-        "locator": "Jn45mo",
+        "locator": "JN45MO",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1146,7 +1200,7 @@
     {
         "callsign": "IK3ERQ",
         "name": "livio",
-        "locator": "jn65ar",
+        "locator": "JN65AR",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1198,7 +1252,7 @@
     {
         "callsign": "IU8KRD",
         "name": "Sergio",
-        "locator": "Jn70cu",
+        "locator": "JN70CU",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1224,7 +1278,7 @@
     {
         "callsign": "I0NLK",
         "name": "Fabio",
-        "locator": "JN62hb",
+        "locator": "JN62HB",
         "f1200": {
             "antenna": "Direttiva",
             "power": "150  - 300 Watt"
@@ -1259,7 +1313,7 @@
     {
         "callsign": "IZ5HQB ",
         "name": "Gabriele ",
-        "locator": "Jn53ns",
+        "locator": "JN53NS",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1299,10 +1353,19 @@
         "callsign": "IK8XLD ",
         "name": "Rocco",
         "locator": "JN70VO",
-        "f1200": "",
-        "f2300": "",
+        "f1200": {
+            "antenna": "Direttiva",
+            "power": "1 - 50 Watt"
+        },
+        "f2300": {
+            "antenna": "Parabola",
+            "power": "50 - 150 Watt"
+        },
         "f5700": "",
-        "f10000": "",
+        "f10000": {
+            "antenna": "Parabola",
+            "power": "1 - 10 Watt"
+        },
         "f24000": "",
         "f47000": "",
         "f76000": "",
@@ -1311,7 +1374,7 @@
     {
         "callsign": "IZ5RNF",
         "name": "Alessandro",
-        "locator": "Jn53fq",
+        "locator": "JN53FQ",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1324,7 +1387,7 @@
     {
         "callsign": "IS0MPC",
         "name": "Roberto",
-        "locator": "Jn40lh",
+        "locator": "JN40LH",
         "f1200": {
             "antenna": "Direttiva",
             "power": "1 - 50 Watt"
@@ -1349,7 +1412,7 @@
     {
         "callsign": "I4CVC",
         "name": "carlo",
-        "locator": "jn45ju",
+        "locator": "JN45JU",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1362,7 +1425,7 @@
     {
         "callsign": "IZ0CKM",
         "name": "Roberto ",
-        "locator": "Jn61gv",
+        "locator": "JN61GV",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1375,7 +1438,7 @@
     {
         "callsign": "IK0ZYH",
         "name": "Edmondo",
-        "locator": "jn62bj",
+        "locator": "JN62BJ",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1427,7 +1490,7 @@
     {
         "callsign": "IT9GRR",
         "name": "Giovanni",
-        "locator": "Jm77ge ",
+        "locator": "JM77GE ",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1459,7 +1522,7 @@
     {
         "callsign": "IN3AQK ",
         "name": "Paolo ",
-        "locator": "Jn56oo",
+        "locator": "JN56OO",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1473,11 +1536,23 @@
         "callsign": "IW3HXR",
         "name": "Bruno",
         "locator": "JN55QR",
-        "f1200": "",
-        "f2300": "",
+        "f1200": {
+            "antenna": "Parabola",
+            "power": "1 - 50 Watt"
+        },
+        "f2300": {
+            "antenna": "Parabola",
+            "power": "1 - 50 Watt"
+        },
         "f5700": "",
-        "f10000": "",
-        "f24000": "",
+        "f10000": {
+            "antenna": "Parabola",
+            "power": "10 - 20 Watt"
+        },
+        "f24000": {
+            "antenna": "Parabola",
+            "power": "1 - 5 Watt"
+        },
         "f47000": "",
         "f76000": "",
         "f122000": ""
@@ -1485,7 +1560,7 @@
     {
         "callsign": "IK7IMQ",
         "name": "Felice",
-        "locator": "Jn80vn",
+        "locator": "JN80VN",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1498,7 +1573,7 @@
     {
         "callsign": "IW0FCH",
         "name": "Giorgio",
-        "locator": "JN61FV30up",
+        "locator": "JN61FV30UP",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1588,7 +1663,7 @@
     {
         "callsign": "IT9FKD",
         "name": "Andrea",
-        "locator": "jm77mn",
+        "locator": "JM77MN",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1601,7 +1676,7 @@
     {
         "callsign": "I3QNS",
         "name": "Federico ",
-        "locator": "Jn65ck ",
+        "locator": "JN65CK ",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1614,12 +1689,21 @@
     {
         "callsign": "I4TTZ",
         "name": "Angelo",
-        "locator": "JN54jh",
-        "f1200": "",
+        "locator": "JN54JH",
+        "f1200": {
+            "antenna": "Direttiva",
+            "power": "50 - 150 Watt"
+        },
         "f2300": "",
         "f5700": "",
-        "f10000": "",
-        "f24000": "",
+        "f10000": {
+            "antenna": "Parabola",
+            "power": "10 - 20 Watt"
+        },
+        "f24000": {
+            "antenna": "Parabola",
+            "power": "1 - 5 Watt"
+        },
         "f47000": "",
         "f76000": "",
         "f122000": ""
@@ -1666,7 +1750,7 @@
     {
         "callsign": "IZ1OTT ",
         "name": "Mauro",
-        "locator": "JN35ua",
+        "locator": "JN35UA",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1679,7 +1763,7 @@
     {
         "callsign": "I4UJB",
         "name": "Giancarlo",
-        "locator": "Jn64cf60md",
+        "locator": "JN64CF60MD",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1705,7 +1789,7 @@
     {
         "callsign": "IU3NMQ",
         "name": "Domenico",
-        "locator": "Jn65ev",
+        "locator": "JN65EV",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1731,7 +1815,7 @@
     {
         "callsign": "IC8EPV",
         "name": "Michele",
-        "locator": "Jn60xr",
+        "locator": "JN60XR",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1744,7 +1828,7 @@
     {
         "callsign": "IK6BLO",
         "name": "Roberto ",
-        "locator": "Jn63kh",
+        "locator": "JN63KH",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1770,7 +1854,7 @@
     {
         "callsign": "IK7UXU",
         "name": "Flavio",
-        "locator": "Jn81he",
+        "locator": "JN81HE",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1783,7 +1867,7 @@
     {
         "callsign": "IW3GOA ",
         "name": "Valter",
-        "locator": "Jn65ds",
+        "locator": "JN65DS",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1796,7 +1880,7 @@
     {
         "callsign": "IU6AEI",
         "name": "Fabrizio",
-        "locator": "Jn63rl",
+        "locator": "JN63RL",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1809,7 +1893,7 @@
     {
         "callsign": "IK7HIN",
         "name": "Marcello",
-        "locator": "Jn81kc",
+        "locator": "JN81KC",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1822,7 +1906,7 @@
     {
         "callsign": "IU1CZH",
         "name": "Giuseppe ",
-        "locator": "JN34wx",
+        "locator": "JN34WX",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1835,7 +1919,7 @@
     {
         "callsign": "IW4CPU",
         "name": "Alessandro",
-        "locator": "Jn54ql",
+        "locator": "JN54QL",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1848,7 +1932,7 @@
     {
         "callsign": "IZ6WLW",
         "name": "Francesco ",
-        "locator": "Jn62pb",
+        "locator": "JN62PB",
         "f1200": {
             "antenna": "Direttiva",
             "power": "1 - 50 Watt"
@@ -1883,7 +1967,7 @@
     {
         "callsign": "IN3BJX",
         "name": "Enzo",
-        "locator": "Jn56mb",
+        "locator": "JN56MB",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1896,7 +1980,7 @@
     {
         "callsign": "IK7HTB",
         "name": "Davide ",
-        "locator": "Jn80pj",
+        "locator": "JN80PJ",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -1910,10 +1994,22 @@
         "callsign": "IU3KMM / I 13439/VE",
         "name": "Maurizio",
         "locator": "JN65DP53",
-        "f1200": "",
-        "f2300": "",
-        "f5700": "",
-        "f10000": "",
+        "f1200": {
+            "antenna": "Direttiva",
+            "power": "1 - 50 Watt"
+        },
+        "f2300": {
+            "antenna": "Direttiva, Parabola",
+            "power": "1 - 50 Watt"
+        },
+        "f5700": {
+            "antenna": "Parabola",
+            "power": "1 - 50 Watt"
+        },
+        "f10000": {
+            "antenna": "Parabola",
+            "power": "1 - 10 Watt"
+        },
         "f24000": "",
         "f47000": "",
         "f76000": "",
@@ -2026,7 +2122,7 @@
     {
         "callsign": "IK0JAY ",
         "name": "Pasquale ",
-        "locator": "Jn61kk",
+        "locator": "JN61KK",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -2053,7 +2149,10 @@
         "callsign": "I2OLV",
         "name": "Massimo",
         "locator": "JN45NK",
-        "f1200": "",
+        "f1200": {
+            "antenna": "Direttiva, Collineare",
+            "power": "1 - 50 Watt"
+        },
         "f2300": "",
         "f5700": "",
         "f10000": "",
@@ -2078,12 +2177,18 @@
     {
         "callsign": "IK6CAK",
         "name": "Mauro",
-        "locator": "JN72dj",
+        "locator": "JN72DJ37IW",
         "f1200": "",
         "f2300": "",
         "f5700": "",
-        "f10000": "",
-        "f24000": "",
+        "f10000": {
+            "antenna": "Parabola, 1.5 offset  (in allestimento 2.4 )",
+            "power": "20  - 50 Watt"
+        },
+        "f24000": {
+            "antenna": "Parabola, 1.5 offset",
+            "power": "10 mW - 1 Watt"
+        },
         "f47000": "",
         "f76000": "",
         "f122000": ""
@@ -2091,7 +2196,7 @@
     {
         "callsign": "IU1BFI ",
         "name": "Paolo Amedeo ",
-        "locator": "JN44ir",
+        "locator": "JN44IR",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -2130,7 +2235,7 @@
     {
         "callsign": "IW0EAC",
         "name": "Andrea",
-        "locator": "jn61jq",
+        "locator": "JN61JQ",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -2203,7 +2308,7 @@
     {
         "callsign": "IU3LYA",
         "name": "Riccardo",
-        "locator": "Jn55uq",
+        "locator": "JN55UQ",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -2229,7 +2334,7 @@
     {
         "callsign": "IK4IRO",
         "name": "Vittorio",
-        "locator": "jn54jm",
+        "locator": "JN54JM",
         "f1200": "",
         "f2300": "",
         "f5700": "",
@@ -2279,5 +2384,94 @@
             "antenna": "Parabola, KIT con parabola da 20 cm",
             "power": "10 mW - 500 mW"
         }
+    },
+    {
+        "callsign": "IU0BTM",
+        "name": "Francesco ",
+        "locator": "JN61GW",
+        "f1200": {
+            "antenna": "Parabola",
+            "power": "50 - 150 Watt"
+        },
+        "f2300": {
+            "antenna": "Parabola",
+            "power": "1 - 50 Watt"
+        },
+        "f5700": "",
+        "f10000": {
+            "antenna": "Parabola",
+            "power": "10 - 20 Watt"
+        },
+        "f24000": "",
+        "f47000": "",
+        "f76000": "",
+        "f122000": ""
+    },
+    {
+        "callsign": "SV1EBS",
+        "name": "STAVROS",
+        "locator": "KM07TL",
+        "f1200": "",
+        "f2300": "",
+        "f5700": "",
+        "f10000": "",
+        "f24000": "",
+        "f47000": "",
+        "f76000": "",
+        "f122000": ""
+    },
+    {
+        "callsign": "S51LF",
+        "name": "Leon",
+        "locator": "JN75CN",
+        "f1200": {
+            "antenna": "Direttiva, Parabola",
+            "power": "150  - 300 Watt"
+        },
+        "f2300": "",
+        "f5700": "",
+        "f10000": "",
+        "f24000": "",
+        "f47000": "",
+        "f76000": "",
+        "f122000": ""
+    },
+    {
+        "callsign": "IU2GDU",
+        "name": "Marco",
+        "locator": "JN45MM",
+        "f1200": {
+            "antenna": "Direttiva",
+            "power": "1 - 50 Watt"
+        },
+        "f2300": {
+            "antenna": "Direttiva, Anche Gregoriana. Per ora QRP portatile  da casa ",
+            "power": "1 - 50 Watt"
+        },
+        "f5700": "",
+        "f10000": "",
+        "f24000": "",
+        "f47000": "",
+        "f76000": "",
+        "f122000": ""
+    },
+    {
+        "callsign": "IU8HRV ",
+        "name": "Fabrizio ",
+        "locator": "JN70MF",
+        "f1200": {
+            "antenna": "Direttiva",
+            "power": "50 - 150 Watt"
+        },
+        "f2300": {
+            "antenna": "Parabola",
+            "power": "1 - 50 Watt"
+        },
+        "f5700": "",
+        "f10000": "",
+        "f24000": "",
+        "f47000": "",
+        "f76000": "",
+        "f122000": ""
     }
 ]
