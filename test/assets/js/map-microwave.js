@@ -23,7 +23,7 @@ let mwMap = L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png',
 // Load intial data
 onLoadStationsData();
 
-//#region CTA function
+//#region CTA functions
 
 function onLoadStationsData()
 {
@@ -143,18 +143,22 @@ function onLoadStationsData()
 function onCLickApplyFilter()
 {
     let jsonDataFiltered = stationsData;
-    console.log("PRIMA: ", jsonDataFiltered);
 
     jsonDataFiltered = FilterData(stationsData, QueryFilter());
-
-    console.log("DOPO: ", jsonDataFiltered);
 
     DrawDataOnMap(jsonDataFiltered);
 }
 
 function onClickResetFilter()
 {
-    
+    document.getElementById("FrequencyFilter1200").checked = true;
+    document.getElementById("FrequencyFilter2300").checked = true;
+    document.getElementById("FrequencyFilter5700").checked = true;
+    document.getElementById("FrequencyFilter10000").checked = true;
+    document.getElementById("FrequencyFilter24000").checked = true;
+    document.getElementById("FrequencyFilter47000").checked = true;
+    document.getElementById("FrequencyFilter76000").checked = true;
+    document.getElementById("FrequencyFilter122000").checked = true;
 }
 
 function onClickSetMyLocator()
@@ -170,6 +174,7 @@ function onClickSetMyLocator()
 //#endregion
 
 
+//#region Data functions
 
 function QueryFilter()
 {
@@ -410,65 +415,4 @@ function GetStationLocator(locator)
     return coordinates;
 }
 
-
-function StationPopupOLD(stationData)
-{
-    let stationView = "<b>" + stationData.callsign + "</b><br />" + stationData.locator + "<br />";
-
-    if(myStation !== undefined && myStation.locator !== undefined && myStation.locator !== "")
-    {
-        const fromMy = bearingDistance(myStation.locator, stationData.locator);
-        stationView += "<hr /><b>Distance:</b> " + parseInt(fromMy.km) + " Km<br /><b>Direction:</b> " + parseInt(fromMy.deg) + "°";
-    }
-
-    stationView += "<table><tr><th>Freq</th><th>Antenna</th><th>Power</th></tr>";
-
-    if(stationData.f1200 !== "")
-    {
-        stationView += "<tr><td>1.2 GHz</td><td>" + stationData.f1200.antenna + "</td><td>" + stationData.f1200.power + "</td></tr>"
-    }
-
-    if(stationData.f2300 !== "")
-    {
-        stationView += "<tr><td>2.3 GHz</td><td>" + stationData.f2300.antenna + "</td><td>" + stationData.f2300.power + "</td></tr>"
-    }
-
-    if(stationData.f5700 !== "")
-    {
-        stationView += "<tr><td>5.7 GHz</td><td>" + stationData.f5700.antenna + "</td><td>" + stationData.f5700.power + "</td></tr>"
-    }
-
-    if(stationData.f5700 !== "")
-    {
-        stationView += "<tr><td>5.7 GHz</td><td>" + stationData.f5700.antenna + "</td><td>" + stationData.f5700.power + "</td></tr>"
-    }
-
-    if(stationData.f10000 !== "")
-    {
-        stationView += "<tr><td>10 GHz</td><td>" + stationData.f10000.antenna + "</td><td>" + stationData.f10000.power + "</td></tr>"
-    }
-
-    if(stationData.f24000 !== "")
-    {
-        stationView += "<tr><td>24 GHz</td><td>" + stationData.f24000.antenna + "</td><td>" + stationData.f24000.power + "</td></tr>"
-    }
-
-    if(stationData.f47000 !== "")
-    {
-        stationView += "<tr><td>47 GHz</td><td>" + stationData.f47000.antenna + "</td><td>" + stationData.f47000.power + "</td></tr>"
-    }
-
-    if(stationData.f76000 !== "")
-    {
-        stationView += "<tr><td>76 GHz</td><td>" + stationData.f76000.antenna + "</td><td>" + stationData.f76000.power + "</td></tr>"
-    }
-
-    if(stationData.f122000 !== "")
-    {
-        stationView += "<tr><td>122 GHz</td><td>" + stationData.f122000.antenna + "</td><td>" + stationData.f122000.power + "</td></tr>"
-    }
-
-    stationView += "</table>"
-
-    return stationView;
-}
+//#endregion
