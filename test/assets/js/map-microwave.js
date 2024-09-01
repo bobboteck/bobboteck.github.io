@@ -6,7 +6,7 @@
     console.log(latLngToLocator(60.179, 24.945)); // KP21le
 */
 // Define global object
-const iconRed = L.icon({ iconUrl: 'images/red-marker.png', iconSize: [26,41], iconAnchor: [12,40], popupAnchor: [0,-30] });
+const iconRed = L.icon({ iconUrl: 'assets/images/red-marker.png', iconSize: [26,41], iconAnchor: [12,40], popupAnchor: [0,-30] });
 let myStation = {};
 let stationsData = {};
 // Init map object
@@ -23,7 +23,7 @@ let mwMap = L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png',
 // Load intial data
 onLoadStationsData();
 
-//#region Action function
+//#region CTA function
 
 function onLoadStationsData()
 {
@@ -36,7 +36,7 @@ function onLoadStationsData()
             {
                 "callsign": "IW3HWT",
                 "name": "Giuseppe (Beppe)",
-                "locator": "Jn55vt ma prevalentemente faccio attività portatile",
+                "locator": "JN55VT",
                 "f1200": {
                     "antenna": "Direttiva, Parabola",
                     "power": "1 - 50 Watt"
@@ -50,6 +50,22 @@ function onLoadStationsData()
                     "antenna": "Parabola",
                     "power": "1 - 10 Watt"
                 },
+                "f24000": "",
+                "f47000": "",
+                "f76000": "",
+                "f122000": ""
+            },
+            {
+                "callsign": "IW3HWT2",
+                "name": "Duplicato",
+                "locator": "JN55VT",
+                "f1200": {
+                    "antenna": "Direttiva, Parabola",
+                    "power": "1 - 50 Watt"
+                },
+                "f2300": "",
+                "f5700": "",
+                "f10000": "",
                 "f24000": "",
                 "f47000": "",
                 "f76000": "",
@@ -71,7 +87,7 @@ function onLoadStationsData()
             {
                 "callsign": "IK3GHY",
                 "name": "Giorgio",
-                "locator": "11111Jn65dm",
+                "locator": "JN65DM",
                 "f1200": "",
                 "f2300": "",
                 "f5700": {
@@ -235,8 +251,6 @@ function FilterData(dataToFilter, query)
 
 function OrderData(dataToOrder)
 {
-    console.log(dataToOrder);
-
     let dataOrdered = dataToOrder.sort((a, b) => 
     {
         if (a.locator < b.locator)
@@ -244,8 +258,6 @@ function OrderData(dataToOrder)
           return -1;
         }
     });
-
-    console.log(dataOrdered);
 
     return dataOrdered;
 }
@@ -261,29 +273,25 @@ function DrawDataOnMap(data)
     });
 
     let orderData = OrderData(data);
-
-    // orderData.forEach(station => 
-    // {
-    //     try
-    //     {
-    //         L.marker(locatorToLatLng(station.locator)).addTo(map).bindPopup(StationPopup(station));
-    //     }
-    //     catch
-    //     {
-    //         console.error("Il locatore di " + station.callsign + " non è un locatore valido [" + station.locator + "]");
-    //     }
-    // });
+    let popUpInfo = "";
 
     for(i=0;i<orderData.length;i++)
     {
         try
         {
-            if(orderData[i].locator === orderData[i+1].locator)
+            if(i < (orderData.length - 1) && orderData[i].locator === orderData[i+1].locator)
             {
-                console.log(orderData[i].callsign + " has same locator of " + orderData[i+1].callsign + "[" + orderData[i].locator + "]")
+                console.log(orderData[i].callsign + " has same locator of " + orderData[i+1].callsign + "[" + orderData[i].locator + "]");
+                popUpInfo += StationPopupData(orderData[i]);
             }
-
-            L.marker(locatorToLatLng(orderData[i].locator)).addTo(map).bindPopup(StationPopup(orderData[i]));
+            else
+            {
+                //L.marker(locatorToLatLng(orderData[i].locator)).addTo(map).bindPopup(StationPopup(orderData[i]));
+                popUpInfo += StationPopupData(orderData[i]);
+                let stationCoordinates = GetStationLocator(orderData[i].locator);
+                L.marker(stationCoordinates).addTo(map).bindPopup(LocatorPopupData(orderData[i]) + popUpInfo);
+                popUpInfo = "";
+            }
         }
         catch
         {
@@ -304,7 +312,103 @@ function DrawDataOnMap(data)
     }
 }
 
-function StationPopup(stationData)
+function LocatorPopupData(stationData)
+{
+    let stationView = "<b>" + stationData.locator.substring(0,6) + "</b>";
+
+    if(myStation !== undefined && myStation.locator !== undefined && myStation.locator !== "")
+    {
+        const fromMy = bearingDistance(myStation.locator, stationData.locator);
+        stationView += "<br />Distance: <b>" + parseInt(fromMy.km) + " Km</b><br />Direction: <b>" + parseInt(fromMy.deg) + "°</b>";
+    }
+
+    stationView += "<hr />";
+
+    return stationView;
+}
+
+function StationPopupData(stationData)
+{
+    // let stationView = "<b>" + stationData.locator.substring(0,6) + "</b>";
+
+    // if(myStation !== undefined && myStation.locator !== undefined && myStation.locator !== "")
+    // {
+    //     const fromMy = bearingDistance(myStation.locator, stationData.locator);
+    //     stationView += "<br />Distance: <b>" + parseInt(fromMy.km) + " Km</b><br />Direction: <b>" + parseInt(fromMy.deg) + "°</b>";
+    // }
+
+    let stationView = "<label class=\"callSign\">" + stationData.callsign + "</label>";
+
+    stationView += "<table class=\"table table-striped\"><tr><th>Freq</th><th>Antenna</th><th>Power</th></tr>";
+
+    if(stationData.f1200 !== "")
+    {
+        stationView += "<tr><td>1.2 GHz</td><td>" + stationData.f1200.antenna + "</td><td>" + stationData.f1200.power + "</td></tr>"
+    }
+
+    if(stationData.f2300 !== "")
+    {
+        stationView += "<tr><td>2.3 GHz</td><td>" + stationData.f2300.antenna + "</td><td>" + stationData.f2300.power + "</td></tr>"
+    }
+
+    if(stationData.f5700 !== "")
+    {
+        stationView += "<tr><td>5.7 GHz</td><td>" + stationData.f5700.antenna + "</td><td>" + stationData.f5700.power + "</td></tr>"
+    }
+
+    if(stationData.f5700 !== "")
+    {
+        stationView += "<tr><td>5.7 GHz</td><td>" + stationData.f5700.antenna + "</td><td>" + stationData.f5700.power + "</td></tr>"
+    }
+
+    if(stationData.f10000 !== "")
+    {
+        stationView += "<tr><td>10 GHz</td><td>" + stationData.f10000.antenna + "</td><td>" + stationData.f10000.power + "</td></tr>"
+    }
+
+    if(stationData.f24000 !== "")
+    {
+        stationView += "<tr><td>24 GHz</td><td>" + stationData.f24000.antenna + "</td><td>" + stationData.f24000.power + "</td></tr>"
+    }
+
+    if(stationData.f47000 !== "")
+    {
+        stationView += "<tr><td>47 GHz</td><td>" + stationData.f47000.antenna + "</td><td>" + stationData.f47000.power + "</td></tr>"
+    }
+
+    if(stationData.f76000 !== "")
+    {
+        stationView += "<tr><td>76 GHz</td><td>" + stationData.f76000.antenna + "</td><td>" + stationData.f76000.power + "</td></tr>"
+    }
+
+    if(stationData.f122000 !== "")
+    {
+        stationView += "<tr><td>122 GHz</td><td>" + stationData.f122000.antenna + "</td><td>" + stationData.f122000.power + "</td></tr>"
+    }
+
+    stationView += "</table>"
+
+    return stationView;
+}
+
+function GetStationLocator(locator)
+{
+    let coordinates = [];
+
+    try
+    {
+        coordinates = locatorToLatLng(locator);
+    }
+    catch
+    {
+        console.error("Il locatore di " + orderData[i].callsign + " non è un locatore valido [" + orderData[i].locator + "]");
+    }
+
+    return coordinates;
+}
+
+
+function StationPopupOLD(stationData)
 {
     let stationView = "<b>" + stationData.callsign + "</b><br />" + stationData.locator + "<br />";
 
@@ -365,6 +469,3 @@ function StationPopup(stationData)
 
     return stationView;
 }
-
-
-
