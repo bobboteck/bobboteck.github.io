@@ -72,19 +72,6 @@ function onLoadStationsData()
                 "f122000": ""
             },
             {
-                "callsign": "IU0PHY",
-                "name": "Roberto",
-                "locator": "JN61GW",
-                "f1200": "",
-                "f2300": "",
-                "f5700": "",
-                "f10000": "",
-                "f24000": "",
-                "f47000": "",
-                "f76000": "",
-                "f122000": ""
-            },
-            {
                 "callsign": "IK3GHY",
                 "name": "Giorgio",
                 "locator": "JN65DM",
@@ -274,6 +261,7 @@ function DrawDataOnMap(data)
 
     let orderData = OrderData(data);
     let popUpInfo = "";
+    let myStationOnMap = false;
 
     for(i=0;i<orderData.length;i++)
     {
@@ -286,10 +274,24 @@ function DrawDataOnMap(data)
             }
             else
             {
-                //L.marker(locatorToLatLng(orderData[i].locator)).addTo(map).bindPopup(StationPopup(orderData[i]));
                 popUpInfo += StationPopupData(orderData[i]);
                 let stationCoordinates = GetStationLocator(orderData[i].locator);
-                L.marker(stationCoordinates).addTo(map).bindPopup(LocatorPopupData(orderData[i]) + popUpInfo);
+                
+                if(myStation.callSign !== undefined && popUpInfo.includes(myStation.callSign.toUpperCase()))
+                {
+                    L.marker(stationCoordinates, {icon: iconRed}).addTo(map).bindPopup(LocatorPopupData(orderData[i]) + popUpInfo);
+                    myStationOnMap = true;
+                }
+                else if(myStation.locator !== undefined && myStation.locator.toUpperCase() === orderData[i].locator)
+                {
+                    L.marker(stationCoordinates, {icon: iconRed}).addTo(map).bindPopup(LocatorPopupData(orderData[i]) + popUpInfo);
+                    myStationOnMap = true;
+                }
+                else
+                {
+                    L.marker(stationCoordinates).addTo(map).bindPopup(LocatorPopupData(orderData[i]) + popUpInfo);
+                }
+
                 popUpInfo = "";
             }
         }
@@ -299,11 +301,12 @@ function DrawDataOnMap(data)
         }
     }
 
-    if(myStation.locator !== undefined)
+    // if(myStation.locator !== undefined)
+    if(myStationOnMap === false && myStation.locator !== undefined)
     {
         try
         {
-            L.marker(locatorToLatLng(myStation.locator), {icon: iconRed}).addTo(map).bindPopup(myStation.callSign);
+            L.marker(locatorToLatLng(myStation.locator), {icon: iconRed}).addTo(map).bindPopup(myStation.callSign.toUpperCase());
         }
         catch
         {
