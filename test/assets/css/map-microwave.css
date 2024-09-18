@@ -1,7 +1,23 @@
+.logoContainer
+{
+    display: flex;
+    justify-content: center;
+}
+
 .callSign
 {
     display: flex;
     justify-content: center;
     font-weight: bold;
     background-color: lightblue;
+}
+
+.noBottomMargin
+{
+    margin-bottom: 0px;
+}
+
+.noPadding
+{
+    padding: 0px;
 }

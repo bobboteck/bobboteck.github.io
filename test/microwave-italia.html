@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>MAP</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="./assets/css/map-microwave.css">
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/qth-locator@2.1.0/lib/index.min.js"></script>
+    </head>
+<body>
+    <header class="ps-5 bg-light">
+        <div class="logoContainer">
+            <img src="./assets/images/microwave-italia.png" alt="logo microwave italia" />
+        </div>
+    </header>
+    <main class="flex-shrink-0">
+        <div class="container">
+            <div class="row">
+                <!--<div class="col-1"></div>-->
+                <div class="col-6">
+                    <div class="card mt-3">
+                        <div class="card-header" style="display: flex;justify-content: space-between;">
+                            <h5 class="noBottomMargin">La mia stazione</h5>
+                            <button type="button" class="btn btn-link noPadding" data-bs-toggle="modal" data-bs-target="#stationInfoModal">
+                                <i class="bi bi-info-circle"></i>
+                            </button>
+                            <!-- Modal - La mia stazione -->
+                            <div class="modal fade" id="stationInfoModal" tabindex="-1" aria-labelledby="stationInfoModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="stationInfoModalLabel">Info - La mia stazione</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Inserendo nella sezione "La mia stazione", i dati di Callsign e Locator, viene inserito nella mappa un marker Rosso alle coordinate corrispondenti al proprio Locator.</p>
+                                            <p>Oltre al marker colorato, in tutti gli altri popup associati ad un marker, dopo aver indicato il proprio Locator, vengono aggiunte le informazioni calcolate di: <b>Distanza</b> e <b>Direzione</b>.</p>
+                                            <p>Se al Locator indicato è gia presente un marker con una o più stazioni, viene marcato rosso quello, mantenendo le informazioni delle stazioni presenti.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal - La mia stazione -->
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="mb-3">
+                                        <label for="userCallsign" class="form-label">Callsign</label>
+                                        <input type="text" class="form-control" id="userCallsign" maxlength="10">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="mb-3">
+                                        <label for="userLocator" class="form-label">Locator</label>
+                                        <input type="text" class="form-control" id="userLocator" maxlength="6">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <label class="form-label" style="width: -webkit-fill-available">&nbsp;</label>
+                                    <button type="button" class="btn btn-primary" style="width: -webkit-fill-available" onclick="onClickSetMyLocator()">Salva</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-3">
+                        <div class="card-header" style="display: flex;justify-content: space-between;">
+                            <h5 class="noBottomMargin">Filtri</h5>
+                            <button type="button" class="btn btn-link noPadding" data-bs-toggle="modal" data-bs-target="#filterInfoModal">
+                                <i class="bi bi-info-circle"></i>
+                            </button>
+                            <!-- Modal - La mia stazione -->
+                            <div class="modal fade" id="filterInfoModal" tabindex="-1" aria-labelledby="filterInfoModal" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="filterInfoModal">Info - Filtri</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Selezionando nella sezione Filtri solo le frequenze di proprio interesse, la mappa viene aggiornata mostrando solo i marker relativi alle stazioni che operano sulle frequenze scelte.</p>
+                                            <p>Cliccando sul pulsante "Annulla filtri" vengono automaticamente reimpostati gli interrutori e mostrate tutte le stazioni nella mappa.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal - La mia stazione -->
+                        </div>
+                        <div class="card-body">
+                            <div class="row mb-3">
+                                <div class="col-3">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="FrequencyFilter1200" checked>
+                                        <label class="form-check-label" for="FrequencyFilter1200">1.2 GHz</label>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-check form-switch form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="FrequencyFilter2300" checked>
+                                        <label class="form-check-label" for="FrequencyFilter2300">2.3 GHz</label>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-check form-switch form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="FrequencyFilter5700" checked>
+                                        <label class="form-check-label" for="FrequencyFilter5700">5.7 GHz</label>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-check form-switch form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="FrequencyFilter10000" checked>
+                                        <label class="form-check-label" for="FrequencyFilter10000">10 GHz</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-3">
+                                    <div class="form-check form-switch form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="FrequencyFilter24000" checked>
+                                        <label class="form-check-label" for="FrequencyFilter24000">24 GHz</label>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-check form-switch form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="FrequencyFilter47000" checked>
+                                        <label class="form-check-label" for="FrequencyFilter47000">47 GHz</label>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-check form-switch form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="FrequencyFilter76000" checked>
+                                        <label class="form-check-label" for="FrequencyFilter76000">76 GHz</label>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-check form-switch form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="FrequencyFilter122000" checked>
+                                        <label class="form-check-label" for="FrequencyFilter122000">122 GHz</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <button type="button" class="btn btn-primary mb-3" style="width: -webkit-fill-available" onclick="onCLickApplyFilter()">Applica filtri</button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="button" class="btn btn-secondary mb-3" style="width: -webkit-fill-available" onclick="onClickResetFilter()">Annulla filtri</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 mt-3">
+                            <p>I dati mostrati in questa pagina sono stati forniti dai rispettivi Radioamatori ...., l'ubicazione della stazione sulla mappa è determinata dal Locatore indicato e non da coordinate geografiche precise.</p>
+                            <p>Se vuoi condividere i dati della tua stazione in Microonde, puoi farlo semplicemente compilando il questionario che trovi a questo <a href="https://docs.google.com/forms/d/e/1FAIpQLScaglghLUs4wsGwB6grS52t5FnELcIWwVSjyR4cSC09Oz_6yg/viewform" target="_blank">link</a> <i class="bi bi-box-arrow-up-right"></i>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div id="map" style="width:700px; height:700px"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">This page and data are for test purpose only!</div>
+            <div class="col-4"></div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> -->
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script type="text/javascript" src="./assets/js/map-microwave.js"></script>
+<!-- 
+  https://leafletjs.com/examples/quick-start/
+  https://github.com/jleh/qth-locator
+  https://www.delftstack.com/howto/javascript/load-json-file-in-javascript/
+  https://www.giangrandi.org/electronics/radio/qthloccalc.shtml
+-->
+    </body>
+</html>
