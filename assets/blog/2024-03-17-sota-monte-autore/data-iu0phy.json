@@ -1,7 +1,7 @@
 {
     "MapConfig": {
-        "Latitude": 47.249,
-        "Longitude": 5.537,
+        "Latitude": 41.979,
+        "Longitude": 13.208,
         "Zoom": 5
       },
     "QTH": {
@@ -42,9 +42,9 @@
         "Date": "2024-03-17",
         "Time": "09:47",
         "CallSign": "I0FHZ",
-        "Locator": "",
-        "Latitude": 0,
-        "Longitude": 0,
+        "Locator": "JN62ap",
+        "Latitude": 42.646,
+        "Longitude": 12.042,
         "QRB": 0,
         "Band": "2",
         "Mode": "SSB",
