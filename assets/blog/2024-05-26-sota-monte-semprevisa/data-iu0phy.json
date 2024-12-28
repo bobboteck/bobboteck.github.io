@@ -1,0 +1,127 @@
+{
+    "MapConfig": {
+        "Latitude": 47.249,
+        "Longitude": 5.537,
+        "Zoom": 5
+      },
+    "QTH": {
+        "Latitude": 41.569,
+        "Longitude": 13.091,
+        "Locator": "JN61nn",
+        "Location": "Monte Semprevisa 1536m slm",
+        "References": [
+          {
+            "Code": "I/LZ-314",
+            "Type": "SOTA"
+          }
+        ],
+        "isPortable": true
+      },
+    "Equipment": {
+        "Radios": [
+          {
+            "Brand": "Yaesu",
+            "Model": "FT-817",
+            "PowerSupply": "LiFePO4 12V 8Ah"
+          }
+        ],
+        "Antennas": [
+            {
+                "Brand": "IU0PHY",
+                "Model": "Inverted V dipole",
+                "Other": "Home made"
+            }
+        ]
+    },
+    "QSOs": [
+        {
+            "Date": "2024-05-26",
+            "Time": "09:37",
+            "CallSign": "IQ5QO/P",
+            "Locator": "JN53jv",
+            "Latitude": 43.896,
+            "Longitude": 10.792,
+            "QRB": 322,
+            "Band": "40",
+            "Mode": "SSB",
+            "RstReceived": 59,
+            "RstSent": 59,
+            "TxPower": 5
+        },
+        {
+            "Date": "2024-05-26",
+            "Time": "10:09",
+            "CallSign": "II0BDA",
+            "Locator": "jn61hn",
+            "Latitude": 41.563,
+            "Longitude": 12.625,
+            "QRB": 42,
+            "Band": "40",
+            "Mode": "SSB",
+            "RstReceived": 59,
+            "RstSent": 59,
+            "TxPower": 5,
+            "Note": ""
+        },
+        {
+            "Date": "2024-05-26",
+            "Time": "10:33",
+            "CallSign": "IK2LEY/P",
+            "Locator": "JN45es",
+            "Latitude": 45.771,
+            "Longitude": 8.375,
+            "QRB": 604,
+            "Band": "40",
+            "Mode": "SSB",
+            "RstReceived": 59,
+            "RstSent": 59,
+            "TxPower": 5,
+            "Note": "S2S:I/PM-223"
+        },
+        {
+            "Date": "2024-05-26",
+            "Time": "10:35",
+            "CallSign": "IZ0IJC",
+            "Locator": "JN61kl",
+            "Latitude": 41.479,
+            "Longitude": 12.875,
+            "QRB": 23,
+            "Band": "40",
+            "Mode": "SSB",
+            "RstReceived": 59,
+            "RstSent": 59,
+            "TxPower": 5,
+            "Note": ""
+        },
+        {
+            "Date": "2024-05-26",
+            "Time": "10:40",
+            "CallSign": "IZ0ARL",
+            "Locator": "JN61iu",
+            "Latitude": 41.854,
+            "Longitude": 12.708,
+            "QRB": 47,
+            "Band": "40",
+            "Mode": "SSB",
+            "RstReceived": 55,
+            "RstSent": 59,
+            "TxPower": 5,
+            "Note": ""
+        },
+        {
+            "Date": "2024-05-26",
+            "Time": "10:59",
+            "CallSign": "IW0HK",
+            "Locator": "JN61no",
+            "Latitude": 41.604,
+            "Longitude": 13.125,
+            "QRB": 5,
+            "Band": "40",
+            "Mode": "SSB",
+            "RstReceived": 59,
+            "RstSent": 59,
+            "TxPower": 5,
+            "Note": "S2S:I/LZ-320"
+        }
+    ]
+}

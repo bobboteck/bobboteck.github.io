@@ -1,0 +1,57 @@
+{
+    "MapConfig": {
+        "Latitude": 47.249,
+        "Longitude": 5.537,
+        "Zoom": 5
+      },
+    "QTH": {
+        "Latitude": 41.979,
+        "Longitude": 13.208,
+        "Locator": "JN61ox",
+        "Location": "Monte Autore 1855m slm",
+        "References": [
+          {
+            "Code": "I/LZ-301",
+            "Type": "SOTA"
+          },
+          {
+            "Code": "I-0454",
+            "Type": "POTA"
+          }
+        ],
+        "isPortable": true
+      },
+    "Equipment": {
+        "Radios": [
+          {
+            "Brand": "Yaesu",
+            "Model": "FT-817",
+            "PowerSupply": "LiFePO4 12V 8Ah"
+          }
+        ],
+        "Antennas": [
+            {
+                "Brand": "IU0PHY",
+                "Model": "DRV",
+                "Other": "Home made"
+            }
+        ]
+    },
+    "QSOs": [
+      {
+        "Date": "2024-03-17",
+        "Time": "09:47",
+        "CallSign": "I0FHZ",
+        "Locator": "",
+        "Latitude": 0,
+        "Longitude": 0,
+        "QRB": 0,
+        "Band": "2",
+        "Mode": "SSB",
+        "RstReceived": 59,
+        "RstSent": 59,
+        "TxPower": 5,
+        "Note": ""
+      }
+    ]
+  }
