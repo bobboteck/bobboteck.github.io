@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en" class="h-100">
+    <head>
+        <title>Converter</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Converter">
+        <meta name="author" content="Roberto D'Amico, Bobboteck, IU0PHY">
+
+        <meta property="article:author" content="Roberto D'Amico, Bobboteck, IU0PHY">
+        <meta property="og:type" content="application">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:site_name" content="Bobboteck">
+        <meta property="og:title" content="Converter">
+        <meta property="og:url" content="https://bobboteck.github.io/app/converters/index.html">
+        <meta property="og:description" content="Converter">
+        <link rel="canonical" href="https://bobboteck.github.io/app/converters/index.html">
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Roberto D'Amico",
+    "url": "https://bobboteck.github.io/"
+}
+</script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+        <!-- Favicons -->
+        <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+        <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png"> -->
+        <link rel="icon" href="../../favicon.ico">
+        <meta name="theme-color" content="#10c963">
+
+        <!-- Custom styles for this template -->
+        <link href="css/styles.css" rel="stylesheet">
+    </head>
+    <body class="d-flex flex-column h-100">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Conveter</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Help</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item disabled" href="#" aria-disabled="true">How to use</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="https://bobboteck.github.io/">Web site</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item disabled" href="#" aria-disabled="true">About</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Apps</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="https://bobboteck.github.io/app/serial-monitor/index.html">Serial Monitor</a></li>
+                                    <li><a class="dropdown-item" href="https://bobboteck.github.io/app/qso-map-generator/index.html">QSO Map generator</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Demo</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="https://bobboteck.github.io/app/serpicobt/index.html">SERPICO Console</a></li>
+                                    <li><a class="dropdown-item" href="https://bobboteck.github.io/app/joy/index.html">Joystick</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="flex-shrink-0">
+            <div class="container">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="csvTextArea" class="form-label">CSV data</label>
+                            <textarea class="form-control" id="csvTextArea" rows="20"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="userLocator" class="form-label">My Locator</label>
+                            <input type="text" class="form-control" id="userLocator" maxlength="6">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="jsonTextArea" class="form-label">JSON result</label>
+                            <textarea class="form-control" id="jsonTextArea" rows="20"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-4">&nbsp;</div>
+                    <div class="d-grid gap-2 d-flex justify-content-center col-md-4">
+                        <button id="btnConvert" type="button" class="btn btn-primary" style="width: inherit" onclick="onClick_convertCsv2Json()">Convert</button>
+                    </div>
+                    <div class="col-md-4">&nbsp;</div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer mt-auto py-3 bg-light">
+            <div class="container">
+                <div class="text-muted">© 2023 Roberto D'Amico.</div>
+                <div class="me-5">
+                    <ul class="footerSocial">
+                        <li>
+                            <a href="https://github.com/bobboteck" rel="nofollow noopener noreferrer">
+                                <span class="footerIconLabel">
+                                    <i class="bi bi-github githubColor"></i>
+                                    <span class="footerIconLabelSpace d-none d-sm-block">GitHub</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/bobboteck" rel="nofollow noopener noreferrer">
+                                <span class="footerIconLabel">
+                                    <i class="bi bi-twitter twitterColor"></i>
+                                    <span class="footerIconLabelSpace d-none d-sm-block">Twitter</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/c/RobertoDAmico" rel="nofollow noopener noreferrer">
+                                <span class="footerIconLabel">
+                                    <i class="bi bi-youtube youtubeColor"></i>
+                                    <span class="footerIconLabelSpace d-none d-sm-block">YouTube</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/r-damico" rel="nofollow noopener noreferrer">
+                                <span class="footerIconLabel">
+                                    <i class="bi bi-linkedin linkedinColor"></i>
+                                    <span class="footerIconLabelSpace d-none d-sm-block">LinkedIn</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/bobboteck" rel="nofollow noopener noreferrer">
+                                <span class="footerIconLabel">
+                                    <i class="bi bi-instagram instagramColor"></i>
+                                    <span class="footerIconLabelSpace d-none d-sm-block">Instagram</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-muted">Use <a href="https://github.com/bobboteck/bobboteck.github.io/issues/new/choose">GitHub Issue</a> for problem or suggestion</div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/qth-locator@2.1.0/lib/index.min.js"></script>
+        <script>
+window._gaq = window._gaq || [];
+_gaq.push(['_setAccount', 'UA-98811481-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+
+function getDate(dateTime)
+{
+    //"17/03/2024 09:47:00" --> "2024-03-17"
+    let day = dateTime.substring(0,2);
+    let mounth = dateTime.substring(3,5);
+    let year = dateTime.substring(6,10);
+
+    return year + "-" + mounth + "-" + day;
+}
+
+function getTime(dateTime)
+{
+    //"17/03/2024 09:47:00" --> "09:47"
+    let hour = dateTime.substring(10,13);
+    let minute = dateTime.substring(14,16);
+
+    return hour + ":" + minute;
+}
+
+function getLatitude(locator)
+{
+    return locatorToLatLng(locator)[0];
+}
+
+function getLongitude(locator)
+{
+    return locatorToLatLng(locator)[1];
+}
+
+function onClick_convertCsv2Json()
+{
+    let csvTextAreaElement = document.getElementById("csvTextArea");
+    let csvData = csvTextAreaElement.value;
+    console.log(csvData);
+
+    var lines=csvData.split("\n");
+
+    var result = [];
+
+    // NOTE: If your columns contain commas in their values, you'll need
+    // to deal with those before doing the next step 
+    // (you might convert them to &&& or something, then covert them back later)
+    // jsfiddle showing the issue https://jsfiddle.net/
+    var headers=lines[0].split(",");
+
+    for(var i=1;i<lines.length;i++)
+    {
+        var obj = {};
+        var currentline=lines[i].split(",");
+
+        for(var j=0;j<headers.length;j++)
+        {
+            obj[headers[j]] = currentline[j];
+        }
+
+        result.push(obj);
+    }
+
+    //return result; //JavaScript object
+    //return JSON.stringify(result); //JSON
+
+    console.log(result);
+
+    let myLocator = document.getElementById('userLocator').value;
+
+    var finalResult = [];
+
+    result.forEach(element => 
+    {
+        var obj = {};
+
+        obj["Date"] = getDate(element.QsoDate);
+        obj["Time"] = getTime(element.QsoDate);
+        obj["CallSign"] = element.Callsign;
+        obj["Locator"] = element.Gridsquare;
+        obj["Latitude"] = getLatitude(element.Gridsquare).toFixed(3);
+        obj["Longitude"] = getLongitude(element.Gridsquare).toFixed(3);
+        obj["QRB"] = parseInt(distance(myLocator, element.Gridsquare));
+        obj["Band"] = element.Band;
+        obj["Mode"] = element.Mode;
+        obj["RstReceived"] = element.RstRcvd;
+        obj["RstSent"] = element.RstSent;
+        obj["TxPower"] = 5;
+        obj["Note"] = "";
+
+        finalResult.push(obj);
+    });
+
+    console.log(finalResult);
+
+    document.getElementById("jsonTextArea").value = JSON.stringify(finalResult);
+}
+        </script>
+    </body>
+</html>

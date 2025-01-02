@@ -88,4 +88,4 @@ Il mio primo QSO è con il mitico Ennio I0FHZ, ma abbiamo cominciato i QSO dopo 
 
 ## Video dell'attivazione
 
-{% include video id="..." provider="youtube" %}
+{% include video id="y3YuDCt8Q_8" provider="youtube" %}
