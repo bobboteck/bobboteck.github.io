@@ -90,6 +90,18 @@ Mi rimetto alla radio, questa volta invece di andare in cerca di stazioni che ch
 Complice l'umidità della nuvola che ormai ci ha completamente avvolti, tutto è "appiccicoso" e smontare non è facilissimo. Dopo aver rimesso tutto negli zaini e fatto un rapido check per controllare di aver lasciato tutto come prima, ci avviamo sul sentiero con la visibilità che si è notevolmente ridotta.
 Arriviamo al rifugio Sebastiani che sono ormai le 19:30, è buio e decidiamo quindi di fermarci a cena al rifugio per concludere una giornata impegnativa, ma comunque piacevole e con risultati soddisfacenti.
 
+#### Risultato del contest di IU0PHY
+
+Nella classifica finale sono arrivato [47°](https://contest.ari.it/user_testa_classifiche.php?id=44&cat=LP#:~:text=47-,IU0PHY,-JN62LL), con un errore nel LOG e un totale di [4776 punti](https://contest.ari.it/report_errori.php?idc=44&cat=LP&call=IU0PHY).
+
+#### Risultato del contest di IZ0QYI
+
+La classifica finale Andrea è arrivato [53°](https://contest.ari.it/user_testa_classifiche.php?id=44&cat=LP#:~:text=53-,IZ0QYI,-JN62LL), con un paio di errori a LOG per un totale di [3877 punti](https://contest.ari.it/report_errori.php?idc=44&cat=LP&call=IZ0QYI).
+
+#### Considerazioni
+
+Non esiste una classifica per stazioni QRP in questo Contest, ed aggiungerei purtroppo, guardando la classifica SOLP del 2024 e conteggiando solo chi ha dichiarato una potenza di <= 5W, ci sarebbero stati solo 12 partecipanti in questa categoria, e con le nostre comunque pochissime ora di attività ci saremmo comunque classificati al 6° e al 8° posto. Chissà magari in futuro ci sarà anche questa categoria.
+
 ## Foto dell'attivazione
 
 {% include gallery caption="SOTA Monte Terminillo" %}
