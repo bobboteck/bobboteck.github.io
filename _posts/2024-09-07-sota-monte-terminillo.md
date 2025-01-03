@@ -106,22 +106,24 @@ Non esiste una classifica per stazioni QRP in questo Contest, ed aggiungerei pur
 
 {% include gallery caption="SOTA Monte Terminillo" %}
 
-## Log dei collegamenti di IU0PHY
+## Logs
+
+### Log dei collegamenti di IU0PHY
 
 {% include qsos_tab.html tabContainer="tabPhy" tabData="/assets/blog/2024-09-07-sota-monte-terminillo/data-iu0phy.json" %}
 
-## Mappa dei collegamenti di IU0PHY
+### Mappa dei collegamenti di IU0PHY
 
 {% include qsos_map.html mapcontainer="mapPhy" mapdata="/assets/blog/2024-09-07-sota-monte-terminillo/data-iu0phy.json" %}
 
-## Log dei collegamenti di IZ0QYI
+### Log dei collegamenti di IZ0QYI
 
 {% include qsos_tab.html tabContainer="tabQyi" tabData="/assets/blog/2024-09-07-sota-monte-terminillo/data-iz0qyi.json" %}
 
-## Mappa dei collegamenti di IZ0QYI
+### Mappa dei collegamenti di IZ0QYI
 
 {% include qsos_map.html mapcontainer="mapQyi" mapdata="/assets/blog/2024-09-07-sota-monte-terminillo/data-iz0qyi.json" %}
 
 ## Video dell'attivazione
 
-{% include video id="..." provider="youtube" %}
+{% include video id="V3BclHnrvqQ" provider="youtube" %}

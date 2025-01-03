@@ -42,7 +42,7 @@
         {"Date":"2024-09-07","Time":" 16:13","CallSign":"IZ0DHC","Locator":"JN62BK","Latitude":"42.438","Longitude":"12.125","QRB":68,"Band":"2m","Mode":"SSB","RstReceived":"59","RstSent":"59","TxPower":5,"Note":""},
         {"Date":"2024-09-07","Time":" 16:22","CallSign":"I4CVC/7","Locator":"JN71SU","Latitude":"41.854","Longitude":"15.542","QRB":223,"Band":"2m","Mode":"SSB","RstReceived":"59","RstSent":"59","TxPower":5,"Note":""},
         {"Date":"2024-09-07","Time":" 16:35","CallSign":"TK2B","Locator":"JN42QP","Latitude":"42.646","Longitude":"9.375","QRB":294,"Band":"2m","Mode":"SSB","RstReceived":"59","RstSent":"59","TxPower":5,"Note":""},
-        {"Date":"2024-09-07","Time":" 16:40","CallSign":"IP9X","Locator":"JN68IE","Latitude":"48.188","Longitude":"12.708","QRB":635,"Band":"2m","Mode":"SSB","RstReceived":"59","RstSent":"59","TxPower":5,"Note":""},
+        {"Date":"2024-09-07","Time":" 16:40","CallSign":"IP9X","Locator":"JM68IE","Latitude":"48.188","Longitude":"12.708","QRB":635,"Band":"2m","Mode":"SSB","RstReceived":"59","RstSent":"59","TxPower":5,"Note":""},
         {"Date":"2024-09-07","Time":" 16:43","CallSign":"IQ4NN","Locator":"JN63GN","Latitude":"43.563","Longitude":"12.542","QRB":125,"Band":"2m","Mode":"SSB","RstReceived":"59","RstSent":"59","TxPower":5,"Note":""},
         {"Date":"2024-09-07","Time":" 16:50","CallSign":"IT9ELM","Locator":"JM67LX","Latitude":"37.979","Longitude":"12.958","QRB":500,"Band":"2m","Mode":"SSB","RstReceived":"59","RstSent":"59","TxPower":5,"Note":""},
         {"Date":"2024-09-07","Time":" 16:55","CallSign":"IQ0PG","Locator":"JN63DC","Latitude":"43.104","Longitude":"12.292","QRB":88,"Band":"2m","Mode":"SSB","RstReceived":"59","RstSent":"59","TxPower":5,"Note":""},
