@@ -100,7 +100,8 @@ La classifica finale Andrea è arrivato [53°](https://contest.ari.it/user_testa
 
 #### Considerazioni
 
-Non esiste una classifica per stazioni QRP in questo Contest, ed aggiungerei purtroppo, guardando la classifica SOLP del 2024 e conteggiando solo chi ha dichiarato una potenza di <= 5W, ci sarebbero stati solo 12 partecipanti in questa categoria, e con le nostre comunque pochissime ora di attività ci saremmo comunque classificati al 6° e al 8° posto. Chissà magari in futuro ci sarà anche questa categoria.
+Purtroppo anche per questo Contest non esiste una classifica per stazioni QRP, che possa invogliare chi come noi attivando cime non può stare 24 ore in radio.
+Guardando la classifica della categoria SOLP (Singolo Operatore Low Power) del 2024 e conteggiando solo chi ha dichiarato una potenza di <= 5W, ci sarebbero stati solo 12 partecipanti in questa categoria, ma magari se ci fosse stata una categoria specifica sarebbero stati molti di più.
 
 ## Foto dell'attivazione
 
