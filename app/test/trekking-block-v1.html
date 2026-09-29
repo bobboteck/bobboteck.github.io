@@ -41,7 +41,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/exifr/7.1.3/full.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/exifr/7.1.3/lite.umd.js"></script>
 <script>
 (async () => {
   /* ================== CONFIGURAZIONE ================== */
@@ -49,10 +49,9 @@
     geojson: '20260906 Monte Rotondo.geojson',   // file del tracciato (stesso dominio del sito)
     durata: null,                  // opzionale: es. "5h 32m" se il GeoJSON non contiene i tempi
     photos: [
-        { src: 'foto/IMG_20260906_161256.jpg', caption: 'Curva' },
-        { src: 'foto/IMG_20260906_170801.jpg', caption: 'Bosco' }
       // Basta il file: la posizione viene letta dall'EXIF GPS della foto.
-      // { src: 'foto/cima.jpg', caption: 'Vetta' },
+      { src: 'foto/IMG_20260906_161256.jpg', caption: 'Curva' },
+      { src: 'foto/IMG_20260906_170801.jpg', caption: 'Bosco' },
       // Se la foto non ha GPS, indica tu le coordinate:
       // { src: 'foto/rifugio.jpg', caption: 'Rifugio', lat: 42.4712, lng: 13.5561 },
     ]
@@ -187,14 +186,11 @@
     let lat = ph.lat, lng = ph.lng;
     if (lat == null || lng == null) {
       try {
-        if (typeof exifr === 'undefined') throw new Error('libreria exifr non caricata');
         const g = await exifr.gps(ph.src);
-        if (g && g.latitude != null) { lat = g.latitude; lng = g.longitude; }
-        else console.warn('[trek] Nessun dato GPS EXIF trovato in', ph.src);
-      } catch (e) { console.warn('[trek] Lettura EXIF fallita per', ph.src, e); }
+        if (g) { lat = g.latitude; lng = g.longitude; }
+      } catch (e) { /* EXIF non leggibile */ }
     }
-    if (lat == null || lng == null) { console.warn('[trek] Foto saltata (senza coordinate):', ph.src); continue; }
-    console.log('[trek] Foto posizionata:', ph.src, lat, lng);
+    if (lat == null || lng == null) { console.warn('Foto senza coordinate GPS:', ph.src); continue; }
     L.marker([lat, lng], { icon: L.divIcon({ className: 'tk-cam', html: '📷', iconSize: [30, 30] }) })
       .addTo(map).on('click', () => {
         dlg.querySelector('img').src = ph.src;
