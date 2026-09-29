@@ -49,7 +49,7 @@
     geojson: '20260906 Monte Rotondo.geojson',   // file del tracciato (stesso dominio del sito)
     durata: null,                  // opzionale: es. "5h 32m" se il GeoJSON non contiene i tempi
     photos: [
-        { src: 'foto/IMG_20260906_161256.jpg', caption: 'Curva', lat: 42.19897, lng: 13.480706 },
+        { src: 'foto/IMG_20260906_161256.jpg', caption: 'Curva', lat: 42.224664, lng: 13.425708 },
         { src: 'foto/IMG_20260906_170801.jpg', caption: 'Bosco', lat: 42.4712, lng: 13.5561 }
       // Basta il file: la posizione viene letta dall'EXIF GPS della foto.
       // { src: 'foto/cima.jpg', caption: 'Vetta' },
@@ -74,8 +74,7 @@
   (gj.features || [gj]).forEach(f => {
     const g = f.geometry || f;
     const lines = g.type === 'LineString' ? [g.coordinates] : g.type === 'MultiLineString' ? g.coordinates : [];
-    const p = f.properties || {};
-    const t = p.coordinateProperties?.times || p.coordTimes || p.times || [];
+    const t = f.properties?.coordinateProperties?.times || f.properties?.times || [];
     let k = 0;
     lines.forEach(l => l.forEach(c => { coords.push(c); times.push(c[3] ?? t[k]); k++; }));
   });
