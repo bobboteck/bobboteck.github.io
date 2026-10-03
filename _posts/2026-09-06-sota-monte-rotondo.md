@@ -13,7 +13,8 @@ categories:
 tags:
   - sota
   - pota
-  - soratte
+  - rotondo
+  - sirente
   - iu0phy
   - iz0qyi
   - qrp
@@ -22,6 +23,7 @@ tags:
   - ft817
   - i-ab-020
   - i-0629
+  - jn62re
 toc: true
 toc_label: "Table of Contents"
 toc_icon: "cog"
