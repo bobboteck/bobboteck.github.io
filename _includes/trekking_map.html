@@ -1,0 +1,197 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+#trek{--ac:#b4462a;--bd:#d9d6cf;--mut:#6b6860;font:15px/1.4 system-ui,sans-serif;color:#222;max-width:960px;margin:0 auto}
+#trek *{box-sizing:border-box}
+#trek .tk-sum{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--bd);border-radius:8px;margin-bottom:10px;background:#faf9f6}
+#trek .tk-sum div{padding:10px 14px;border-right:1px solid var(--bd)}
+#trek .tk-sum div:last-child{border:0}
+#trek .tk-sum b{display:block;font-size:1.35em;font-variant-numeric:tabular-nums}
+#trek .tk-sum span{color:var(--mut);font-size:.85em}
+#tk-map{height:460px;border-radius:8px;border:1px solid var(--bd);z-index:0}
+#tk-chart{position:relative;margin-top:10px;border:1px solid var(--bd);border-radius:8px;background:#faf9f6;height:220px;touch-action:none}
+#tk-chart svg{width:100%;height:100%;display:block}
+#tk-tip{position:absolute;top:8px;pointer-events:none;background:#fff;border:1px solid var(--bd);border-radius:6px;padding:4px 8px;font-size:.85em;white-space:nowrap;display:none;box-shadow:0 1px 4px #0002}
+#tk-dlg{border:0;border-radius:10px;padding:0;max-width:min(92vw,900px);overflow:hidden}
+#tk-dlg::backdrop{background:#000a}
+#tk-dlg img{display:block;max-width:100%;max-height:80vh;margin:auto}
+#tk-dlg .cap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 14px}
+#tk-dlg button{border:1px solid var(--bd);background:#fff;border-radius:6px;padding:4px 12px;cursor:pointer}
+.tk-cam{font-size:20px;line-height:26px;text-align:center;background:#fff;border:2px solid var(--ac);border-radius:50%;width:30px!important;height:30px!important}
+@media(max-width:600px){#trek .tk-sum{grid-template-columns:1fr 1fr}#trek .tk-sum div:nth-child(2){border-right:0}#tk-map{height:340px}}
+</style>
+
+<div id="trek">
+  <div class="tk-sum">
+    <div><b id="s-time">–</b><span>Tempo totale</span></div>
+    <div><b id="s-dist">–</b><span>Distanza</span></div>
+    <div><b id="s-up">–</b><span>Dislivello positivo</span></div>
+    <div><b id="s-down">–</b><span>Dislivello negativo</span></div>
+  </div>
+  <div id="tk-map"></div>
+  <div id="tk-chart"><svg></svg><div id="tk-tip"></div></div>
+  <dialog id="tk-dlg"><img alt=""><div class="cap"><span></span><button>Chiudi</button></div></dialog>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/exifr/7.1.3/full.umd.js"></script>
+<script>
+(async () => {
+  /* ================== CONFIGURAZIONE ================== */
+  const CONFIG = {
+    geojson: '{{ include.trekkingdata }}',   // file del tracciato (stesso dominio del sito)
+    durata: null,                  // opzionale: es. "5h 32m" se il GeoJSON non contiene i tempi
+    photos: [
+      // Basta il file: la posizione viene letta dall'EXIF GPS della foto.
+      // { src: 'foto/cima.jpg', caption: 'Vetta' },
+      // Se la foto non ha GPS, indica tu le coordinate:
+      // { src: 'foto/rifugio.jpg', caption: 'Rifugio', lat: 42.4712, lng: 13.5561 },
+    ]
+  };
+  /* ==================================================== */
+
+  const $ = id => document.getElementById(id);
+  const R = 6371000, rad = x => x * Math.PI / 180;
+  const hav = (a, b) => {
+    const dLa = rad(b.lat - a.lat), dLo = rad(b.lng - a.lng);
+    const h = Math.sin(dLa / 2) ** 2 + Math.cos(rad(a.lat)) * Math.cos(rad(b.lat)) * Math.sin(dLo / 2) ** 2;
+    return 2 * R * Math.asin(Math.sqrt(h));
+  };
+  const parseT = v => typeof v === 'number' ? (v < 1e11 ? v * 1000 : v) : Date.parse(v);
+
+  // ---- Lettura GeoJSON (Feature, FeatureCollection, LineString, MultiLineString) ----
+  const gj = await (await fetch(CONFIG.geojson)).json();
+  let coords = [], times = [];
+  (gj.features || [gj]).forEach(f => {
+    const g = f.geometry || f;
+    const lines = g.type === 'LineString' ? [g.coordinates] : g.type === 'MultiLineString' ? g.coordinates : [];
+    const p = f.properties || {};
+    const t = p.coordinateProperties?.times || p.coordTimes || p.times || [];
+    let k = 0;
+    lines.forEach(l => l.forEach(c => { coords.push(c); times.push(c[3] ?? t[k]); k++; }));
+  });
+
+  const pts = coords.map((c, i) => ({ lng: c[0], lat: c[1], ele: c[2] ?? 0, t: times[i] != null ? parseT(times[i]) : null }));
+  let d = 0;
+  pts.forEach((p, i) => { if (i) d += hav(pts[i - 1], p); p.d = d; });
+
+  // ---- Dislivelli (smoothing + soglia 3 m per ignorare il rumore GPS) ----
+  const W = 2, sm = pts.map((_, i) => {
+    const s = pts.slice(Math.max(0, i - W), i + W + 1);
+    return s.reduce((a, p) => a + p.ele, 0) / s.length;
+  });
+  let up = 0, down = 0, ref = sm[0];
+  sm.forEach(e => {
+    if (e - ref >= 3) { up += e - ref; ref = e; }
+    else if (ref - e >= 3) { down += ref - e; ref = e; }
+  });
+  pts.forEach((p, i) => p.ele = sm[i]);
+
+  // ---- Riepilogo ----
+  const tA = pts[0].t, tB = pts[pts.length - 1].t;
+  let dur = CONFIG.durata;
+  if (!dur && tA && tB && tB > tA) {
+    const m = Math.round((tB - tA) / 60000);
+    dur = Math.floor(m / 60) + 'h ' + String(m % 60).padStart(2, '0') + 'm';
+  }
+  $('s-time').textContent = dur || 'n/d';
+  $('s-dist').textContent = (d / 1000).toFixed(2) + ' km';
+  $('s-up').textContent = '+' + Math.round(up) + ' m';
+  $('s-down').textContent = '−' + Math.round(down) + ' m';
+
+  // ---- Mappa ----
+  const topo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+    maxZoom: 17, attribution: '© OpenStreetMap, SRTM | © <a href="https://opentopomap.org">OpenTopoMap</a>'
+  });
+  const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19, attribution: '© OpenStreetMap'
+  });
+  const map = L.map('tk-map', { layers: [topo], scrollWheelZoom: false });
+  L.control.layers({ 'Rilievo': topo, 'Stradale': osm }).addTo(map);
+  const ll = pts.map(p => [p.lat, p.lng]);
+  const line = L.polyline(ll, { color: '#b4462a', weight: 4, opacity: .9 }).addTo(map);
+  map.fitBounds(line.getBounds(), { padding: [20, 20] });
+  L.circleMarker(ll[0], { radius: 6, color: '#fff', weight: 2, fillColor: '#2e7d32', fillOpacity: 1 }).addTo(map).bindTooltip('Partenza');
+  L.circleMarker(ll[ll.length - 1], { radius: 6, color: '#fff', weight: 2, fillColor: '#222', fillOpacity: 1 }).addTo(map).bindTooltip('Arrivo');
+  const hoverDot = L.circleMarker(ll[0], { radius: 8, color: '#fff', weight: 3, fillColor: '#1565c0', fillOpacity: 1, interactive: false });
+
+  // ---- Profilo altimetrico ----
+  const svg = $('tk-chart').querySelector('svg'), tip = $('tk-tip');
+  const eles = pts.map(p => p.ele);
+  const minE = Math.floor((Math.min(...eles) - 10) / 50) * 50, maxE = Math.ceil((Math.max(...eles) + 10) / 50) * 50;
+  const M = { l: 48, r: 12, t: 14, b: 28 };
+  let cw = 0, ch = 0;
+  const X = v => M.l + v / d * (cw - M.l - M.r);
+  const Y = v => M.t + (1 - (v - minE) / (maxE - minE)) * (ch - M.t - M.b);
+
+  function draw() {
+    cw = svg.clientWidth; ch = svg.clientHeight;
+    const step = (maxE - minE) / 4;
+    let g = '';
+    for (let i = 0; i <= 4; i++) {
+      const e = minE + i * step;
+      g += `<line x1="${M.l}" x2="${cw - M.r}" y1="${Y(e)}" y2="${Y(e)}" stroke="#ddd"/><text x="${M.l - 6}" y="${Y(e) + 4}" text-anchor="end" font-size="11" fill="#6b6860">${Math.round(e)}</text>`;
+    }
+    const kmStep = d > 20000 ? 5 : d > 8000 ? 2 : 1;
+    for (let k = 0; k * 1000 <= d; k += kmStep)
+      g += `<text x="${X(k * 1000)}" y="${ch - 8}" text-anchor="middle" font-size="11" fill="#6b6860">${k}</text>`;
+    g += `<text x="${cw - M.r}" y="${ch - 8}" text-anchor="end" font-size="10" fill="#6b6860">km</text><text x="6" y="10" font-size="10" fill="#6b6860">m</text>`;
+    const path = pts.map((p, i) => (i ? 'L' : 'M') + X(p.d).toFixed(1) + ' ' + Y(p.ele).toFixed(1)).join('');
+    g += `<path d="${path}L${X(d)} ${Y(minE)}L${X(0)} ${Y(minE)}Z" fill="#b4462a22"/><path d="${path}" fill="none" stroke="#b4462a" stroke-width="2"/>`;
+    g += `<line id="tk-v" y1="${M.t}" y2="${ch - M.b}" stroke="#1565c0" style="display:none"/><circle id="tk-c" r="5" fill="#1565c0" stroke="#fff" stroke-width="2" style="display:none"/>`;
+    svg.innerHTML = g;
+  }
+
+  function show(i) {
+    const p = pts[i], v = $('tk-v'), c = $('tk-c');
+    v.setAttribute('x1', X(p.d)); v.setAttribute('x2', X(p.d));
+    c.setAttribute('cx', X(p.d)); c.setAttribute('cy', Y(p.ele));
+    v.style.display = c.style.display = '';
+    tip.innerHTML = `<b>${Math.round(p.ele)} m</b> · km ${(p.d / 1000).toFixed(2)}`;
+    tip.style.display = 'block';
+    const x = X(p.d), w = tip.offsetWidth;
+    tip.style.left = Math.min(Math.max(x + 10, 0), cw - w - 4) + 'px';
+    hoverDot.setLatLng([p.lat, p.lng]).addTo(map);
+  }
+  function hide() {
+    $('tk-v').style.display = $('tk-c').style.display = 'none';
+    tip.style.display = 'none'; hoverDot.remove();
+  }
+  function nearest(dist) { // ricerca binaria sulla distanza
+    let a = 0, b = pts.length - 1;
+    while (b - a > 1) { const m = (a + b) >> 1; pts[m].d < dist ? a = m : b = m; }
+    return dist - pts[a].d < pts[b].d - dist ? a : b;
+  }
+  svg.addEventListener('pointermove', e => {
+    const x = e.clientX - svg.getBoundingClientRect().left;
+    const dist = Math.min(Math.max((x - M.l) / (cw - M.l - M.r), 0), 1) * d;
+    show(nearest(dist));
+  });
+  svg.addEventListener('pointerleave', hide);
+  draw();
+  new ResizeObserver(draw).observe($('tk-chart'));
+
+  // ---- Foto georeferenziate ----
+  const dlg = $('tk-dlg');
+  dlg.querySelector('button').onclick = () => dlg.close();
+  dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+  for (const ph of CONFIG.photos) {
+    let lat = ph.lat, lng = ph.lng;
+    if (lat == null || lng == null) {
+      try {
+        if (typeof exifr === 'undefined') throw new Error('libreria exifr non caricata');
+        const g = await exifr.gps(ph.src);
+        if (g && g.latitude != null) { lat = g.latitude; lng = g.longitude; }
+        else console.warn('[trek] Nessun dato GPS EXIF trovato in', ph.src);
+      } catch (e) { console.warn('[trek] Lettura EXIF fallita per', ph.src, e); }
+    }
+    if (lat == null || lng == null) { console.warn('[trek] Foto saltata (senza coordinate):', ph.src); continue; }
+    console.log('[trek] Foto posizionata:', ph.src, lat, lng);
+    L.marker([lat, lng], { icon: L.divIcon({ className: 'tk-cam', html: '📷', iconSize: [30, 30] }) })
+      .addTo(map).on('click', () => {
+        dlg.querySelector('img').src = ph.src;
+        dlg.querySelector('span').textContent = ph.caption || '';
+        dlg.showModal();
+      });
+  }
+})().catch(e => { console.error(e); document.getElementById('trek').insertAdjacentHTML('afterbegin', '<p style="color:#b00">Impossibile caricare il tracciato (' + e.message + ').</p>'); });
+</script>
