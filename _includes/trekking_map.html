@@ -22,13 +22,13 @@
 
 <div id="trek">
   <div class="tk-sum">
-    <div><b id="s-time">–</b><span>Tempo totale</span></div>
-    <div><b id="s-dist">–</b><span>Distanza</span></div>
-    <div><b id="s-up">–</b><span>Dislivello positivo</span></div>
-    <div><b id="s-down">–</b><span>Dislivello negativo</span></div>
+    <div><b id="s-time-{{ include.trekkingdataname }}">–</b><span>Tempo totale</span></div>
+    <div><b id="s-dist-{{ include.trekkingdataname }}">–</b><span>Distanza</span></div>
+    <div><b id="s-up-{{ include.trekkingdataname }}">–</b><span>Dislivello positivo</span></div>
+    <div><b id="s-down-{{ include.trekkingdataname }}">–</b><span>Dislivello negativo</span></div>
   </div>
   <div id="{{ include.trekkingmapname }}" class="tk-map"></div>
-  <div id="{{ include.trekkingprofilename }}" class="tk-chart"><svg></svg><div id="tk-tip"></div></div>
+  <div id="{{ include.trekkingdataname }}" class="tk-chart"><svg></svg><div id="tk-tip"></div></div>
   <dialog id="tk-dlg"><img alt=""><div class="cap"><span></span><button>Chiudi</button></div></dialog>
 </div>
 
@@ -93,10 +93,10 @@
     const m = Math.round((tB - tA) / 60000);
     dur = Math.floor(m / 60) + 'h ' + String(m % 60).padStart(2, '0') + 'm';
   }
-  $('s-time').textContent = dur || 'n/d';
-  $('s-dist').textContent = (d / 1000).toFixed(2) + ' km';
-  $('s-up').textContent = '+' + Math.round(up) + ' m';
-  $('s-down').textContent = '−' + Math.round(down) + ' m';
+  $('s-time-{{ include.trekkingdataname }}').textContent = dur || 'n/d';
+  $('s-dist-{{ include.trekkingdataname }}').textContent = (d / 1000).toFixed(2) + ' km';
+  $('s-up-{{ include.trekkingdataname }}').textContent = Math.round(up) + ' m';
+  $('s-down-{{ include.trekkingdataname }}').textContent = Math.round(down) + ' m';
 
   // ---- Mappa ----
   const topo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
@@ -115,7 +115,7 @@
   const hoverDot = L.circleMarker(ll[0], { radius: 8, color: '#fff', weight: 3, fillColor: '#1565c0', fillOpacity: 1, interactive: false });
 
   // ---- Profilo altimetrico ----
-  const svg = $('{{ include.trekkingprofilename }}').querySelector('svg'), tip = $('tk-tip');
+  const svg = $('{{ include.trekkingdataname }}').querySelector('svg'), tip = $('tk-tip');
   const eles = pts.map(p => p.ele);
   const minE = Math.floor((Math.min(...eles) - 10) / 50) * 50, maxE = Math.ceil((Math.max(...eles) + 10) / 50) * 50;
   const M = { l: 48, r: 12, t: 14, b: 28 };
@@ -168,7 +168,7 @@
   });
   svg.addEventListener('pointerleave', hide);
   draw();
-  new ResizeObserver(draw).observe($('{{ include.trekkingprofilename }}'));
+  new ResizeObserver(draw).observe($('{{ include.trekkingdataname }}'));
 
   // ---- Foto georeferenziate ----
   const dlg = $('tk-dlg');

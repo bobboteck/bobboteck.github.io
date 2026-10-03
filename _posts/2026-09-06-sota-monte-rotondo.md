@@ -83,10 +83,10 @@ gallery:
 ...
 
 Qui trovate la traccia del percorso fatto per raggiungere la cima.
-{% include trekking_map.html trekkingmapname="MonteRotondoAscesa" trekkingprofilename="ProfiloAscesa" trekkingdata="/assets/blog/2026-09-06-sota-monte-rotondo/monte-rotondo-ascesa.geojson" %}
+{% include trekking_map.html trekkingmapname="MonteRotondoAscesa" trekkingdataname="Ascesa" trekkingdata="/assets/blog/2026-09-06-sota-monte-rotondo/monte-rotondo-ascesa.geojson" %}
 
 Qui trovate la traccia del percorso fatto per scendere.
-{% include trekking_map.html trekkingmapname="MonteRotondoDiscesa" trekkingprofilename="ProfiloDiscesa" trekkingdata="/assets/blog/2026-09-06-sota-monte-rotondo/monte-rotondo-discesa.geojson" %}
+{% include trekking_map.html trekkingmapname="MonteRotondoDiscesa" trekkingdataname="Discesa" trekkingdata="/assets/blog/2026-09-06-sota-monte-rotondo/monte-rotondo-discesa.geojson" %}
 
 > Il tracciato è stato generato da una nuova applicazione che sto usando che sembra avere qualche problema.
 
