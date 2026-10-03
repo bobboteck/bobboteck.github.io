@@ -83,10 +83,10 @@ gallery:
 ...
 
 Qui trovate la traccia del percorso fatto per raggiungere la cima.
-{% include trekking_map.html trekkingdata="/assets/blog/2026-09-06-sota-monte-rotondo/monte-rotondo-ascesa.geojson" %}
+{% include trekking_map.html trekkingmapname="MonteRotondoAscesa" trekkingdata="/assets/blog/2026-09-06-sota-monte-rotondo/monte-rotondo-ascesa.geojson" %}
 
 Qui trovate la traccia del percorso fatto per scendere.
-{% include trekking_map.html trekkingdata="/assets/blog/2026-09-06-sota-monte-rotondo/monte-rotondo-discesa.geojson" %}
+{% include trekking_map.html trekkingmapname="MonteRotondoDiscesa" trekkingdata="/assets/blog/2026-09-06-sota-monte-rotondo/monte-rotondo-discesa.geojson" %}
 
 ## Foto dell'attivazione
 

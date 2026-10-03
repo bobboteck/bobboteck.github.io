@@ -7,7 +7,7 @@
 #trek .tk-sum div:last-child{border:0}
 #trek .tk-sum b{display:block;font-size:1.35em;font-variant-numeric:tabular-nums}
 #trek .tk-sum span{color:var(--mut);font-size:.85em}
-#tk-map{height:460px;border-radius:8px;border:1px solid var(--bd);z-index:0}
+.tk-map{height:460px;border-radius:8px;border:1px solid var(--bd);z-index:0}
 #tk-chart{position:relative;margin-top:10px;border:1px solid var(--bd);border-radius:8px;background:#faf9f6;height:220px;touch-action:none}
 #tk-chart svg{width:100%;height:100%;display:block}
 #tk-tip{position:absolute;top:8px;pointer-events:none;background:#fff;border:1px solid var(--bd);border-radius:6px;padding:4px 8px;font-size:.85em;white-space:nowrap;display:none;box-shadow:0 1px 4px #0002}
@@ -17,7 +17,7 @@
 #tk-dlg .cap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 14px}
 #tk-dlg button{border:1px solid var(--bd);background:#fff;border-radius:6px;padding:4px 12px;cursor:pointer}
 .tk-cam{font-size:20px;line-height:26px;text-align:center;background:#fff;border:2px solid var(--ac);border-radius:50%;width:30px!important;height:30px!important}
-@media(max-width:600px){#trek .tk-sum{grid-template-columns:1fr 1fr}#trek .tk-sum div:nth-child(2){border-right:0}#tk-map{height:340px}}
+@media(max-width:600px){#trek .tk-sum{grid-template-columns:1fr 1fr}#trek .tk-sum div:nth-child(2){border-right:0}.tk-map{height:340px}}
 </style>
 
 <div id="trek">
@@ -27,7 +27,7 @@
     <div><b id="s-up">–</b><span>Dislivello positivo</span></div>
     <div><b id="s-down">–</b><span>Dislivello negativo</span></div>
   </div>
-  <div id="tk-map"></div>
+  <div id="{{ include.trekkingmapname }}" class="tk-map"></div>
   <div id="tk-chart"><svg></svg><div id="tk-tip"></div></div>
   <dialog id="tk-dlg"><img alt=""><div class="cap"><span></span><button>Chiudi</button></div></dialog>
 </div>
@@ -105,7 +105,7 @@
   const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19, attribution: '© OpenStreetMap'
   });
-  const map = L.map('tk-map', { layers: [topo], scrollWheelZoom: false });
+  const map = L.map('{{ include.trekkingmapname }}', { layers: [topo], scrollWheelZoom: false });
   L.control.layers({ 'Rilievo': topo, 'Stradale': osm }).addTo(map);
   const ll = pts.map(p => [p.lat, p.lng]);
   const line = L.polyline(ll, { color: '#b4462a', weight: 4, opacity: .9 }).addTo(map);
