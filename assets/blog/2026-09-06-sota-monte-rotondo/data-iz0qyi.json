@@ -1,0 +1,223 @@
+{
+    "MapConfig": {
+        "Latitude": 42.188,
+        "Longitude": 13.458,
+        "Zoom": 5
+      },
+    "QTH": {
+        "Latitude": 42.188,
+        "Longitude": 13.458,
+        "Locator": "JN62re",
+        "Location": "Monte Rotondo 2062m slm",
+        "References": [
+          {
+            "Code": "I/AB-020",
+            "Type": "SOTA"
+          },
+          {
+            "Code": "I-0629",
+            "Type": "POTA"
+          }
+        ],
+        "isPortable": true
+      },
+    "Equipment": {
+        "Radios": [
+          {
+            "Brand": "Yaesu",
+            "Model": "FT-817",
+            "PowerSupply": "PB Gel 12V 7Ah"
+          }
+        ],
+        "Antennas": [
+            {
+                "Brand": "",
+                "Model": "HB9",
+                "Other": ""
+            }
+        ]
+    },
+    "QSOs": 
+    [
+        {
+            "Date": "2026-09-06",
+            "Time": " 9::8",
+            "CallSign": "IP0A",
+            "Locator": "JN40OU",
+            "Latitude": "40.854",
+            "Longitude": "9.208",
+            "QRB": 383,
+            "Band": "144",
+            "Mode": "SSB",
+            "RstReceived": "59",
+            "RstSent": "59",
+            "TxPower": 5,
+            "Note": ""
+        },
+        {
+            "Date": "2026-09-06",
+            "Time": " 9::5",
+            "CallSign": "9A6A",
+            "Locator": "JN83GE",
+            "Latitude": "43.188",
+            "Longitude": "16.542",
+            "QRB": 275,
+            "Band": "144",
+            "Mode": "SSB",
+            "RstReceived": "59",
+            "RstSent": "59",
+            "TxPower": 5,
+            "Note": ""
+        },
+        {
+            "Date": "2026-09-06",
+            "Time": " 9::8",
+            "CallSign": "IK0RPV",
+            "Locator": "JN63OI",
+            "Latitude": "43.354",
+            "Longitude": "13.208",
+            "QRB": 131,
+            "Band": "144",
+            "Mode": "SSB",
+            "RstReceived": "59",
+            "RstSent": "59",
+            "TxPower": 5,
+            "Note": ""
+        },
+        {
+            "Date": "2026-09-06",
+            "Time": " 9::8",
+            "CallSign": "IO2V",
+            "Locator": "JN44RN",
+            "Latitude": "44.563",
+            "Longitude": "9.458",
+            "QRB": 417,
+            "Band": "144",
+            "Mode": "SSB",
+            "RstReceived": "59",
+            "RstSent": "59",
+            "TxPower": 5,
+            "Note": ""
+        },
+        {
+            "Date": "2026-09-06",
+            "Time": " 9::6",
+            "CallSign": "IT9ELM",
+            "Locator": "JM67LX",
+            "Latitude": "37.979",
+            "Longitude": "12.958",
+            "QRB": 469,
+            "Band": "144",
+            "Mode": "SSB",
+            "RstReceived": "59",
+            "RstSent": "59",
+            "TxPower": 5,
+            "Note": ""
+        },
+        {
+            "Date": "2026-09-06",
+            "Time": " 9::0",
+            "CallSign": "IK4ZHH",
+            "Locator": "JN63AX",
+            "Latitude": "43.979",
+            "Longitude": "12.042",
+            "QRB": 230,
+            "Band": "144",
+            "Mode": "SSB",
+            "RstReceived": "59",
+            "RstSent": "59",
+            "TxPower": 5,
+            "Note": ""
+        },
+        {
+            "Date": "2026-09-06",
+            "Time": " 10:14",
+            "CallSign": "IT9ZMX",
+            "Locator": "JM68ND",
+            "Latitude": "38.146",
+            "Longitude": "13.125",
+            "QRB": 450,
+            "Band": "144",
+            "Mode": "SSB",
+            "RstReceived": "59",
+            "RstSent": "59",
+            "TxPower": 5,
+            "Note": ""
+        },
+        {
+            "Date": "2026-09-06",
+            "Time": " 10:24",
+            "CallSign": "IQ5NN",
+            "Locator": "JN63GN",
+            "Latitude": "43.563",
+            "Longitude": "12.542",
+            "QRB": 170,
+            "Band": "144",
+            "Mode": "SSB",
+            "RstReceived": "59",
+            "RstSent": "59",
+            "TxPower": 5,
+            "Note": ""
+        },
+        {
+            "Date": "2026-09-06",
+            "Time": " 10:26",
+            "CallSign": "IC8TEM",
+            "Locator": "JN70CN",
+            "Latitude": "40.563",
+            "Longitude": "14.208",
+            "QRB": 191,
+            "Band": "144",
+            "Mode": "SSB",
+            "RstReceived": "59",
+            "RstSent": "59",
+            "TxPower": 5,
+            "Note": ""
+        },
+        {
+            "Date": "2026-09-06",
+            "Time": " 12:08",
+            "CallSign": "S59DEM",
+            "Locator": "JN75DS",
+            "Latitude": "45.771",
+            "Longitude": "14.292",
+            "QRB": 403,
+            "Band": "144",
+            "Mode": "SSB",
+            "RstReceived": "59",
+            "RstSent": "59",
+            "TxPower": 5,
+            "Note": ""
+        },
+        {
+            "Date": "2026-09-06",
+            "Time": " 12:50",
+            "CallSign": "IS0/I2SVA",
+            "Locator": "JN40SX",
+            "Latitude": "40.979",
+            "Longitude": "9.542",
+            "QRB": 352,
+            "Band": "144",
+            "Mode": "SSB",
+            "RstReceived": "59",
+            "RstSent": "59",
+            "TxPower": 5,
+            "Note": ""
+        },
+        {
+            "Date": "2026-09-06",
+            "Time": " 13:15",
+            "CallSign": "9A4C",
+            "Locator": "JN85QJ",
+            "Latitude": "45.396",
+            "Longitude": "17.375",
+            "QRB": 475,
+            "Band": "144",
+            "Mode": "SSB",
+            "RstReceived": "59",
+            "RstSent": "59",
+            "TxPower": 5,
+            "Note": ""
+        }
+    ]
+  }
