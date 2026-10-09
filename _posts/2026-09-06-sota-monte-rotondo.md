@@ -92,18 +92,20 @@ La traccia del percorso fatto per scendere.
 
 {% include gallery caption="SOTA Monte Rotondo" %}
 
-## Log dei collegamenti di IZ0QYI
+## Collegamenti
+
+### Log di IZ0QYI
 
 {% include qsos_tab.html tabContainer="tabQyi" tabData="/assets/blog/2026-09-06-sota-monte-rotondo/data-iz0qyi.json" %}
 
-## Mappa dei collegamenti di IZ0QYI
+### Mappa di IZ0QYI
 
 {% include qsos_map.html mapcontainer="mapQyi" mapdata="/assets/blog/2026-09-06-sota-monte-rotondo/data-iz0qyi.json" %}
 
-## Log dei collegamenti di IU0PHY
+### Log di IU0PHY
 
 {% include qsos_tab.html tabContainer="tabPhy" tabData="/assets/blog/2026-09-06-sota-monte-rotondo/data-iu0phy.json" %}
 
-## Mappa dei collegamenti di IU0PHY
+### Mappa di IU0PHY
 
 {% include qsos_map.html mapcontainer="mapPhy" mapdata="/assets/blog/2026-09-06-sota-monte-rotondo/data-iu0phy.json" %}
