@@ -1,0 +1,59 @@
+{
+    "MapConfig": {
+        "Latitude": 42.188,
+        "Longitude": 13.458,
+        "Zoom": 5
+      },
+    "QTH": {
+        "Latitude": 42.188,
+        "Longitude": 13.458,
+        "Locator": "JN62re",
+        "Location": "Monte Rotondo 2062m slm",
+        "References": [
+          {
+            "Code": "I/AB-020",
+            "Type": "SOTA"
+          },
+          {
+            "Code": "I-0629",
+            "Type": "POTA"
+          }
+        ],
+        "isPortable": true
+      },
+    "Equipment": {
+        "Radios": [
+          {
+            "Brand": "Yaesu",
+            "Model": "FT-817",
+            "PowerSupply": "LiFePO4 12V 8Ah"
+          }
+        ],
+        "Antennas": [
+            {
+                "Brand": "IU0PHY",
+                "Model": "DRV",
+                "Other": "Home made"
+            }
+        ]
+    },
+    "QSOs": 
+    [
+        {"Date":"2026-09-06","Time":" 09:04","CallSign":"IT9ELM","Locator":"JM67LX","Latitude":"37.979","Longitude":"12.958","QRB":469,"Band":"144","Mode":"SSB","RstReceived":"59","RstSent":"59","TxPower":5,"Note":""},
+        {"Date":"2026-09-06","Time":" 09:09","CallSign":"IO2V","Locator":"JN44RN","Latitude":"44.563","Longitude":"9.458","QRB":417,"Band":"144","Mode":"SSB","RstReceived":"59","RstSent":"59","TxPower":5,"Note":""},
+        {"Date":"2026-09-06","Time":" 09:20","CallSign":"IK0RPV","Locator":"JN63OI","Latitude":"43.354","Longitude":"13.208","QRB":131,"Band":"144","Mode":"SSB","RstReceived":"59","RstSent":"59","TxPower":5,"Note":""},
+        {"Date":"2026-09-06","Time":" 09:27","CallSign":"S59DEM","Locator":"JN75DS","Latitude":"45.771","Longitude":"14.292","QRB":403,"Band":"144","Mode":"SSB","RstReceived":"59","RstSent":"59","TxPower":5,"Note":""},
+        {"Date":"2026-09-06","Time":" 09:28","CallSign":"IC8TEM","Locator":"JN70CN","Latitude":"40.563","Longitude":"14.208","QRB":191,"Band":"144","Mode":"SSB","RstReceived":"59","RstSent":"59","TxPower":5,"Note":""},
+        {"Date":"2026-09-06","Time":" 09:41","CallSign":"IK4ZHH","Locator":"JN63AX","Latitude":"43.979","Longitude":"12.042","QRB":230,"Band":"144","Mode":"SSB","RstReceived":"59","RstSent":"59","TxPower":5,"Note":""},
+        {"Date":"2026-09-06","Time":" 10:08","CallSign":"IT9ZMX","Locator":"JM68ND","Latitude":"38.146","Longitude":"13.125","QRB":450,"Band":"144","Mode":"SSB","RstReceived":"59","RstSent":"59","TxPower":5,"Note":""},
+        {"Date":"2026-09-06","Time":" 10:15","CallSign":"IQ5NN","Locator":"JN63FN","Latitude":"43.563","Longitude":"12.458","QRB":173,"Band":"144","Mode":"SSB","RstReceived":"59","RstSent":"59","TxPower":5,"Note":""},
+        {"Date":"2026-09-06","Time":" 10:17","CallSign":"IP0A","Locator":"JN40OU","Latitude":"40.854","Longitude":"9.208","QRB":383,"Band":"144","Mode":"SSB","RstReceived":"59","RstSent":"59","TxPower":5,"Note":""},
+        {"Date":"2026-09-06","Time":" 10:20","CallSign":"9A6A","Locator":"JN83GE","Latitude":"43.188","Longitude":"16.542","QRB":275,"Band":"144","Mode":"SSB","RstReceived":"59","RstSent":"59","TxPower":5,"Note":""},
+        {"Date":"2026-09-06","Time":" 12:16","CallSign":"IT9JVF","Locator":"JM67LX","Latitude":"37.979","Longitude":"12.958","QRB":469,"Band":"144","Mode":"SSB","RstReceived":"59","RstSent":"59","TxPower":5,"Note":""},
+        {"Date":"2026-09-06","Time":" 12:20","CallSign":"IK6ZLA","Locator":"JN63MS","Latitude":"43.771","Longitude":"13.042","QRB":179,"Band":"144","Mode":"SSB","RstReceived":"59","RstSent":"59","TxPower":5,"Note":""},
+        {"Date":"2026-09-06","Time":" 12:32","CallSign":"TK4BB","Locator":"JN42QP","Latitude":"42.646","Longitude":"9.375","QRB":339,"Band":"144","Mode":"SSB","RstReceived":"59","RstSent":"59","TxPower":5,"Note":""},
+        {"Date":"2026-09-06","Time":" 12:43","CallSign":"IS0CSX","Locator":"JN40RX","Latitude":"40.979","Longitude":"9.458","QRB":358,"Band":"144","Mode":"SSB","RstReceived":"59","RstSent":"59","TxPower":5,"Note":""},
+        {"Date":"2026-09-06","Time":" 12:54","CallSign":"IS0/I2SVA","Locator":"JN40SX","Latitude":"40.979","Longitude":"9.542","QRB":352,"Band":"144","Mode":"SSB","RstReceived":"59","RstSent":"59","TxPower":5,"Note":""},
+        {"Date":"2026-09-06","Time":" 13:22","CallSign":"9A4C","Locator":"JN85QJ","Latitude":"45.396","Longitude":"17.375","QRB":475,"Band":"144","Mode":"SSB","RstReceived":"59","RstSent":"59","TxPower":5,"Note":""}
+    ]
+  }
