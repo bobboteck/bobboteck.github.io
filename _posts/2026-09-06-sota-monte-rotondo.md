@@ -36,67 +36,61 @@ gallery:
     title: "Si parte"
   - url: /assets/blog/2026-09-06-sota-monte-rotondo/2026-09-06-sota-monte-rotondo-02.jpg
     image_path: /assets/blog/2026-09-06-sota-monte-rotondo/2026-09-06-sota-monte-rotondo-02-th.jpg
-    alt: "Cercando di identificare cosa si vede nella valle"
-    title: "Cercando di identificare cosa si vede nella valle"
+    alt: "Vista sulla piana di Campo Felice"
+    title: "Vista sulla piana di Campo Felice"
   - url: /assets/blog/2026-09-06-sota-monte-rotondo/2026-09-06-sota-monte-rotondo-03.jpg
     image_path: /assets/blog/2026-09-06-sota-monte-rotondo/2026-09-06-sota-monte-rotondo-03-th.jpg
-    alt: "Arrivati all'eremo di San Silvestro"
-    title: "Arrivati all'eremo di San Silvestro"
+    alt: "Arrivati alla croce, manca pochissimo alla cima"
+    title: "Arrivati alla croce, manca pochissimo alla cima"
   - url: /assets/blog/2026-09-06-sota-monte-rotondo/2026-09-06-sota-monte-rotondo-04.jpg
     image_path: /assets/blog/2026-09-06-sota-monte-rotondo/2026-09-06-sota-monte-rotondo-04-th.jpg
-    alt: "Dettaglio della bobina di accordo dell'antenna verticale"
-    title: "Dettaglio della bobina di accordo dell'antenna verticale"
+    alt: "Si vedono le antenne sulla cima"
+    title: "Si vedono le antenne sulla cima"
   - url: /assets/blog/2026-09-06-sota-monte-rotondo/2026-09-06-sota-monte-rotondo-05.jpg
     image_path: /assets/blog/2026-09-06-sota-monte-rotondo/2026-09-06-sota-monte-rotondo-05-th.jpg
-    alt: "Prima volta in assoluto di un'attivazione SOTA da un tavolino"
-    title: "Prima volta in assoluto di un'attivazione SOTA da un tavolino"
+    alt: "La postazione di Andrea con la HB9"
+    title: "La postazione di Andrea con la HB9"
   - url: /assets/blog/2026-09-06-sota-monte-rotondo/2026-09-06-sota-monte-rotondo-06.jpg
     image_path: /assets/blog/2026-09-06-sota-monte-rotondo/2026-09-06-sota-monte-rotondo-06-th.jpg
-    alt: "Vista del parco antenne"
-    title: "Vista del parco antenne"
-  - url: /assets/blog/2026-09-06-sota-monte-rotondo/2026-09-06-sota-monte-rotondo-07.jpg
-    image_path: /assets/blog/2026-09-06-sota-monte-rotondo/2026-09-06-sota-monte-rotondo-07-th.jpg
-    alt: "La vista dei monti verso oriente"
-    title: "La vista dei monti verso oriente"
-  - url: /assets/blog/2026-09-06-sota-monte-rotondo/2026-09-06-sota-monte-rotondo-08.jpg
-    image_path: /assets/blog/2026-09-06-sota-monte-rotondo/2026-09-06-sota-monte-rotondo-08-th.jpg
-    alt: "La vista dei monti verso oriente continua"
-    title: "La vista dei monti verso oriente continua"
-  - url: /assets/blog/2026-09-06-sota-monte-rotondo/2026-09-06-sota-monte-rotondo-09.jpg
-    image_path: /assets/blog/2026-09-06-sota-monte-rotondo/2026-09-06-sota-monte-rotondo-09-th.jpg
-    alt: "In lontananza, verso occidente, si vede anche il mare"
-    title: "In lontananza, verso occidente, si vede anche il mare"
+    alt: "La mia postazione con la DRV"
+    title: "La mia postazione con la DRV"
 ---
 
 ## L'attivazione
 
-...
+Il contest IARU VHF è sempre una ghiotta occasione per salire su qualche cima e fare VHF in QRP, la data era segnata sul calendario già da tempo, ma come al solito l’organizzazione di un attivazione è sempre questione degli ultimi giorni.
+Stabilito che saremmo andati la domenica per poter sfruttare meglio il tempo disponibile, cominciamo a pensare ad una cima, propongo Monte Rotondo poco sopra i 2000 metri nella piana di Campo Felice (?) che per noi è anche un new one SOTA, decisa la destinazione ci diamo appuntamento per domenica mattina.
+Il viaggio scorre veloce, è quasi tutta autostrada da Roma, chiacchieriamo raccontandoci come è andata l’estate, poi arrivati alla piana identifichiamo in lontananza la cima cercando di capire dove fermarci con la macchina. Arriviamo ad una piazzola e chiediamo ad una signora, che ci dice che possiamo salire in macchina fino al rifugio, sempre che ci riusciamo, lei ci fa strada perché sta andando proprio, il Doblò di Andrea non si fa problemi la segue e sale fino al rifugio.
 
-### Conclusioni
+### Considerazioni
 
 #### Radio
 
-...
+Dal punto di vista Radio, la cima offre ampi spazi per posizionare le antenne, la sdrada che arriva fino in cima la renderebbe ottimale anche per organizzare un Field day, ma servirebbe un mezzo adatto a percorrerla. Come già detto la posizione è buona anche per le VHF e superiori vista l’apertura a 360° della cima. Nei dintorni, ci sono molte cime più alte, ma sono comunque piuttosto distanti.
+Abbiamo effettuato QSO con stazioni Italiane, isole comprese, Slovenia, Croazia e Corsica, anche se dal nord Italia non siamo andati oltre la pianura padana, ascoltavamo qualche stazione dalla zona 3, ma i segnali erano molto bassi.
+Da Roma hanno collegato la Spagna, noi non ne abbiamo ascoltato neanche una, forse in quella direzione eravamo più coperti e distanti dal mare. Ho ricevuto in modo distinto una stazione dalla Romania, ma il tempo che chiudeva un QSO con non ho capito chi e poi non l'ho più ascoltata, sarebbe stato un DX.
 
 #### Trekking
 
-...
+Sempre la signora che ci aveva dato le indicazioni per salire su con la macchina, ci dice che il sentiero sale su dietro la stazione della funivia e così ci incamminiamo, seguendo il primo segno e una traccia tra la bassa vegetazione.
+Purtroppo non passa molto tempo che la traccia finisce, o meglio sempre inerpicarsi sul fronte della montagna, con non poca difficoltà (almeno per me) saliamo fino a ricongiungerci con la traccia delle ruspe che sale dritta seguendo la nuova funivia in costruzione.
+Come ci è successo anche altre volte, non troviamo più segni del sentiero, proviamo anche a dividerci spostandoci uno sulla destra e uno sulla sinistra, ma il pendio è ripido e ritroviamo alla fine dei segni ritornando sulla traccia delle ruspe.
+Arrivati alla stazione della funivia, anche questa ancora in costruzione, abbiamo davanti a noi la cima, cerchiamo anche qui di capire dove sia meglio passare, optando alla fine per la traccia/strada, che stando alla cartina dovrebbe arrivare fino in cima.
+Questo tratto è sicuramente più agevole, quindi con passo lento ma costante arriviamo prima alla croce per poi spostarci qualche metro più in là e più in alto della cima vera e propria.
 
-Qui trovate la traccia del percorso fatto per raggiungere la cima.
+Per scendere decidiamo di seguire le strade di servizio degli impianti che in alcuni tratti sono immerse nelle piste da sci, il percorso è sicuramente più lungo ma più agevole, e alla fine il tempo di percorrenza differisce di poco.
+
+La traccia del percorso fatto per raggiungere la cima.
 {% include trekking_map.html trekkingmapname="MonteRotondoAscesa" trekkingdataname="Ascesa" trekkingdata="/assets/blog/2026-09-06-sota-monte-rotondo/monte-rotondo-ascesa.geojson" %}
 
-Qui trovate la traccia del percorso fatto per scendere.
+La traccia del percorso fatto per scendere.
 {% include trekking_map.html trekkingmapname="MonteRotondoDiscesa" trekkingdataname="Discesa" trekkingdata="/assets/blog/2026-09-06-sota-monte-rotondo/monte-rotondo-discesa.geojson" %}
 
-> Il tracciato è stato generato da una nuova applicazione che sto usando che sembra avere qualche problema.
+> Il tracciato è stato generato da una nuova applicazione che sto usando che sembra avere qualche problema con l'altimetro.
 
 ## Foto dell'attivazione
 
 {% include gallery caption="SOTA Monte Rotondo" %}
-
-## Video dell'attivazione
-
-{% include video id="" provider="youtube" %}
 
 ## Log dei collegamenti di IZ0QYI
 
